@@ -1,5 +1,11 @@
 # KStack Changelog
 
+## v1.9 — Porter's Five Forces in Biz Context (2026-03-25)
+
+`/biz-context` — Porter's Five Forces assessment added to Domain 4 (Market Position). Structured table rating each force (Competitive Rivalry, Threat of New Entrants, Threat of Substitutes, Buyer Power, Supplier Power) by current intensity, trend direction, and CX implication. Evidence-grounded — forces rated [UNASSESSED] if data is insufficient. Includes a named "CX-critical forces" callout identifying which combination (rivalry + buyer power + substitutes) creates the most urgency, connected directly to the strategic "So What" in Step 3.
+
+---
+
 ## v1.8 — Brand Strategy Track (2026-03-24)
 
 Two new skills extending KStack into brand strategy. The track chains with the existing CX intelligence skills — `/persona-build` feeds the Audience force, `/biz-context` feeds the Company force, `/trend-scan` feeds the Moment force.

@@ -123,9 +123,24 @@ Work through each domain systematically. For each domain:
 - Competitive differentiation (what do customers choose this company for vs. alternatives?)
 - Brand perception and trust indicators
 - Channel mix vs. market and competitor norms
-- Key competitive threats (new entrants, disruptors, substitutes)
 - **Digital presence and competitive parity:** If website benchmarking, search trend data, or competitive analysis is available, assess whether the company's digital footprint reflects its market position. Does the website clearly communicate the value proposition? Are self-service capabilities present or absent vs. competitors? Is the company visible in the channels where its customers are actively researching? A company can be strong operationally and weak digitally — this is a market position risk, not just an ops problem.
 - **Competitive news velocity:** If any competitor has made a significant announcement, partnership, or product launch recently, flag it. Competitor actions that appear in news coverage often signal where the market is moving and how quickly the benchmark is shifting. If no competitor intelligence was provided and Step 0.5 search has not already run competitor searches, use WebSearch for `"[Competitor name]" announcement OR launch OR partnership [current year]` for each competitor identified. Label all findings `[SOURCE: Web search — verify before presenting]`.
+
+**Porter's Five Forces Assessment**
+
+After the standard market position analysis, assess the five competitive forces. The goal is not a textbook exercise — it is to identify which force is most actively shaping the CX opportunity right now and where the pressure is building.
+
+| Force | Current Intensity | Trend | CX Implication |
+|---|---|---|---|
+| Competitive Rivalry | [Low/Medium/High] | [Increasing/Stable/Decreasing] | [What this means for CX investment urgency] |
+| Threat of New Entrants | [Low/Medium/High] | [Increasing/Stable/Decreasing] | [Where new entrants are winning or disrupting on experience] |
+| Threat of Substitutes | [Low/Medium/High] | [Increasing/Stable/Decreasing] | [What switching looks like and where the experience gap is] |
+| Buyer Power | [Low/Medium/High] | [Increasing/Stable/Decreasing] | [How much leverage customers have to demand better experience] |
+| Supplier Power | [Low/Medium/High] | [Increasing/Stable/Decreasing] | [How supplier constraints affect service delivery or cost-to-serve] |
+
+For each force, cite the specific evidence driving the rating — not generic industry assumptions. If data is insufficient to rate a force, mark it [UNASSESSED] and flag what information would change the rating.
+
+**The CX-critical forces:** Competitive rivalry, threat of substitutes, and buyer power directly determine how much CX differentiation matters and how much urgency exists. High rivalry + high buyer power + rising substitutes is the combination that makes CX investment most urgent. Name the dominant force and connect it explicitly to the strategic "So What" in Step 3.
 
 ### Domain 5: Organizational Capability
 - Leadership alignment on CX as a priority
@@ -192,7 +207,7 @@ This section connects the diagnostic to the action. It should answer:
 ## Output Format
 
 **Section 1: Five-Domain Diagnostic**
-One section per domain with: evidence summary, health rating, key data points, data gaps flagged.
+One section per domain with: evidence summary, health rating, key data points, data gaps flagged. Domain 4 includes the Porter's Five Forces table with intensity ratings, trend direction, and CX implication per force.
 
 **Section 2: Key Tensions**
 3-5 tensions stated as specific, evidenced conflicts.

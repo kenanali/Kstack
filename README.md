@@ -51,7 +51,7 @@ flowchart LR
 | Skill | Expert mode | What you get |
 |---|---|---|
 | `/trend-scan` | Futurist + macro analyst | Trend radar across PESTLE + tech waves, scored for CX relevance, with specific CX implications and convergence zones |
-| `/biz-context` | Management consultant | Five-domain business diagnostic (revenue, customer metrics, ops, market position, org capability) + key tensions + strategic "so what" |
+| `/biz-context` | Management consultant | Five-domain business diagnostic (revenue, customer metrics, ops, market position, org capability) + Porter's Five Forces competitive assessment + key tensions + strategic "so what" |
 | `/scan-blockers` | Organizational consultant | Full blocker map across 8 categories, rated by severity and addressability, with "where to start" and landmine warnings |
 | `/persona-build` | UX researcher + behavioral psychologist | Rich persona card with JTBD (functional, emotional, social), trigger events, anxieties, unmet needs — every claim tagged as evidenced or inferred |
 | `/journey-map` | Service designer | Stage-by-stage journey map with customer thought/feeling/emotion score per touchpoint, moments of truth, and top 5 opportunities |
@@ -233,6 +233,12 @@ Where gstack encodes engineering and product thinking, KStack encodes CX transfo
 ---
 
 ## Changelog
+
+### v1.9 — Porter's Five Forces in Biz Context (2026-03-25)
+
+`/biz-context` — Porter's Five Forces assessment added to Domain 4 (Market Position). Rates each force by intensity, trend, and CX implication. Identifies the dominant force driving CX urgency and connects it to the strategic "So What."
+
+Full details: [CHANGELOG.md](CHANGELOG.md)
 
 ### v1.8 — Brand Strategy Track (2026-03-24)
 
