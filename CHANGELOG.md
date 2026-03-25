@@ -1,18 +1,24 @@
 # KStack Changelog
 
-## v2.0 — Journey Map Visual HTML Output (2026-03-25)
+## v1.9.2 — Journey Map Skill-Creator Improvements (2026-03-25)
+
+`/journey-map` — Applied skill-creator methodology. Description rewritten to be more trigger-assertive, naming specific phrases like "what does the customer go through?" and workshop/sprint contexts. Mandatory gate language replaced with reasoning-based pauses (explaining *why* stopping matters rather than issuing rules). No-persona intake path made more direct with four explicit questions. Added `evals/evals.json` with 5 test cases covering: standard intake, no-persona verbal path, cyclical journey, enterprise B2B, and improving an existing Miro export.
+
+---
+
+## v1.9.1 — Journey Map Visual HTML Output (2026-03-25)
 
 `/journey-map` — New final step generates two output files automatically after every session: a structured JSON of the full journey data and a self-contained HTML file with a visual horizontal journey map. The HTML renders stages as columns with six rows (Stage, Narrative, Channels, Feeling, Problems, Opportunities). Emotion is represented as a single emoji per stage (😣→😊) derived from the average touchpoint score. No external dependencies — the HTML file opens directly in any browser.
 
 ---
 
-## v1.9 — Porter's Five Forces in Biz Context (2026-03-25)
+## v1.9.0 — Porter's Five Forces in Biz Context (2026-03-25)
 
 `/biz-context` — Porter's Five Forces assessment added to Domain 4 (Market Position). Structured table rating each force (Competitive Rivalry, Threat of New Entrants, Threat of Substitutes, Buyer Power, Supplier Power) by current intensity, trend direction, and CX implication. Evidence-grounded — forces rated [UNASSESSED] if data is insufficient. Includes a named "CX-critical forces" callout identifying which combination (rivalry + buyer power + substitutes) creates the most urgency, connected directly to the strategic "So What" in Step 3.
 
 ---
 
-## v1.8 — Brand Strategy Track (2026-03-24)
+## v1.8.0 — Brand Strategy Track (2026-03-24)
 
 Two new skills extending KStack into brand strategy. The track chains with the existing CX intelligence skills — `/persona-build` feeds the Audience force, `/biz-context` feeds the Company force, `/trend-scan` feeds the Moment force.
 
@@ -34,7 +40,7 @@ Two new skills extending KStack into brand strategy. The track chains with the e
 
 ---
 
-## v1.7 — Persona Design Principles (2026-03-24)
+## v1.7.0 — Persona Design Principles (2026-03-24)
 
 Improved `/persona-build` with three additions drawn from research on persona design failures and best practices.
 
@@ -47,7 +53,7 @@ Improved `/persona-build` with three additions drawn from research on persona de
 
 ---
 
-## v1.6 — Live Data Integration (2026-03-23)
+## v1.6.0 — Live Data Integration (2026-03-23)
 
 Added web search and live data retrieval capabilities to three skills where public information meaningfully supplements what users provide. All web-sourced findings are labeled `[SOURCE: Web search — verify before presenting]` to maintain evidence discipline. Search is conditional — triggered only when the user has not provided the relevant data, not as a replacement for user-supplied materials.
 
@@ -75,7 +81,7 @@ Added web search and live data retrieval capabilities to three skills where publ
 
 ---
 
-## v1.5 — Interview Synthesis (2026-03-23)
+## v1.5.0 — Interview Synthesis (2026-03-23)
 
 Advanced multi-interview analysis methodology across three skills.
 
@@ -99,7 +105,7 @@ Advanced multi-interview analysis methodology across three skills.
 
 ---
 
-## v1.4 — Evidence Scaffolding (2026-03-23)
+## v1.4.0 — Evidence Scaffolding (2026-03-23)
 
 ### All skills — What to Upload
 
@@ -144,7 +150,7 @@ Applied to all three skills that use interview transcripts as primary inputs:
 
 ---
 
-## v1.3 — Journey Architecture (2026-03-23)
+## v1.3.0 — Journey Architecture (2026-03-23)
 
 ### journey-map
 
@@ -160,7 +166,7 @@ Structural improvements to journey architecture, informed by analysis of how sta
 
 ---
 
-## v1.2 — Signal Grounding (2026-03-23)
+## v1.2.0 — Signal Grounding (2026-03-23)
 
 Skills grounded in real-world data signals across web, news, community, and competitive sources.
 
@@ -191,7 +197,7 @@ Skills grounded in real-world data signals across web, news, community, and comp
 
 ---
 
-## v1.1 — Portfolio Refinement (2026-03-23)
+## v1.1.0 — Portfolio Refinement (2026-03-23)
 
 ### workshop-prep
 
@@ -200,7 +206,7 @@ Skills grounded in real-world data signals across web, news, community, and comp
 
 ---
 
-## v1.0 — Initial Release (2026-03-23)
+## v1.0.0 — Initial Release (2026-03-23)
 
 ### Process
 Ran the full skill-creator evaluation cycle: 20 test cases (2 per skill) across all 10 skills, 6 parallel evaluation agents, grading notes per skill, improvements applied, reinstalled.

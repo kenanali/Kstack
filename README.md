@@ -234,49 +234,55 @@ Where gstack encodes engineering and product thinking, KStack encodes CX transfo
 
 ## Changelog
 
-### v2.0 — Journey Map Visual HTML Output (2026-03-25)
+### v1.9.2 — Journey Map Skill-Creator Improvements (2026-03-25)
+
+`/journey-map` — Description sharpened with specific trigger phrases, mandatory gate language rewritten as reasoning-based pauses, no-persona intake made more direct. Added evals test suite.
+
+Full details: [CHANGELOG.md](CHANGELOG.md)
+
+### v1.9.1 — Journey Map Visual HTML Output (2026-03-25)
 
 `/journey-map` — Automatically generates a JSON data file and a self-contained HTML visual journey map at the end of every session. Horizontal grid layout with stages as columns, six rows per stage, and emoji-based emotion indicators. Opens directly in any browser.
 
 Full details: [CHANGELOG.md](CHANGELOG.md)
 
-### v1.9 — Porter's Five Forces in Biz Context (2026-03-25)
+### v1.9.0 — Porter's Five Forces in Biz Context (2026-03-25)
 
 `/biz-context` — Porter's Five Forces assessment added to Domain 4 (Market Position). Rates each force by intensity, trend, and CX implication. Identifies the dominant force driving CX urgency and connects it to the strategic "So What."
 
 Full details: [CHANGELOG.md](CHANGELOG.md)
 
-### v1.8 — Brand Strategy Track (2026-03-24)
+### v1.8.0 — Brand Strategy Track (2026-03-24)
 
 Two new skills: `/brand-building-blocks`, `/brand-territories`. Synthesizes research across three forces (Audience, Company, Moment) into named building blocks, then explores 3 distinct territory directions each anchored by a different emotional benefit. Designed to consume `/persona-build`, `/biz-context`, and `/trend-scan` outputs directly.
 
 Full details: [CHANGELOG.md](CHANGELOG.md)
 
-### v1.7 — Persona Design Principles (2026-03-24)
+### v1.7.0 — Persona Design Principles (2026-03-24)
 
 `/persona-build` — Purpose-calibrated scope (use case now shapes output priorities), explicit exclusion guidance (no personality spectrums, unrelated hobbies, or fabricated content), "A Day With [Name]" contextual narrative section, and beyond-the-product unmet needs requirement. Improvements drawn from research on common persona design failures.
 
 Full details: [CHANGELOG.md](CHANGELOG.md)
 
-### v1.6 — Live Data Integration (2026-03-23)
+### v1.6.0 — Live Data Integration (2026-03-23)
 
 `/biz-context`, `/trend-scan`, `/biz-case` — Added live web search and public data retrieval to the three skills where public information meaningfully supplements user-provided context. `/biz-context` now searches for annual reports, review site sentiment, competitor news, and WebFetches the company homepage when data is missing. `/trend-scan` gathers live signal data across PESTLE dimensions before the scan, enabling real Multi-Source Confirmed validation. `/biz-case` searches for industry benchmarks and competitor capability announcements. All web-sourced findings labeled `[SOURCE: Web search — verify before presenting]`. Search is conditional — only runs when user hasn't provided the relevant data.
 
 Full details: [CHANGELOG.md](CHANGELOG.md)
 
-### v1.5 — Interview Synthesis (2026-03-23)
+### v1.5.0 — Interview Synthesis (2026-03-23)
 
 Advanced multi-interview analysis methodology across `/persona-build`, `/synthesize`, and `/scan-blockers`. Individual transcript analysis before cross-interview synthesis; dominant vs. outlier theme distinction; emergent subgroup detection; Learning Agenda framing; Between-Group Analysis for mixed-stakeholder data.
 
 Full details: [CHANGELOG.md](CHANGELOG.md)
 
-### v1.4 — Evidence Scaffolding (2026-03-23)
+### v1.4.0 — Evidence Scaffolding (2026-03-23)
 
 **All skills** — Explicit "What to Upload" table in every skill's Step 0, naming exact file types and why each helps. **`/scan-blockers`** — Four diagnostic probe questions (vision cascade, decision rights, execution culture, goal alignment); two named landmines; Goal Misalignment Compound pattern; expanded blocker taxonomy. **`/service-map`** — Decision Points in backstage layer; Clock Stops field; five named failure point types; Competing Metrics column in handoff register; incentive architecture check. **`/journey-map`** and **`/service-map`** — Mandatory persona and stage confirmation gates before any mapping begins.
 
 Full details: [CHANGELOG.md](CHANGELOG.md)
 
-### v1.3 — Journey Architecture (2026-03-23)
+### v1.3.0 — Journey Architecture (2026-03-23)
 
 `/journey-map` — Stage header blocks (timeframe, business goal, user need per stage, goal-experience tension); named insight cards per stage with sourced evidence; per-stage HMW questions embedded in each stage; linear vs. cyclical journey type; cycle-over-cycle post-resolution modeling.
 
@@ -284,7 +290,7 @@ Full details: [CHANGELOG.md](CHANGELOG.md)
 
 ---
 
-### v1.2 — Signal Grounding (2026-03-23)
+### v1.2.0 — Signal Grounding (2026-03-23)
 
 Skills grounded in real-world data signals across web, news, community, and competitive sources.
 
@@ -298,13 +304,13 @@ Full details: [CHANGELOG.md](CHANGELOG.md)
 
 ---
 
-### v1.1 — Portfolio Refinement (2026-03-23)
+### v1.1.0 — Portfolio Refinement (2026-03-23)
 
 `/workshop-prep` — **Removed.** Focus narrowed to strategic intelligence, customer understanding, synthesis, and activation. KStack is now a 9-skill portfolio.
 
 ---
 
-### v1.0 — Initial Release (2026-03-23)
+### v1.0.0 — Initial Release (2026-03-23)
 
 First full skill-creator evaluation cycle. 20 test cases run across all 10 skills, graded, and improved.
 
