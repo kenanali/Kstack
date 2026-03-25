@@ -1,0 +1,82 @@
+[
+  {
+    "query": "we keep trying to improve the customer experience at this bank and nothing ever lands — pilots succeed but nothing gets scaled, recommendations get made and nothing changes. I need to do a systematic scan of what's actually blocking us. I've got stakeholder interview notes from 12 people.",
+    "should_trigger": true
+  },
+  {
+    "query": "my client says 'we've tried CX transformation before and it didn't work' — i need to map all the organisational, cultural, process and technology blockers before we design the new program so we don't repeat the same mistakes",
+    "should_trigger": true
+  },
+  {
+    "query": "I'm doing discovery for a complaints experience redesign at an insurance company. Before I start designing solutions I want to understand all the internal and external forces that are preventing a better complaints experience — political, structural, tech, the lot.",
+    "should_trigger": true
+  },
+  {
+    "query": "i've got notes from a bunch of stakeholder interviews where people described why CX improvement is hard here. can you help me turn these into a structured blocker map with severity ratings so i can show the leadership team what's actually in the way?",
+    "should_trigger": true
+  },
+  {
+    "query": "we're writing a CX strategy for a telco and need a section on 'what's blocking us' — I want to go beyond the obvious stuff (legacy tech, siloed data) and surface the cultural and leadership blockers that people don't usually put on paper",
+    "should_trigger": true
+  },
+  {
+    "query": "starting a new CX program at a hospital and the exec team thinks it'll be easy — i need a reality check on what blockers exist across the org before we set expectations. they've given me their org chart, some process docs, and a staff satisfaction survey",
+    "should_trigger": true
+  },
+  {
+    "query": "our client's NPS has been declining for 3 years despite multiple initiatives. something structural is blocking improvement and I want to do a proper blocker analysis across all 8 categories before our next steering committee",
+    "should_trigger": true
+  },
+  {
+    "query": "I need to identify the 3 highest-leverage blockers in this organisation — the ones that if addressed would unlock the most CX improvement. I have the biz-context output and some interview notes. Can you map the full blocker landscape and then tell me where to start?",
+    "should_trigger": true
+  },
+  {
+    "query": "we need to present to the board on 'why CX transformation is hard here' and we want it to be specific and evidence-based — not just 'change is hard'. Help me build a blocker map from our discovery materials",
+    "should_trigger": true
+  },
+  {
+    "query": "I want to understand what's causing poor customer satisfaction scores at this company — is it a product problem or a service problem?",
+    "should_trigger": false
+  },
+  {
+    "query": "can you help me run a stakeholder workshop to get alignment on CX priorities? I need an agenda and facilitation guide",
+    "should_trigger": false
+  },
+  {
+    "query": "what risks should i include in the risk register for our CX business case?",
+    "should_trigger": false
+  },
+  {
+    "query": "I need help getting leadership buy-in for our CX program — how should I frame the investment case?",
+    "should_trigger": false
+  },
+  {
+    "query": "can you help me map the customer journey for the onboarding experience at a bank?",
+    "should_trigger": false
+  },
+  {
+    "query": "I want to do a root cause analysis of why our contact centre volumes are so high — what's driving the unnecessary contacts?",
+    "should_trigger": false
+  },
+  {
+    "query": "help me understand what's happening with the regulatory environment in financial services and how it affects what we can do with customer data",
+    "should_trigger": false
+  },
+  {
+    "query": "i need to build a change management plan for rolling out a new CRM system to our service team",
+    "should_trigger": false
+  },
+  {
+    "query": "we have a culture problem in our CX team — people are disengaged and turnover is high. how do we fix it?",
+    "should_trigger": false
+  },
+  {
+    "query": "my client has fragmented customer data across 5 systems and no single customer view — what technology should they invest in?",
+    "should_trigger": false
+  },
+  {
+    "query": "can you help me prioritise a list of 15 CX initiatives based on impact and feasibility?",
+    "should_trigger": false
+  }
+]

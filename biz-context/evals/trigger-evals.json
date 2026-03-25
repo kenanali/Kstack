@@ -1,0 +1,82 @@
+[
+  {
+    "query": "before we start the CX design work i need to do a proper situation analysis of this company — I've got their annual report, last year's NPS data, and a competitor snapshot. Can you help me work through what the business context is before we map any journeys?",
+    "should_trigger": true
+  },
+  {
+    "query": "I'm kicking off a CX transformation engagement at a utilities company next week. They've sent me a stack of docs — board paper, operational dashboard, VOC summary. I need to understand the business health before I can start designing interventions.",
+    "should_trigger": true
+  },
+  {
+    "query": "we're writing a CX strategy for a regional bank and i want to understand how the business is actually performing before we make recommendations — revenue trajectory, customer metrics, the works. they've given us some data but it's a bit scattered",
+    "should_trigger": true
+  },
+  {
+    "query": "I need to do a five-domain diagnostic for a supermarket chain — look at their revenue, NPS, operational efficiency, market position, and whether the org is capable of delivering a CX transformation. I've got their annual report and a staff survey pasted below.",
+    "should_trigger": true
+  },
+  {
+    "query": "our client keeps saying 'we're doing fine commercially so CX isn't urgent' — i want to stress-test that claim by doing a proper business health check against their actual data before the steering committee meeting",
+    "should_trigger": true
+  },
+  {
+    "query": "i need to frame up the 'why does CX matter for this business specifically' argument. can you help me read through their performance data and identify the tensions — the places where two true things are in conflict?",
+    "should_trigger": true
+  },
+  {
+    "query": "working on a pitch for a hospital network's patient experience transformation. need to do a situation analysis from the materials they've shared — financial performance, patient satisfaction data, staff engagement survey. what's the story the data tells?",
+    "should_trigger": true
+  },
+  {
+    "query": "I've uploaded three documents: a strategy deck, a voice of customer report, and a market research summary. Can you analyse the business context from these and tell me what the key tensions are before we run the discovery workshop?",
+    "should_trigger": true
+  },
+  {
+    "query": "my client's leadership team has very different views on whether the business is in good shape. i need an evidence-based diagnostic that can cut through the politics and say: here's what the data actually shows, here's where we're at risk, here's the so what for the CX agenda",
+    "should_trigger": true
+  },
+  {
+    "query": "can you help me understand what's causing our client's churn rate to be so high? they've lost 15% of customers in the last year",
+    "should_trigger": false
+  },
+  {
+    "query": "I need to create a financial model to project the ROI of a CX investment over 3 years — what assumptions should I use?",
+    "should_trigger": false
+  },
+  {
+    "query": "what macro trends should I know about before presenting to the board of a retail bank?",
+    "should_trigger": false
+  },
+  {
+    "query": "can you help me identify the internal and organisational blockers preventing our CX program from getting traction?",
+    "should_trigger": false
+  },
+  {
+    "query": "I want to benchmark our client's NPS against their industry peers — where can I find the data and what's a good score for a telco?",
+    "should_trigger": false
+  },
+  {
+    "query": "we're writing a business case for a self-service portal and need to show the CFO it will pay back within 18 months",
+    "should_trigger": false
+  },
+  {
+    "query": "can you summarise this annual report for me? I just need the key numbers",
+    "should_trigger": false
+  },
+  {
+    "query": "I need to understand the competitive landscape in health insurance — who are the main players and what are they competing on?",
+    "should_trigger": false
+  },
+  {
+    "query": "my client wants me to help them build their CX strategy — where should I start?",
+    "should_trigger": false
+  },
+  {
+    "query": "can you help me build a prioritisation framework for which CX initiatives to invest in first",
+    "should_trigger": false
+  },
+  {
+    "query": "I need to prepare for a stakeholder interview — what questions should I ask the CEO before we start the CX program?",
+    "should_trigger": false
+  }
+]

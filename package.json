@@ -1,0 +1,11 @@
+{
+  "name": "kstack",
+  "version": "1.0.0",
+  "description": "CX transformation skill system for Claude Code",
+  "scripts": {
+    "install-skills": "bash setup"
+  },
+  "engines": {
+    "bun": ">=1.0.0"
+  }
+}

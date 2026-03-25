@@ -1,0 +1,82 @@
+[
+  {
+    "query": "I'm kicking off a CX transformation project for a mid-sized Australian bank and need to build a picture of the external forces shaping customer expectations before I start the discovery phase. Can you help me scan the macro environment?",
+    "should_trigger": true
+  },
+  {
+    "query": "we've got a board workshop in 3 weeks for a health insurance client and i need to build out the strategic context slide — what are the big forces in the health sector right now that are affecting how customers experience their insurer?",
+    "should_trigger": true
+  },
+  {
+    "query": "I'm writing the brief for a CX strategy project in retail banking and want to understand what technology shifts in the next 3-5 years will most affect how customers interact with their bank. Things like AI, open banking, that kind of stuff.",
+    "should_trigger": true
+  },
+  {
+    "query": "My client is a telco and they keep saying their CX problems are unique to them, but I think a lot of what they're experiencing is driven by broader forces — customer trust erosion, digital channel expectations, stuff like that. Can you do a trend scan to help me make that argument?",
+    "should_trigger": true
+  },
+  {
+    "query": "building a client deck for an energy company — section 2 needs to cover the external environment affecting their customer experience. want a PESTLE-style analysis focused on what matters for CX specifically, not generic strategy stuff",
+    "should_trigger": true
+  },
+  {
+    "query": "I need to brief a design team on the macro context before they start journey mapping for a superannuation fund. What are the key external forces — regulatory, social, tech — that should be shaping how we think about the member experience?",
+    "should_trigger": true
+  },
+  {
+    "query": "we uploaded a gartner report and a deloitte customer trends report from last year — can you read them and pull out the most relevant signals for our CX work with a logistics company? we want a trend radar, not just a summary",
+    "should_trigger": true
+  },
+  {
+    "query": "i want to understand which technology waves are actually going to land in the 2-4 year window for retail — specifically the ones that will change customer behaviour at the point of purchase or post-purchase service. AI, IoT, whatever is real versus hype",
+    "should_trigger": true
+  },
+  {
+    "query": "we're in a competitive pitch for a CX program at an aged care provider and I want our proposal to show we understand the macro context — social, regulatory, demographic shifts — that make this work urgent now not in 5 years",
+    "should_trigger": true
+  },
+  {
+    "query": "can you help me understand what's happening with AI and customer service automation and whether banks should be investing in it",
+    "should_trigger": false
+  },
+  {
+    "query": "I need to analyse this company's NPS trend data and understand why their scores have been declining over the last 18 months",
+    "should_trigger": false
+  },
+  {
+    "query": "who are the main competitors in the Australian health insurance market and what are they doing differently from our client",
+    "should_trigger": false
+  },
+  {
+    "query": "can you help me run a SWOT analysis for my client? they want to understand their strengths, weaknesses, opportunities and threats before we scope the project",
+    "should_trigger": false
+  },
+  {
+    "query": "I want to map the customer journey for someone applying for a home loan at a bank — from awareness through to settlement",
+    "should_trigger": false
+  },
+  {
+    "query": "what are the biggest regulatory changes affecting financial services in australia right now — i need to make sure our compliance team is across them",
+    "should_trigger": false
+  },
+  {
+    "query": "I need to do a competitor benchmarking exercise — can you help me compare our client's digital experience against the top 3 players in their market?",
+    "should_trigger": false
+  },
+  {
+    "query": "i've got a bunch of customer interview transcripts from a discovery phase — can you help me identify themes and patterns in what customers are telling us?",
+    "should_trigger": false
+  },
+  {
+    "query": "what are the current trends in CX? i need some thought leadership content for a linkedin post",
+    "should_trigger": false
+  },
+  {
+    "query": "can you read this analyst report and give me a summary of the key points",
+    "should_trigger": false
+  },
+  {
+    "query": "my client wants to know what's happening with the economy and whether they should delay their CX investment — help me build the business case for why now is still the right time",
+    "should_trigger": false
+  }
+]

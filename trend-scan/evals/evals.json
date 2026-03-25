@@ -1,0 +1,62 @@
+{
+  "skill_name": "trend-scan",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I'm starting a CX transformation project for a mid-sized Australian retail bank. We're about to redesign the home loan application journey. I need a trend scan covering the external forces that will shape what customers expect from a bank over the next 3 years. Focus on what's most relevant to the home loan journey specifically — the application process, post-settlement experience, rate management, that kind of thing. Timeframe: near to mid-term (1-4 years).",
+      "expected_output": "A trend radar with 5-8 elevated forces relevant to retail banking CX (especially home loan journey), each with specific CX implications — not generic statements. Should include PESTLE scan, scored signals, convergence zones, and a synthesizing paragraph linking trends to the home loan journey specifically.",
+      "files": [],
+      "expectations": [
+        "The output contains a scored signal table covering at least 4 PESTLE dimensions",
+        "Each elevated trend has a 'What this means for CX' section that names a specific touchpoint or journey stage — not generic statements like 'customers will expect more'",
+        "At least one convergence zone is identified where two or more forces compound each other",
+        "The output includes a 'Signals on Watch' section for trends that didn't make the radar",
+        "The synthesizing paragraph specifically references the home loan journey context, not just generic banking CX",
+        "AI/automation is covered as a signal with specific implications (not just 'AI will change banking')",
+        "The skill asks at least one clarifying question before finalizing implications (the mandatory check-in step)"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I'm preparing a board paper for a large Australian telco. I need to make the case for why investing in CX is strategically urgent — and a big part of that argument is the external environment. Can you scan the macro trends affecting telco customer experience over the next 2-5 years? I'm particularly interested in technology waves (5G, AI, IoT) and social/demographic shifts. The board is skeptical of 'soft' CX arguments so I need specific, evidenced forces with clear business consequences.",
+      "expected_output": "A rigorous trend radar for telco CX with emphasis on technology waves and social shifts. Each implication should connect directly to a business consequence, not just a customer sentiment outcome. Tone should reflect the board-level audience.",
+      "files": [],
+      "expectations": [
+        "Technology waves section covers at least two specific technologies relevant to telco (5G, AI, IoT, edge computing, etc.) with distinct CX implications for each",
+        "Social/demographic dimension is covered with specific data or trend direction (not generic 'customers are changing')",
+        "At least one trend explicitly links to a business performance consequence (churn, revenue, cost) not just customer sentiment",
+        "The output distinguishes between near-term (1-3yr) and mid-term (3-5yr) forces",
+        "Convergence zones are identified where multiple forces amplify each other",
+        "Tone is direct and evidence-focused — no generic consulting language like 'customers are at the heart of everything'"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Quick trend scan for a superannuation fund that's redesigning their member experience. They're worried about two things: (1) competition from non-traditional players (tech companies, neobanks getting super licences) and (2) changing member expectations as millennials become the dominant cohort. 5-year horizon. What are the 5-6 forces that matter most?",
+      "expected_output": "A focused trend radar of 5-6 forces, emphasising competitive disruption and demographic shifts. Should name specific disruptors and specific millennial behaviour patterns — not generalizations.",
+      "files": [],
+      "expectations": [
+        "The competitive threat from non-traditional players is covered with specific named examples or categories (not just 'new entrants')",
+        "Millennial/Gen Z behaviour patterns are characterised with specific traits relevant to superannuation (not generic millennial stereotypes)",
+        "The scan includes regulatory dimension given superannuation's highly regulated context",
+        "5-6 forces are elevated to the trend radar as requested (not more, not fewer)",
+        "Each force has a specific CX implication tied to the superannuation member journey — not generic financial services implications",
+        "The output is appropriately scoped to 5 years as requested"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "I'm doing a trend scan for a large Australian health insurer. They have two big CX concerns right now: (1) trust erosion following the Royal Commission and industry scandals, and (2) digital health platforms (Telehealth, health apps, wearables) changing what members expect from their insurer. Can you scan across all PESTLE dimensions and identify the 6-8 forces that matter most for their CX agenda? Mid-term focus (3-5 years).",
+      "expected_output": "Comprehensive PESTLE scan for health insurance CX. Trust/regulatory dimension should be prominent given Royal Commission context. Digital health platform shifts should be specifically addressed with clear mechanism of impact on insurer CX.",
+      "files": [],
+      "expectations": [
+        "Political/regulatory dimension specifically addresses the Royal Commission context and ongoing regulatory scrutiny",
+        "Technology section addresses digital health platforms (telehealth, wearables, health apps) with specific implications for what members will expect from their insurer",
+        "Trust as a social force is covered — not just mentioned but given a specific CX mechanism",
+        "6-8 forces are elevated as requested",
+        "Convergence zone includes the intersection of regulatory pressure and digital health expectations",
+        "The skill demonstrates that it has understood the 3-5 year timeframe in how it categorises near vs mid-term forces"
+      ]
+    }
+  ]
+}

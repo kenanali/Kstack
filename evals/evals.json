@@ -1,0 +1,293 @@
+{
+  "skill_system": "kstack",
+  "description": "Evaluation set for all 10 KStack CX transformation skills",
+  "evals": [
+    {
+      "id": 0,
+      "skill": "trend-scan",
+      "prompt": "I need a trend scan for a mid-sized Australian retail bank (about $4B in assets). We're about to redesign our home loan customer journey and want to understand what macro forces will shape customer expectations over the next 3 years. We don't have any documents yet — can we start from there?",
+      "expected_output": "Skill asks focused intake questions, then produces: PESTLE + tech wave signals with scores, a trend radar with 5-8 elevated forces with specific CX implications (not generic), 2-3 convergence zones, signals on watch, and a synthesizing paragraph tied to the home loan journey specifically.",
+      "assertions": [
+        "asks at least 2 intake questions before proceeding",
+        "produces a scoring table with Relevance, Timeframe, and CX Disruption Potential columns",
+        "elevated trends include specific CX implications that name mechanism of impact, not generic statements",
+        "identifies convergence zones where multiple trends intersect",
+        "does mandatory check-in after scanning table before writing implications",
+        "final paragraph ties back to home loan journey specifically"
+      ],
+      "files": []
+    },
+    {
+      "id": 1,
+      "skill": "trend-scan",
+      "prompt": "Do a trend scan for a B2B software company selling HR tools to mid-market US companies. I'm trying to figure out where to invest in CX improvements over the next 5 years. I'm thinking mainly about AI, but I want to know if I'm missing anything.",
+      "expected_output": "Skill covers all 7 PESTLE+Tech dimensions, surfaces HR-tech-specific forces, doesn't just validate the AI assumption but also surfaces economic, regulatory (employment law), and social forces. Produces specific implications for B2B CX, not B2C generics.",
+      "assertions": [
+        "covers all 7 dimensions in the scan",
+        "doesn't just focus on AI despite user's stated bias — surfaces at least 2 non-tech forces as high relevance",
+        "implications are specific to B2B/HR context, not generic",
+        "performs check-in before writing full implications"
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "skill": "biz-context",
+      "prompt": "I'm the CX Director at a telco. Revenue has been flat for 3 years, NPS has dropped from +22 to +8 in 18 months, and we're losing customers at the premium end to a new MVNO competitor. I'm preparing a business case for a $3M CX transformation program and need to understand our situation clearly. I don't have documents to share — can you work from what I describe?",
+      "expected_output": "Skill asks for more context across the 5 domains before proceeding. Produces a five-domain diagnostic with health ratings, surfaces at least 3 specific tensions (not generic ones), connects to CX opportunity with urgency, and flags data gaps. Does NOT make up metrics — clearly marks what's evidenced vs. inferred.",
+      "assertions": [
+        "asks structured questions to fill data gaps before producing the diagnostic",
+        "produces health ratings for all 5 domains",
+        "tensions are specific and evidence-based, not generic like 'cost vs quality'",
+        "flags data gaps with explanation of what each prevents from concluding",
+        "distinguishes evidenced claims from inferences"
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "skill": "biz-context",
+      "prompt": "Run a biz context analysis. Here's the summary: Revenue up 12% YoY but NPS down 15 points. Churn rate 8.2% (up from 5.1% two years ago). Cost-to-serve increased 22% with no operational improvement metrics. Market share flat despite revenue growth (we're growing due to price increases, not volume). Employee NPS is -12.",
+      "expected_output": "Skill reads the data provided, asks targeted follow-up questions for gaps (like what's driving churn, what competitors are doing), produces a diagnostic that names the central tension as revenue growth masking deteriorating customer and operational health, and flags what's missing.",
+      "assertions": [
+        "identifies the tension between revenue growth and deteriorating CX/retention",
+        "asks about data gaps before finalizing (at least the domain gap check)",
+        "health ratings reflect data provided, not defaults to 'Adequate'",
+        "strategic so-what connects to what CX needs to deliver"
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "skill": "scan-blockers",
+      "prompt": "Scan for blockers at a large state government department (~3,000 staff) trying to move 60% of citizen transactions online. They've been trying for 2 years with minimal progress. I have some interview notes: 'Leaders say digital first but still approve paper-heavy processes.' 'IT says they can't integrate legacy systems — 3 different CRMs.' 'Staff are scared automation will eliminate their jobs.' 'Minister wants the number by election time.' 'Procurement takes 18 months for any new software.'",
+      "expected_output": "Skill reads the interview notes and uses taxonomy to identify blockers across all relevant categories. Produces a blocker map, identifies 3 high-leverage blockers, names 2-3 landmines. The interview notes should generate at least 5 specific blockers with category attribution.",
+      "assertions": [
+        "reads provided interview notes before scanning",
+        "identifies at least 5 distinct blockers from the interview notes",
+        "each blocker has a specific description tied to the evidence, not generic labels",
+        "performs mandatory check-in asking if anything is missing",
+        "landmines section names deceptive blockers with early warning signals",
+        "identifies the cultural/leadership blocker (say-do gap) and the structural procurement blocker"
+      ],
+      "files": []
+    },
+    {
+      "id": 5,
+      "skill": "scan-blockers",
+      "prompt": "I need to scan blockers for our CX transformation. The main thing we're trying to achieve is reducing customer complaints by 40% and bringing average resolution time from 15 days to 3 days. What do I need to give you?",
+      "expected_output": "Skill asks structured intake questions to gather context before scanning. Does not produce a generic blocker list without context. Asks specifically about industry, what's been tried, and requests any documentation.",
+      "assertions": [
+        "asks for context before scanning — does not produce a premature blocker list",
+        "asks about industry and org type",
+        "asks for materials (interview notes, process docs, etc.)",
+        "asks what is already suspected as blockers"
+      ],
+      "files": []
+    },
+    {
+      "id": 6,
+      "skill": "persona-build",
+      "prompt": "Build a persona for stressed first-home buyers going through the mortgage application process at a bank. I have some research: Survey shows 73% say the process felt 'overwhelming'. Common complaints: 'Too much paperwork', 'Never knew where I was in the process', 'Felt judged when I asked questions'. Behavioral data: 67% start online then switch to branch. Average 4.2 calls to the bank during the process. Drop-off highest at income verification stage (38% abandonment). Common trigger: just got pre-approval from one bank, shopping around.",
+      "expected_output": "Skill asks a few clarifying questions, then produces a full persona card with: JTBD (functional, emotional, social), trigger events, decision factors, anxieties (evidence-based), channel preferences, unmet needs (in the 'needs X but currently Y' format), and a key quote. Every claim is tagged EVIDENCED, INFERRED, or ASSUMED.",
+      "assertions": [
+        "tags claims as EVIDENCED, INFERRED, or ASSUMED",
+        "emotional JTBD captures the emotional truth (feeling judged, in control, not stupid) not surface-level",
+        "anxieties are specific and tied to evidence (abandonment at income verification)",
+        "channel preference reflects behavioral data (starts online, moves to branch)",
+        "performs mandatory evidence review check-in before finalizing",
+        "key quote captures emotional truth, not just a process frustration"
+      ],
+      "files": []
+    },
+    {
+      "id": 7,
+      "skill": "persona-build",
+      "prompt": "I want to build a persona for elderly customers using our internet banking. I don't have any research — can you just create one based on what you know about elderly digital banking users?",
+      "expected_output": "Skill clearly flags that it refuses to invent data and asks the user for research. Explains what kinds of research would help. Does NOT just produce a made-up persona. May offer to proceed with everything tagged as ASSUMED if user confirms, but makes the limitation explicit.",
+      "assertions": [
+        "does not produce a persona without flagging the data limitation",
+        "explicitly states that claims without research will be marked ASSUMED",
+        "asks what research is available before proceeding",
+        "if it proceeds, all claims are tagged ASSUMED and explained as such"
+      ],
+      "files": []
+    },
+    {
+      "id": 8,
+      "skill": "journey-map",
+      "prompt": "Map the journey for a first-home buyer going through a mortgage application. Here's the persona summary: Sarah, 31, anxious about being judged, needs to feel in control and informed. Trigger: just got pre-approval and is comparing lenders. Anxieties: not knowing where she is in the process, fear of being declined. Channel: starts online, moves to branch for complex steps. Unmet need: real-time visibility into application status. The journey starts when she decides to apply and ends when she gets formal approval (or declines).",
+      "expected_output": "Skill confirms stages with the user before mapping. Produces a full journey map table (one per stage) with: touchpoints, channel, customer action, customer thought (first person, specific), feeling, emotion score (not defaulted to 3), pain points, moments of truth, and opportunities. Produces emotional arc narrative, top 5 moments of truth, top 5 opportunities, design provocations.",
+      "assertions": [
+        "proposes stages from customer perspective (not process steps) and does check-in before mapping",
+        "customer thoughts are in first person and specific, not sanitized descriptions",
+        "emotion scores are not all 3 — reflects actual experience (likely 1-2 for frustrating stages)",
+        "identifies at least 5 moments of truth",
+        "opportunities are framed as specific improvement → customer outcome → mechanism",
+        "design provocations are uncomfortable, specific questions not generic",
+        "references touchpoint taxonomy from file"
+      ],
+      "files": []
+    },
+    {
+      "id": 9,
+      "skill": "journey-map",
+      "prompt": "I need a journey map for our customer complaint process but I don't have a persona. Can we skip the persona step?",
+      "expected_output": "Skill notes that it's designed to work with a persona and asks for at least a basic customer description to work from. Doesn't refuse outright but gets enough about the customer type to map with emotional truth. Doesn't produce a generic process diagram.",
+      "assertions": [
+        "asks for at minimum a customer description or segment before mapping",
+        "explains why persona context matters for emotional truth",
+        "does not produce a generic process-only map without customer perspective"
+      ],
+      "files": []
+    },
+    {
+      "id": 10,
+      "skill": "service-map",
+      "prompt": "Create a service blueprint for the mortgage application journey. The journey stages are: 1) Discovering and applying online, 2) Document submission, 3) Credit and eligibility assessment, 4) Decision communication, 5) Settlement. Systems involved: online banking portal, document upload system, credit decisioning engine (legacy), CRM (Salesforce), notifications system (email + SMS), and core banking. Teams: Digital/Web, Credit Operations, Home Loan Specialists, Settlement Team.",
+      "expected_output": "Skill asks for any known failure points and process docs, then maps all 5 layers for each stage. Produces failure point register, handoff risk register, complexity ratings, and top 3 systemic design opportunities. Failure points should be specific, not generic.",
+      "assertions": [
+        "requests any known failure points or process docs before mapping",
+        "maps all 5 layers for each stage",
+        "failure point register has specific descriptions with severity and root cause hypothesis",
+        "handoff risks include specific failure scenarios",
+        "top 3 systemic opportunities are framed with the specific format: redesigning X would Y by enabling Z"
+      ],
+      "files": []
+    },
+    {
+      "id": 11,
+      "skill": "service-map",
+      "prompt": "Map our insurance claims service. I'll give you the journey stages: 1) Lodging a claim, 2) Assessment, 3) Resolution. I don't know all the systems involved — can we proceed?",
+      "expected_output": "Skill explicitly asks for the system inventory before proceeding (mandatory per Step 0.5). Doesn't guess at system names. Asks for team names at minimum. Proceeds only after getting enough context to map the systems layer.",
+      "assertions": [
+        "asks for system inventory before proceeding (mandatory step 0.5)",
+        "asks for team/org unit names involved",
+        "does not produce a systems layer with made-up system names"
+      ],
+      "files": []
+    },
+    {
+      "id": 12,
+      "skill": "synthesize",
+      "prompt": "Here are my inputs for synthesis:\n\nFROM TREND SCAN: Three key trends: (1) AI-powered self-service raising expectations for instant resolution; (2) Trust deficit in financial services post-scandal; (3) Regulatory pressure increasing documentation requirements.\n\nFROM BIZ CONTEXT: NPS dropped 15 points. Revenue growing but churn at 8.2%. Cost-to-serve up 22%. Key tension: growth strategy relies on acquiring customers into a deteriorating experience.\n\nFROM JOURNEY MAP: Mortgage application journey — 5 stages. Highest pain: document submission (emotion score avg 1.8) and decision communication (score 1.5). Moments of truth: 7 identified. Key unmet need: proactive status communication.\n\nI need this synthesis to brief our design team before an ideation session next week.",
+      "expected_output": "Skill clusters findings into 5-8 named themes (memorable names, not generic), identifies 3-5 specific tensions, generates HMW questions with strategic leverage ratings, identifies 3 burning platform insights with consequence + time dimension, writes a synthesis headline paragraph. Does NOT just summarize inputs — finds patterns across sources.",
+      "assertions": [
+        "theme names are memorable and capture what's true (not 'Theme 1' or 'Digital Experience')",
+        "themes cite evidence from multiple input sources, not just one",
+        "does mandatory theme check-in before proceeding to tensions",
+        "tensions are specific and name both sides with evidence, not generic strategic platitudes",
+        "HMW questions are specific enough to generate concrete ideas, not generic",
+        "burning platform follows Finding + Consequence + Time dimension format",
+        "synthesis headline opens with insight, not 'our research shows'"
+      ],
+      "files": []
+    },
+    {
+      "id": 13,
+      "skill": "synthesize",
+      "prompt": "I need to synthesize some research. What do I need to give you?",
+      "expected_output": "Skill asks structured intake questions: which skill outputs are being brought in, requests materials be pasted/uploaded, asks what the synthesis will be used for, and asks for the specific CX question to answer. Does not produce anything before receiving inputs.",
+      "assertions": [
+        "asks what research outputs are available",
+        "asks for materials before producing any synthesis",
+        "asks what the synthesis will be used for",
+        "does not produce premature analysis"
+      ],
+      "files": []
+    },
+    {
+      "id": 14,
+      "skill": "workshop-prep",
+      "prompt": "Design a 3-hour ideation workshop for 12 people — a mix of 4 senior executives (CEO, CFO, COO, CX Director) and 8 service designers. The objective is to generate and prioritize ideas for reducing the mortgage application journey friction we've identified. The executives have never done journey mapping or HMW exercises. We have synthesis outputs showing the top tensions. Format: in-person. One constraint: the CFO will dominate any financial discussion.",
+      "expected_output": "Skill confirms objective framing, loads activity library, designs arc appropriate for mixed-seniority audience with varying CX method familiarity. Runsheet accounts for exec time constraints (likely 3 hours = tight for full ideation+prioritization). Facilitation notes call out the CFO risk specifically. HMW questions are grounded in the mortgage journey tensions.",
+      "assertions": [
+        "confirms objective framing before designing (step 0.5)",
+        "loads activity library file",
+        "arc follows diverge-before-converge flow",
+        "facilitation notes include energy management and the CFO domination risk specifically",
+        "HMW questions reference specific insights (not generic)",
+        "pre-read brief is ≤400 words and appropriate for senior executives",
+        "materials checklist is complete"
+      ],
+      "files": []
+    },
+    {
+      "id": 15,
+      "skill": "workshop-prep",
+      "prompt": "What information do you need to design a workshop?",
+      "expected_output": "Skill asks all intake questions from Step 0: objective, audience, time available, research inputs, format, constraints. Does not produce a generic agenda without context.",
+      "assertions": [
+        "asks about objective (specific, not 'shared understanding')",
+        "asks about audience composition and familiarity with CX methods",
+        "asks about time available",
+        "asks about research inputs / problem frame",
+        "asks about format (in-person/remote/hybrid)",
+        "asks about constraints"
+      ],
+      "files": []
+    },
+    {
+      "id": 16,
+      "skill": "biz-case",
+      "prompt": "Build a business case for a contact centre transformation program. We want to reduce average handle time by 30%, reduce repeat contacts by 25%, and improve agent satisfaction. Investment is approximately $2.5M over 18 months. Audience is the CFO and Investment Committee. Current numbers: 1.2M calls/year, average handle time 8.2 minutes, repeat contact rate 34%, cost-per-call $8.40, agent attrition 42%/year. NPS for contact centre interactions: -18.",
+      "expected_output": "Skill reads numbers provided, uses value driver library, asks what additional numbers exist, builds ROI with provided data marked [DATA] and estimates marked [ASSUMPTION]. Problem statement cites specific metrics. ROI logic includes payback period. Risk register has 5 specific risks not generic ones. Assumptions register is complete.",
+      "assertions": [
+        "loads value-driver-library.md",
+        "asks for any additional numbers before building ROI (mandatory step 4.5)",
+        "marks all claims as [DATA], [BENCHMARKED], or [ASSUMPTION]",
+        "ROI logic calculates specific numbers from provided data (not just directional)",
+        "risk register has 5 risks across delivery/adoption/value categories",
+        "assumptions register lists all assumptions with basis",
+        "executive summary goes at the top with recommendation first"
+      ],
+      "files": []
+    },
+    {
+      "id": 17,
+      "skill": "biz-case",
+      "prompt": "I need a business case for improving our onboarding experience. Can you help?",
+      "expected_output": "Skill asks all intake questions: initiative description, audience, investment ask, available inputs, existing numbers, timeline. Does not produce a business case without understanding the context.",
+      "assertions": [
+        "asks for initiative description",
+        "asks who the audience is",
+        "asks for investment magnitude",
+        "asks for available inputs/data",
+        "asks for existing metrics",
+        "does not produce any sections without intake"
+      ],
+      "files": []
+    },
+    {
+      "id": 18,
+      "skill": "prioritize",
+      "prompt": "Prioritize these 7 CX initiatives for us:\n1. Real-time application status tracker (mobile app feature)\n2. Agent empowerment program (training + authority to resolve)\n3. Proactive complaint prediction model (AI/ML)\n4. Complaint process redesign (end-to-end)\n5. CRM system replacement\n6. Voice of customer program (NPS + follow-up interviews)\n7. Digital onboarding for new customers\n\nStrategic priorities: (1) Grow premium segment, (2) Reduce cost-to-serve, (3) Improve NPS. Constraints: $4M total budget, 12-person team, need something to show in 6 months. Non-negotiable: CRM replacement is already funded and can't be stopped.",
+      "expected_output": "Skill clarifies any vague initiatives (AI prediction model needs specifics), scores all 7 across 4 dimensions with weighted composite, does mandatory scoring review check-in, produces portfolio 2x2 view, writes sequencing narrative naming specific initiatives, and explicitly deprioritizes with rationale. CRM is noted as non-negotiable.",
+      "assertions": [
+        "asks clarifying questions for vague initiatives (especially the ML model)",
+        "scores all 7 initiatives across all 4 dimensions",
+        "mandatory scoring review check-in before building portfolio view",
+        "composite scores calculated correctly with weights (25/35/25/15)",
+        "portfolio 2x2 is produced as text-based quadrant",
+        "sequencing narrative names specific initiatives and their dependencies",
+        "explicitly deprioritizes some initiatives with rationale and revisit conditions",
+        "CRM replacement noted as non-negotiable and handled appropriately"
+      ],
+      "files": []
+    },
+    {
+      "id": 19,
+      "skill": "prioritize",
+      "prompt": "We have too many CX ideas and need to prioritize. What do you need from me?",
+      "expected_output": "Skill asks all intake questions: initiative list, strategic priorities, constraints, success definition, non-negotiables. Does not produce scoring without context.",
+      "assertions": [
+        "asks for the initiative list",
+        "asks for strategic priorities to use as alignment lens",
+        "asks for constraints (budget, capacity, time horizon)",
+        "asks about non-negotiables",
+        "does not produce premature scoring"
+      ],
+      "files": []
+    }
+  ]
+}

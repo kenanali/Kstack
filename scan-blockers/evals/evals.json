@@ -1,0 +1,53 @@
+{
+  "skill_name": "scan-blockers",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I've just completed 14 stakeholder interviews at a large Australian bank as part of a CX transformation discovery. Here are the themes from the interviews:\n\n**Leadership themes:**\n- 'Every exec has a different definition of what customer experience means'\n- 'The CFO doesn't believe NPS drives revenue — he wants hard ROI before approving anything'\n- 'We've had 4 CX strategies in 8 years. People are tired of hearing about it.'\n\n**Org/process themes:**\n- The digital team, operations team, and customer service team all run separate customer listening programs and none share data\n- Frontline staff can't waive fees or make exceptions without manager approval — which takes 24-48 hours\n- There are 23 active 'improvement initiatives' with no shared prioritisation or governance\n\n**Technology themes:**\n- Core banking system is 15 years old with no API layer — all integrations are custom-built\n- Customer data is split across 7 systems. Nobody has a single customer view.\n- The contact centre system and the CRM don't talk to each other\n\n**People themes:**\n- Contact centre turnover is 42% per year\n- Training is product-focused, not experience-focused\n- Frontline staff are measured on call handle time, not resolution or customer satisfaction\n\nPlease scan for blockers, map them by category and severity, tell me where to start, and flag any landmines.",
+      "expected_output": "A comprehensive blocker map derived from the interview themes, organised by the 8-category taxonomy with severity and addressability ratings. 'Where to Start' should identify the 3 highest-leverage blockers with specific rationale. Landmines should name deceptive blockers not obvious from the summary.",
+      "files": [],
+      "expectations": [
+        "At least 10 blockers are identified and mapped across at least 5 different categories",
+        "Each blocker description is specific to this org — not generic (e.g., not 'siloed data' but a specific description matching the interview evidence)",
+        "The CFO ROI skepticism is identified as a Culture & Leadership blocker with High severity",
+        "The 15-year-old core banking system without API layer is rated as a Technology & Data blocker with Structural addressability",
+        "The 42% contact centre turnover is captured in People & Capability category",
+        "'Where to Start' section names 3 specific blockers and explains the leverage logic — not just 'fix culture and technology'",
+        "At least one landmine is identified that isn't obvious from the interview summary (e.g., the incentive misalignment on call handle time could quietly undermine any CX intervention)",
+        "The mandatory check-in question is asked before finalising severity ratings"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I'm scoping a complaints experience redesign for a health insurer. The exec team thinks the main problem is 'our complaints team doesn't care enough' — but I suspect the real blockers are more structural. I've got these materials:\n\n- Process map showing the complaints journey: 6 different teams handle different complaint types, with no single owner\n- Data: average complaint resolution time is 22 days (regulatory requirement is 45 days, so they're technically compliant but customers are furious)\n- The complaints system and the policy system are separate — agents have to manually check both and often give inconsistent information\n- A team meeting transcript where a frontline agent says: 'I know what would fix the customer's problem but I'm not allowed to do it — I have to escalate and they never respond in time'\n- Complaints team turnover is 55% per year\n- Regulatory note: AFCA (Australian Financial Complaints Authority) referral rates have increased 40% in the last year\n\nMap all the blockers you can see, tell me what's structurally broken (not just people issues), and identify the top 2-3 leverage points.",
+      "expected_output": "A blocker map that surfaces the structural causes behind the surface-level 'people don't care' narrative. Should identify process, technology, and structural blockers as primary. People issues should be reframed as symptoms of structural causes. AFCA referral rate should be treated as evidence of severity.",
+      "files": [],
+      "expectations": [
+        "The output explicitly challenges or reframes the 'complaints team doesn't care' narrative — attributing the problem to structural causes",
+        "Process & Operations category includes the 6-team fragmented ownership as a specific blocker (not generic 'siloed process')",
+        "Technology & Data category captures the system separation between complaints and policy systems as a specific blocker",
+        "The frontline empowerment constraint (can't fix, must escalate, no response) is captured in Org Structure or People & Capability",
+        "AFCA referral rate increase is used as severity evidence for at least one blocker",
+        "55% complaints team turnover is reframed as a symptom of the structural problems, not a root cause",
+        "'Where to Start' focuses on structural fixes (ownership, empowerment, system integration) rather than people/culture interventions",
+        "At least one landmine is identified — the 40% AFCA increase as a regulatory risk that could escalate if root causes aren't addressed"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I'm doing a blocker scan for a digital CX program at a national retailer. They want to dramatically improve their online-to-offline experience (buy online, pick up in store / returns / loyalty). Executive sponsor is the CDO. Here's the quick context:\n\n- Stores are franchised — corporate has limited direct control over in-store experience\n- Loyalty program is owned by Marketing, digital is owned by Technology, and in-store experience is owned by Operations. No cross-functional CX governance.\n- The CDP (Customer Data Platform) project was scoped 18 months ago and is still in procurement\n- Privacy regulations are tightening — new rules on how customer data can be used for personalisation come into effect in 8 months\n- The CDO has budget and mandate but the COO (who runs operations) isn't bought in\n- Store staff training is managed by franchisees, not head office\n\nIdentify all blockers, rate them, and tell me which ones will kill this program if not addressed.",
+      "expected_output": "A blocker map that surfaces the franchise structure as a major structural constraint, the cross-functional ownership fragmentation, and the regulatory timeline as a hard constraint. Landmines should address the CDO/COO alignment gap and the franchise control limitation.",
+      "files": [],
+      "expectations": [
+        "The franchise structure is identified as an Org Structure blocker with Structural addressability — correctly rated as not quickly fixable",
+        "The three-way ownership split (Marketing/Technology/Operations) across loyalty, digital, and in-store is captured as an Org Structure blocker",
+        "The stalled CDP procurement is captured as a Technology & Data blocker and its 18-month delay is used as evidence of severity",
+        "The 8-month privacy regulation deadline is captured as a Regulatory & Compliance blocker with a time-sensitive urgency note",
+        "The COO misalignment is identified as a Culture & Leadership blocker — specifically the lack of cross-functional executive alignment",
+        "The franchise staff training gap is captured in People & Capability with an explanation of why head office-led CX interventions won't land at store level",
+        "Landmines include the CDO/COO tension — framed as 'looks like a sponsorship issue, actually a program killer'",
+        "The output asks a clarifying check-in question before finalising severity ratings"
+      ]
+    }
+  ]
+}

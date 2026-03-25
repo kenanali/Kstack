@@ -1,0 +1,51 @@
+{
+  "skill_name": "biz-context",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I'm starting a CX transformation project for a retail bank. Here's the context I have:\n\n**Revenue & Growth:** Revenue grew 4% last year, mostly from rate increases not volume. New customer acquisition is flat. Home loan book is growing but margins are compressed.\n\n**Customer Metrics:** NPS is 23, down from 34 three years ago. CSAT for branch is 72%, for digital is 58%. Complaint volumes up 18% YoY. Top complaint themes: billing errors, delayed responses, digital glitches.\n\n**Operations:** Cost-to-serve has increased 12% in 2 years. First contact resolution is 61%. Average handle time in the contact centre is up. Digital self-service completion rate is 34%.\n\n**Market:** Market share is holding at 8% but premium positioning is eroding. Two neobanks have launched in the last 18 months with significantly better digital ratings.\n\n**Org:** CX team was restructured 6 months ago. There are 3 competing CX programs currently active with no shared governance. Exec sponsor for CX changed twice in 18 months.\n\nI need this analysis to inform a board paper on why we need a major CX transformation investment.",
+      "expected_output": "A five-domain diagnostic with honest health ratings supported by the provided data. Should identify 3-5 specific tensions between the data points. Strategic So What should connect directly to a board-level investment case.",
+      "files": [],
+      "expectations": [
+        "Each of the five domains is assessed with a health rating (Strong/Adequate/At Risk/Critical) supported by specific data points from the input",
+        "Customer Metrics domain is rated At Risk or Critical given the 11-point NPS decline and 18% complaint volume increase",
+        "Organizational Capability domain flags the exec sponsor instability and competing programs as specific evidence",
+        "At least 3 tensions are identified — and they must name specific conflicting data points from the input (not generic tensions)",
+        "The tension between flat acquisition and NPS decline is named (new customers entering a worsening experience)",
+        "The Strategic So What connects to a board investment case — mentions the specific risk of inaction using the data provided",
+        "Data gaps are flagged — the input doesn't include CLV, churn rate, or employee data, and the output should note these",
+        "No claim is made without traceable evidence from the input — no hallucinated metrics"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I need a business context analysis for an aged care provider before we start their patient/resident experience redesign. Here's what I know:\n\n- Revenue is government-funded (NDIS + residential aged care subsidies) with some private pay. Subsidy rates were cut 3% last year following a government review.\n- Family satisfaction surveys show scores of 64% 'satisfied or very satisfied' — below the sector benchmark of 71%.\n- Staff turnover is 38% per year in care roles. Agency staff make up 22% of the workforce on any given day.\n- Royal Commission into Aged Care Quality and Safety reported 2 years ago — significant regulatory overhang and compliance requirements.\n- CEO is 8 months into the role, came from acute health. Board wants visible CX improvement within 12 months.\n- No dedicated CX function. Quality and Compliance team owns most resident-facing quality metrics.\n\nThis analysis will inform our discovery scope — what to focus on and what to tell the new CEO about what's actually going on.",
+      "expected_output": "Five-domain diagnostic appropriate for aged care context, with tensions that reflect the specific dynamics of government-funded care (regulatory pressure, workforce instability, quality compliance vs. experience design). So What should address the 12-month board expectation.",
+      "files": [],
+      "expectations": [
+        "Revenue domain addresses the government subsidy model and the implications of the 3% cut — not treated like a commercial business",
+        "Operational Health domain prominently flags the 38% turnover and 22% agency workforce as a CX delivery risk (not just an HR issue)",
+        "Organizational Capability domain notes the absence of a CX function and the Quality/Compliance ownership of resident metrics as a structural gap",
+        "A tension is identified between the 12-month board expectation for visible improvement and the structural depth of the workforce problem",
+        "The Royal Commission regulatory context is reflected in the analysis",
+        "Strategic So What gives the new CEO a clear framing for what the data shows and what the discovery scope should prioritise",
+        "The output distinguishes between what is evidenced by the data provided and what is inferred from context"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Quick business context read for a pitch I'm writing. The client is a large Australian telco. I don't have their internal data but I know:\n- They're the #2 player by market share (roughly 25%)\n- Their NPS has historically lagged the market leader by 8-12 points\n- They've had two major network outages in the last year that got national media coverage\n- They're investing heavily in 5G rollout\n- Their customer service has been restructured twice in 3 years\n- Industry churn benchmark is around 14% per year\n\nI'm pitching for a CX transformation engagement. I need this analysis to feel credible and specific — using what I know to build a picture of where the pressure is.",
+      "expected_output": "A situation analysis that works from limited public/contextual information, clearly flagging what's inferred vs evidenced. Should build a credible CX opportunity framing for a pitch context.",
+      "files": [],
+      "expectations": [
+        "The output clearly labels claims as [EVIDENCED], [INFERRED], or [ASSUMED] (or equivalent tagging) — given the limited inputs",
+        "The network outage events are treated as a customer trust and brand perception issue in the Market Position domain",
+        "The repeated restructuring of customer service is flagged as an Organizational Capability risk — not normalised",
+        "A tension is identified between the 5G investment (future growth) and current NPS gap (present experience deficit)",
+        "Data gaps register is comprehensive — notes missing NPS score, churn rate, cost-to-serve data that would strengthen the analysis",
+        "The Strategic So What is written for a pitch context — addresses why CX transformation is the right opportunity now for this client",
+        "The output does not fabricate specific metrics — all numbers either come from the input or are explicitly labelled as estimated/benchmarked"
+      ]
+    }
+  ]
+}
