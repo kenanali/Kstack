@@ -54,7 +54,7 @@ flowchart LR
 | `/biz-context` | Management consultant | Five-domain business diagnostic (revenue, customer metrics, ops, market position, org capability) + Porter's Five Forces competitive assessment + key tensions + strategic "so what" |
 | `/scan-blockers` | Organizational consultant | Full blocker map across 8 categories, rated by severity and addressability, with "where to start" and landmine warnings |
 | `/persona-build` | UX researcher + behavioral psychologist | Rich persona card with JTBD (functional, emotional, social), trigger events, anxieties, unmet needs — every claim tagged as evidenced or inferred |
-| `/journey-map` | Service designer | Stage-by-stage journey map with customer thought/feeling/emotion score per touchpoint, moments of truth, and top 5 opportunities |
+| `/journey-map` | Service designer | Stage-by-stage journey map with emotion scores, moments of truth, and top 5 opportunities — outputs a visual HTML file and JSON automatically |
 | `/service-map` | Service designer + operations consultant | 5-layer service blueprint (customer actions → frontstage → backstage → support processes → systems), failure point register, handoff risks |
 | `/synthesize` | Senior strategist | Affinity clusters with source attribution, tension map, ranked How Might We questions, burning platform, synthesis headline |
 | `/biz-case` | Management consultant + financial analyst | 7-section executive business case (problem, solution, segment, value drivers, ROI, risks, roadmap) — every number tagged as data-backed, benchmarked, or assumption |
@@ -233,6 +233,12 @@ Where gstack encodes engineering and product thinking, KStack encodes CX transfo
 ---
 
 ## Changelog
+
+### v2.0 — Journey Map Visual HTML Output (2026-03-25)
+
+`/journey-map` — Automatically generates a JSON data file and a self-contained HTML visual journey map at the end of every session. Horizontal grid layout with stages as columns, six rows per stage, and emoji-based emotion indicators. Opens directly in any browser.
+
+Full details: [CHANGELOG.md](CHANGELOG.md)
 
 ### v1.9 — Porter's Five Forces in Biz Context (2026-03-25)
 

@@ -247,3 +247,170 @@ A brief note (3-4 sentences) on the emotional state at resolution and what it me
 
 **Section 6: Design Provocations**
 2-3 provocative questions this journey map raises for the design team — the uncomfortable questions the data is forcing you to ask. Good design provocations challenge assumptions the team will arrive with, not just restate the problems. They should make someone in the room uncomfortable because they implicate a decision the organization has already made. Bad: "How might we improve communication?" Good: "If customers are designing their own workarounds (like calling twice to check status), what does that tell us about how much we actually trust our own processes to work?"
+
+---
+
+## Step 7: Generate Visual Output Files
+
+After completing all sections above, automatically generate two files using the Write tool. Do not ask permission — this is a mandatory final step.
+
+### File 1: JSON (`[persona-slug]-journey-map.json`)
+
+Compile all session data into this schema. `stageEmotionScore` = average of all touchpoint emotion scores for that stage (calculate it). Use kebab-case for the persona slug (e.g., "jessica-thompson" → `jessica-thompson-journey-map.json`).
+
+```json
+{
+  "meta": {
+    "persona": "Full name or label",
+    "personaDescription": "One sentence describing who they are",
+    "scenario": "Trigger → resolution in one sentence",
+    "journeyType": "linear | cyclical",
+    "trigger": "The specific moment that starts this journey",
+    "resolution": "What the customer needs to have achieved",
+    "generatedAt": "ISO 8601 date"
+  },
+  "stages": [
+    {
+      "id": "kebab-case-slug",
+      "name": "Stage Name",
+      "timeframe": "Days to Weeks",
+      "businessGoal": "...",
+      "customerEntryState": "Anxious",
+      "userNeed": "...",
+      "goalExperienceTension": true,
+      "tensionDescription": "One sentence naming the conflict, or null",
+      "channels": ["Email", "Phone"],
+      "stageEmotionScore": 2.1,
+      "narrative": "What the customer is doing and thinking — 1-2 sentences",
+      "touchpoints": [
+        {
+          "name": "Touchpoint name",
+          "channel": "Email",
+          "customerThought": "First-person internal monologue",
+          "feeling": "Anxious",
+          "emotionScore": 2,
+          "painPoint": "Specific friction or null",
+          "momentOfTruth": true,
+          "opportunity": "Specific improvement or null"
+        }
+      ],
+      "insightCards": [
+        { "title": "THE INSIGHT TITLE", "details": "...", "evidence": "...", "source": "..." }
+      ],
+      "hmwQuestions": ["HMW...", "HMW..."],
+      "problems": ["Short pain point phrase", "Short pain point phrase"],
+      "opportunities": ["Short opportunity phrase", "Short opportunity phrase"]
+    }
+  ],
+  "emotionalArc": "Narrative description of the full arc",
+  "topMomentsOfTruth": ["Stage — touchpoint", "Stage — touchpoint"],
+  "topOpportunities": ["Improvement at X would Y because Z"],
+  "designProvocations": ["Uncomfortable question"]
+}
+```
+
+### File 2: HTML (`[persona-slug]-journey-map.html`)
+
+Generate a fully self-contained HTML file. No external dependencies — all CSS inline in `<style>`, no JavaScript needed. Use the exact structure below, populated with the session data.
+
+**Grid layout:** CSS Grid with a fixed 140px left column for row labels and `1fr` per stage column. Six rows: Stage Header, Narrative, Channels, Feeling, Problems, Opportunities.
+
+**Emotion emoji mapping** (round `stageEmotionScore` to nearest integer):
+- Score 1 → 😣
+- Score 2 → 😟
+- Score 3 → 😐
+- Score 4 → 🙂
+- Score 5 → 😊
+
+**Stage color palette** (cycle through for each stage column, 0-indexed):
+- 0: `#6366f1` (indigo)
+- 1: `#0ea5e9` (sky)
+- 2: `#10b981` (emerald)
+- 3: `#f59e0b` (amber)
+- 4: `#ef4444` (red)
+- 5: `#8b5cf6` (violet)
+- 6: `#06b6d4` (cyan)
+- 7: `#84cc16` (lime)
+
+**HTML template to follow:**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Persona] Journey Map</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f5; padding: 24px; color: #1a1a1a; }
+    h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+    .meta { font-size: 13px; color: #666; margin-bottom: 20px; }
+    .opps { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 28px; }
+    .opp-card { background: #e8f4fd; border-left: 3px solid #3b82f6; padding: 10px 14px; border-radius: 4px; font-size: 12px; color: #1e40af; max-width: 280px; line-height: 1.4; }
+    .grid { display: grid; grid-template-columns: 140px [REPEAT_COLS]; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; background: white; min-width: 0; }
+    .row-label { background: #f8f8f8; border-right: 2px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; padding: 12px 10px; font-size: 10px; font-weight: 700; color: #999; text-transform: uppercase; letter-spacing: 0.06em; display: flex; align-items: center; }
+    .cell { border-right: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; padding: 12px; font-size: 12px; line-height: 1.5; min-height: 60px; }
+    .cell:last-child { border-right: none; }
+    .stage-name { font-weight: 700; font-size: 13px; color: white; }
+    .stage-time { font-size: 11px; color: rgba(255,255,255,0.75); margin-top: 3px; }
+    .pills { display: flex; flex-wrap: wrap; gap: 4px; }
+    .pill { background: #f0f0f0; color: #555; font-size: 11px; padding: 2px 8px; border-radius: 10px; }
+    .emotion { text-align: center; padding: 14px 12px; }
+    .emoji { font-size: 30px; display: block; }
+    .feeling { font-size: 11px; color: #888; margin-top: 4px; }
+    .problems { background: #fff5f5; }
+    .problems ul { list-style: none; padding: 0; }
+    .problems li { color: #b91c1c; padding: 2px 0 2px 14px; position: relative; }
+    .problems li::before { content: "•"; position: absolute; left: 2px; }
+    .opps-col { background: #f0f9ff; }
+    .opps-col ul { list-style: none; padding: 0; }
+    .opps-col li { color: #0369a1; padding: 2px 0 2px 14px; position: relative; }
+    .opps-col li::before { content: "→"; position: absolute; left: 0; }
+  </style>
+</head>
+<body>
+  <h1>[Persona name] — [Scenario]</h1>
+  <div class="meta">[Journey type] &nbsp;·&nbsp; Trigger: [trigger] &nbsp;·&nbsp; Resolution: [resolution] &nbsp;·&nbsp; [generatedAt]</div>
+
+  <div class="opps">
+    [For each top opportunity: <div class="opp-card">[opportunity text]</div>]
+  </div>
+
+  <div class="grid">
+
+    <!-- ROW: Stage Header -->
+    <div class="row-label">Stage</div>
+    [For each stage i: <div class="cell" style="background:[stage-color-i]"><div class="stage-name">[name]</div><div class="stage-time">[timeframe]</div></div>]
+
+    <!-- ROW: Narrative -->
+    <div class="row-label">Narrative</div>
+    [For each stage: <div class="cell">[narrative]</div>]
+
+    <!-- ROW: Channels -->
+    <div class="row-label">Channels</div>
+    [For each stage: <div class="cell"><div class="pills">[For each channel: <span class="pill">[channel]</span>]</div></div>]
+
+    <!-- ROW: Feeling -->
+    <div class="row-label">Feeling</div>
+    [For each stage: <div class="cell emotion"><span class="emoji">[emoji from score]</span><div class="feeling">[customerEntryState]</div></div>]
+
+    <!-- ROW: Problems -->
+    <div class="row-label">Problems</div>
+    [For each stage: <div class="cell problems"><ul>[For each problem: <li>[problem]</li>]</ul></div>]
+
+    <!-- ROW: Opportunities -->
+    <div class="row-label">Opportunities</div>
+    [For each stage: <div class="cell opps-col"><ul>[For each opportunity: <li>[opportunity]</li>]</ul></div>]
+
+  </div>
+</body>
+</html>
+```
+
+Replace `[REPEAT_COLS]` with `repeat([N], 1fr)` where N is the number of stages.
+
+After writing both files, tell the user:
+> "Visual files saved:
+> - `[persona-slug]-journey-map.json`
+> - `[persona-slug]-journey-map.html` — open in your browser to view the map"

@@ -1,5 +1,11 @@
 # KStack Changelog
 
+## v2.0 — Journey Map Visual HTML Output (2026-03-25)
+
+`/journey-map` — New final step generates two output files automatically after every session: a structured JSON of the full journey data and a self-contained HTML file with a visual horizontal journey map. The HTML renders stages as columns with six rows (Stage, Narrative, Channels, Feeling, Problems, Opportunities). Emotion is represented as a single emoji per stage (😣→😊) derived from the average touchpoint score. No external dependencies — the HTML file opens directly in any browser.
+
+---
+
 ## v1.9 — Porter's Five Forces in Biz Context (2026-03-25)
 
 `/biz-context` — Porter's Five Forces assessment added to Domain 4 (Market Position). Structured table rating each force (Competitive Rivalry, Threat of New Entrants, Threat of Substitutes, Buyer Power, Supplier Power) by current intensity, trend direction, and CX implication. Evidence-grounded — forces rated [UNASSESSED] if data is insufficient. Includes a named "CX-critical forces" callout identifying which combination (rivalry + buyer power + substitutes) creates the most urgency, connected directly to the strategic "So What" in Step 3.
