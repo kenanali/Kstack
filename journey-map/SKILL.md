@@ -83,33 +83,52 @@ Use the Read tool to read `touchpoint-taxonomy.md` in the same folder. This give
 
 ## Step 2: Define Journey Stages
 
-Propose 4-7 stages that cover the full arc from trigger event to post-resolution. For each stage, define three things:
+**Start from the broadest possible lifecycle — not the transaction.**
 
-1. **Stage name** — from the customer's perspective (what they're doing or experiencing), not the organization's process steps
-2. **Timeframe** — how long does this stage typically last? (e.g., "Minutes," "Hours," "Days to Weeks," "Weeks to Months," "Continuous/Ongoing"). This shapes the entire touchpoint design — a stage lasting hours requires different interventions than one lasting weeks.
-3. **Business goal for this stage** — what is the organization trying to achieve at this point? (e.g., "Inspire and capture early interest," "Support decision-making and convert," "Deliver and celebrate," "Retain and cross-sell"). This is used later to surface goal-experience tensions.
+The instinct is to begin with the purchase funnel: Awareness → Consideration → Evaluation → Purchase. Resist it. The purchase funnel is a narrow slice of a much larger customer lifecycle — and the most valuable design, service, and product innovation opportunities almost always live outside it.
 
-Good stage names: "Realising there's a problem," "Looking for help," "Getting through to someone," "Waiting for resolution," "Finding out the outcome," "Reflecting on the experience."
+Before proposing any stages, ask two questions:
 
-Not: "Initiation," "Contact," "Processing," "Closure."
+1. **What is this customer actually trying to accomplish in the world?** Not "buy a tool" — but "complete a renovation on time and build a reputation that wins the next job." Not "file a claim" — but "get my life back to normal after something went wrong." The journey should be built around that broader goal, not around the product interaction.
+
+2. **What is the full lifecycle of that goal?** For a DEWALT Performance Pro, it might span: winning a project → planning the work → procuring tools → executing the job → troubleshooting mid-project → completing and handing over → winning referrals and starting again. The tool purchase sits inside "procuring tools." If the map starts there, it misses everything before and after — and that's where new engagement models, digital services, and product innovations live.
+
+**The lifecycle view is the brief.** Propose 5-8 stages that cover the customer's full arc in context of the broader goal. The purchase, application, or interaction that prompted this mapping is likely one or two stages within a larger lifecycle — not the whole map.
+
+For each stage, define:
+
+1. **Stage name** — from the customer's perspective (what they're doing in their life or work), not the organization's process steps
+2. **Timeframe** — how long does this stage typically last? (e.g., "Minutes," "Hours," "Days to Weeks," "Weeks to Months," "Continuous/Ongoing")
+3. **Business goal for this stage** — what is the organization trying to achieve here? (e.g., "Become part of the project from day one," "Win the replacement before competitors enter consideration," "Convert project completion into referrals")
+
+Good stage names: "Winning the job," "Getting the site ready," "Something's not working," "Handing it over and moving on," "Deciding whether to come back."
+
+Not: "Awareness," "Consideration," "Purchase," "Post-Purchase."
 
 ---
 
-## Step 2.5: Mandatory Stage Check-In
+## Step 2.5: Mandatory Stage Confirmation — Do Not Proceed Without This
 
-After proposing the stages, stop.
+After proposing the stages, stop completely. Do not begin mapping touchpoints until the user explicitly confirms the stages are correct.
 
-> "Here are the stages I've mapped from the customer's perspective:
-> 1. [Stage 1] — [customer description] | Timeframe: [X] | Business goal: [Y]
+Present the proposed stages and ask two things:
+
+> **Proposed lifecycle stages:**
+> 1. [Stage 1] — [what the customer is doing at this point in their broader life/work context] | Timeframe: [X] | Business goal: [Y]
 > 2. [Stage 2] — [customer description] | Timeframe: [X] | Business goal: [Y]
 > ...
-> Does this capture the full journey? Are there stages missing — or stages that should be split or merged? (Common gaps: pre-trigger awareness, post-resolution follow-up, the comparison/shopping stage before commitment.)
 >
-> Also flag any stages where the business goal and what you know about the customer's emotional state seem to be in tension — e.g., 'Business goal is to convert, but customers are scoring low on confidence at this stage.' Those tensions are often where the most important design work lives."
+> **Before I map anything: two questions.**
+>
+> First — **does this capture the full lifecycle, or are we still inside the purchase funnel?** Common gaps: What is the customer doing before they're in market at all? What happens during the actual project or work the product serves? What does the moment after completion look like — and who does the customer talk to? Each of those gaps is a potential engagement opportunity the brand is currently missing.
+>
+> Second — **are there stages where the business goal and what you know about the customer seem to be in tension?** For example: "Business goal is to convert, but the customer is in the middle of a project and not thinking about buying anything." Those tensions are where the most important design and service innovation work lives.
+>
+> Confirm or adjust before I build — stage structure is the skeleton of the map, and rebuilding it mid-way means rebuilding everything.
 
-Pause here before mapping any touchpoints. Stage structure is the skeleton of the map — adding or removing a stage mid-way requires rebuilding everything. Getting confirmation now is faster than correcting later.
+**Do not proceed to Step 3 until the user confirms the stages.** If operating without live interaction: state the proposed stages, flag any lifecycle gaps explicitly, and note what would change if a stage were added or expanded. Then proceed — but document the assumption.
 
-If operating without live interaction: complete the check-in as a written exchange — state the proposed stages, describe what each covers, and name what would change if a stage were split, merged, or added. Do not narrate around this step.
+Adjust based on the user's response before mapping any touchpoints.
 
 ---
 
@@ -122,11 +141,9 @@ STAGE: [Stage name]
 Timeframe: [How long this stage typically lasts]
 Business goal: [What the organization is trying to achieve at this stage]
 Customer entry state: [The dominant emotional state as the customer arrives — 1-2 words]
-Primary user need: [A single synthesized statement of the most critical thing the customer needs to succeed at this stage. Functional, not emotional. Written as if the customer dictated it — e.g., "I need a transparent way to evaluate total cost of ownership before committing, not just sticker price." This is the headline; the full need cards follow below the touchpoint table.]
-Goal-experience tension: [Yes/No — if Yes, name the conflict in one sentence: e.g., "Business goal is to convert, but customer arrives anxious and under-confident; pressure at this moment drives abandonment, not conversion."]
+User need: [A synthesized statement of what the customer genuinely needs to succeed at this stage. Functional, not emotional — written as if the customer dictated it.]
+Goal-experience tension: [Yes/No — if Yes, name the conflict in one sentence]
 ```
-
-This header is the most executive-readable part of the stage output. It forces the question: are we designing for our goal, or for the customer's reality? The User Need field is particularly important — it is what a product or service manager can take directly into a design brief.
 
 ---
 
@@ -152,130 +169,67 @@ For each stage, identify all touchpoints. For each touchpoint, complete the full
   - Most complaint/claims/application journeys will average 1.5-2.5 across stages. If your average is above 3, you are likely being too generous.
 - **Pain Point:** Specific friction, failure, or unmet need at this touchpoint. Leave blank if genuinely none.
 - **Moment of Truth:** Y/N — is this a touchpoint where the experience materially shapes the customer's perception of the brand? (Mark generously — there are usually more than you think)
-- **Opportunity:** What specific improvement at this touchpoint would change the experience? Be concrete.
+- **Opportunity:** Leave blank. Opportunities live in the HMW row of the grid, not at the touchpoint level.
 
 ---
 
-## Step 3.2: User Needs Cards
+## Output Format
 
-After the touchpoint table, surface **2-4 distinct user needs** for this stage. These are the design-ready requirements — what the experience must deliver for the customer to succeed here. Each need stands alone, is backed by evidence, and is specific enough for a designer or product manager to build against.
+**The journey map IS the output.** Do not generate lengthy prose analysis sections before or after the grid. The deliverable is the grid itself — structured, specific, ready to present.
 
-These are **not** insight observations (those come in Step 3.5). Needs = what customers require. Insights = why they behave the way they do.
+**Section 1: Journey Header** (3 lines maximum)
+- Persona and one-sentence description
+- Trigger → Resolution
+- Journey type (linear / cyclical) and confirmed stage names
 
-For each need:
+**Section 2: Journey Map**
+For each stage, in this order:
+1. Stage header block (compact — name / timeframe / business goal / customer entry state / goal-experience tension Y/N)
+2. User Need row — the synthesized need statement + 1-3 evidence bullets with sources
+3. Touchpoint table
+4. HMW Opportunities — 3-5 HMW questions for this stage (see guidance below)
 
-```
-USER NEED: [Title — the need in 6 words or fewer]
-[1-2 sentence need statement — functional, specific, written as if the customer said it]
+**HMW Opportunity guidance:**
+- HMW questions are the opportunities row of the grid. They replace bullet-point solution statements.
+- Frame each as a genuine question, not a disguised recommendation. "HMW make this faster" is not an HMW. "HMW give the contractor confidence that what they need is in stock before they leave the job site?" is an HMW.
+- Each HMW should explicitly aim at one of these innovation vectors: **content**, **digital experience**, **new service**, **new product**, or **new business model**. Label which vector it targets.
+- 3-5 per stage. More than 5 means the stage is too broad.
 
-Evidence:
-• [Specific data point, quote, or behavioral signal] (Source: [name the source])
-• [Second evidence point if available] (Source: [name the source])
-```
-
-**Quality rules:**
-- Each need must be **distinct** — not restatements of the same underlying need at different abstraction levels
-- At least one need per stage must be directly evidenced (not inferred)
-- Needs must be **actionable design inputs** — someone should be able to build a feature or service against them
-- Do not overlap with what insight cards will say — insight cards explain behavior, need cards define requirements
-
----
-
-## Step 3.5: Stage Insight Cards
-
-After completing the touchpoint table for each stage, surface **2-4 named insight cards** — the behavioral observations that explain *why* the touchpoint scores look the way they do. These are the workshop-ready, sticky-note-scale insights: memorable, named, evidenced. They survive presentations and get quoted in design briefs. The table captures structure; the insight cards capture the story.
-
-For each insight card:
-
-```
-[STAGE NAME] — INSIGHT [n]: [TITLE IN CAPS — a memorable behavioral label]
-Details: [1-2 sentences describing the behavior or dynamic — what customers are actually doing and why]
-Evidence: [Specific data point, verbatim quote, or behavioral signal] | Source: [Research report, Customer Interviews, Analytics, Benchmark — name it]
-```
-
-**Source attribution is mandatory for evidence.** "Customers report frustration" is not evidence. "Customers report frustration — Source: Customer Interviews" is still weak. "Customer support calls during this phase are highly emotionally charged; agent notes from Q3 contact review — Source: Customer Interviews" is evidence. Make it specific enough that someone could trace it back.
-
-**Per-stage HMW questions:** After the insight cards for each stage, include **2-4 How Might We questions** specific to that stage. Per-stage HMWs make the map workshop-usable phase-by-phase — a team working on the procurement phase can pick up their HMWs and ideate without needing the full map. HMWs placed only at the end of a long output rarely get used.
-
-```
-HOW MIGHT WE (Stage: [Stage name])
-- HMW [specific, actionable question connected to the user need or a pain point at this stage]
-- HMW [specific, actionable question]
-- HMW [specific, actionable question]
-```
-
-HMW quality check: each HMW should be answerable with multiple different solutions (not so prescriptive it implies one answer) but specific enough that a bad answer would be obviously out of scope. "HMW improve the experience?" fails. "HMW help customers know exactly what's happening with their repair without having to contact us?" passes.
-
-Good insight card titles: "THE CONFIDENCE GAP UNDER THE ENTHUSIASM," "VALIDATION BEFORE COMMITMENT," "JUST-IN-TIME INFORMATION OVER DOCUMENTATION," "THE LAST MILE IS WHERE IT COLLAPSES"
-
-Bad insight card titles: "Customers experience issues," "Pain point identified," "Research behavior"
-
-The test for a good insight card: would a designer remember this title three days after the workshop, without referring back to the map?
+**Section 3: Synthesis** (after all stages — brief, no more than 10 bullets total)
+- Emotional arc: 2 sentences — entry state, key inflection, exit state
+- Top moments of truth: bullet list (stage — touchpoint — why it matters in one clause)
+- If cyclical: one sentence on what emotional state the customer carries into the next cycle
 
 ---
 
-## Step 3.6: Write Output Files Now
+## Step 7: Generate HTML Output File
 
-**Before writing the prose sections below, write both output files now.** The mapping is complete — write the files while context is available, not after generating another 1,000 words of narrative.
+After completing all sections above, automatically generate one file using the Write tool. Do not ask permission — this is a mandatory final step.
 
-Use the Write tool twice in sequence:
+### HTML file: `[persona-slug]-journey-map.html`
 
-### File 1: JSON (`[persona-slug]-journey-map.json`)
+Generate a fully self-contained HTML file. No external dependencies — all CSS inline in `<style>`, no JavaScript. Use the exact structure below, populated with the session data.
 
-Compile all stage data into this schema. `stageEmotionScore` = average of all touchpoint emotion scores for that stage (calculate it).
+**Grid layout:** CSS Grid with a fixed 160px left column for row labels and `1fr` per stage column. Seven rows: Stage Header, Narrative, Channels, Feeling, User Need, Problems, HMW Opportunities.
 
-```json
-{
-  "meta": {
-    "persona": "Full name or label",
-    "personaDescription": "One sentence",
-    "scenario": "Trigger → resolution",
-    "journeyType": "linear | cyclical",
-    "trigger": "...",
-    "resolution": "...",
-    "generatedAt": "ISO 8601 date"
-  },
-  "stages": [
-    {
-      "id": "kebab-case-slug",
-      "name": "Stage Name",
-      "timeframe": "...",
-      "businessGoal": "...",
-      "customerEntryState": "...",
-      "primaryUserNeed": "Single synthesized need statement",
-      "userNeeds": [
-        {
-          "title": "Short need title",
-          "need": "Full need statement — 1-2 sentences",
-          "evidence": [
-            { "text": "Specific data point or quote", "source": "Source name" }
-          ]
-        }
-      ],
-      "goalExperienceTension": true,
-      "tensionDescription": "One sentence or null",
-      "channels": ["Channel A", "Channel B"],
-      "stageEmotionScore": 2.1,
-      "narrative": "1-2 sentences",
-      "problems": ["Short pain point", "Short pain point"],
-      "opportunities": ["Short opportunity", "Short opportunity"]
-    }
-  ],
-  "topMomentsOfTruth": ["Stage — touchpoint"],
-  "topOpportunities": ["Improvement at X would Y because Z"],
-  "designProvocations": ["Uncomfortable question"]
-}
-```
+**Emotion emoji mapping** (round `stageEmotionScore` to nearest integer):
+- Score 1 → 😣
+- Score 2 → 😟
+- Score 3 → 😐
+- Score 4 → 🙂
+- Score 5 → 😊
 
-### File 2: HTML (`[persona-slug]-journey-map.html`)
+**Stage color palette** (cycle through for each stage column, 0-indexed):
+- 0: `#6366f1` (indigo)
+- 1: `#0ea5e9` (sky)
+- 2: `#10b981` (emerald)
+- 3: `#f59e0b` (amber)
+- 4: `#ef4444` (red)
+- 5: `#8b5cf6` (violet)
+- 6: `#06b6d4` (cyan)
+- 7: `#84cc16` (lime)
 
-Generate a fully self-contained HTML file. No external dependencies — all CSS inline in `<style>`, no JavaScript.
-
-**Emotion emoji** (round `stageEmotionScore` to nearest integer): 1→😣 2→😟 3→😐 4→🙂 5→😊
-
-**Stage colors** (cycle by 0-based index): 0:`#6366f1` 1:`#0ea5e9` 2:`#10b981` 3:`#f59e0b` 4:`#ef4444` 5:`#8b5cf6` 6:`#06b6d4` 7:`#84cc16`
-
-Use CSS Grid. Replace `[N]` with the number of stages.
+**HTML template to follow:**
 
 ```html
 <!DOCTYPE html>
@@ -288,163 +242,82 @@ Use CSS Grid. Replace `[N]` with the number of stages.
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f5; padding: 24px; color: #1a1a1a; }
     h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
-    .meta { font-size: 13px; color: #666; margin-bottom: 20px; }
-    .grid { display: grid; grid-template-columns: 140px repeat([N], 1fr); border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; background: white; }
+    .meta { font-size: 13px; color: #666; margin-bottom: 24px; }
+    .grid { display: grid; grid-template-columns: 160px [REPEAT_COLS]; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; background: white; min-width: 0; }
     .row-label { background: #f8f8f8; border-right: 2px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; padding: 12px 10px; font-size: 10px; font-weight: 700; color: #999; text-transform: uppercase; letter-spacing: 0.06em; display: flex; align-items: center; }
-    .cell { border-right: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; padding: 12px; font-size: 12px; line-height: 1.5; }
+    .cell { border-right: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; padding: 12px; font-size: 12px; line-height: 1.5; min-height: 60px; }
+    .cell:last-child { border-right: none; }
     .stage-name { font-weight: 700; font-size: 13px; color: white; }
     .stage-time { font-size: 11px; color: rgba(255,255,255,0.75); margin-top: 3px; }
     .pills { display: flex; flex-wrap: wrap; gap: 4px; }
     .pill { background: #f0f0f0; color: #555; font-size: 11px; padding: 2px 8px; border-radius: 10px; }
-    .emotion { text-align: center; padding: 10px 12px; }
+    .emotion { text-align: center; padding: 14px 12px; }
     .emoji { font-size: 30px; display: block; }
     .feeling { font-size: 11px; color: #888; margin-top: 4px; }
+    .need-col { background: #fafaf7; }
+    .need-statement { font-size: 12px; color: #1a1a1a; line-height: 1.5; margin-bottom: 8px; font-style: italic; }
+    .need-evidence { list-style: none; padding: 0; margin: 0; }
+    .need-evidence li { font-size: 11px; color: #6b7280; padding: 2px 0 2px 12px; position: relative; line-height: 1.4; }
+    .need-evidence li::before { content: "•"; position: absolute; left: 2px; color: #9ca3af; }
+    .need-source { font-style: italic; color: #9ca3af; }
     .problems { background: #fff5f5; }
-    .opps-col { background: #f0f9ff; }
-    ul { list-style: none; padding: 0; }
+    .problems ul { list-style: none; padding: 0; }
     .problems li { color: #b91c1c; padding: 2px 0 2px 14px; position: relative; }
     .problems li::before { content: "•"; position: absolute; left: 2px; }
-    .opps-col li { color: #0369a1; padding: 2px 0 2px 14px; position: relative; }
-    .opps-col li::before { content: "→"; position: absolute; left: 0; }
-    .needs-section { margin-top: 28px; }
-    .needs-section h2 { font-size: 13px; font-weight: 700; color: #999; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px; }
-    .needs-grid { display: grid; grid-template-columns: repeat([N], 1fr); gap: 12px; align-items: start; }
-    .needs-col-header { color: white; font-weight: 700; font-size: 12px; padding: 8px 12px; border-radius: 6px 6px 0 0; }
-    .need-card { background: white; border: 1px solid #e5e7eb; border-top: none; padding: 14px; }
-    .need-card + .need-card { border-top: 1px solid #f3f4f6; }
-    .need-label { font-size: 10px; font-weight: 800; color: #ef4444; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; }
-    .need-text { font-size: 13px; color: #1a1a1a; line-height: 1.55; margin-bottom: 10px; }
-    .evidence-label { font-size: 10px; font-weight: 700; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
-    .evidence-list { list-style: none; padding: 0; }
-    .evidence-list li { font-size: 11px; color: #555; padding: 2px 0 2px 12px; position: relative; line-height: 1.45; }
-    .evidence-list li::before { content: "•"; position: absolute; left: 2px; color: #9ca3af; }
-    .evidence-source { font-style: italic; color: #9ca3af; }
+    .hmw-col { background: #f0f9ff; }
+    .hmw-col ul { list-style: none; padding: 0; }
+    .hmw-col li { color: #0369a1; padding: 3px 0 3px 14px; position: relative; font-size: 11px; line-height: 1.4; }
+    .hmw-col li::before { content: "?"; position: absolute; left: 2px; font-weight: 700; color: #7dd3fc; }
+    .hmw-vector { display: inline-block; font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #0ea5e9; background: #e0f2fe; border-radius: 3px; padding: 1px 5px; margin-bottom: 2px; }
   </style>
 </head>
 <body>
-  <h1>[Persona name] — [Journey scenario]</h1>
-  <div class="meta">[Journey type] &nbsp;·&nbsp; Trigger: [trigger] &nbsp;·&nbsp; [generatedAt]</div>
+  <h1>[Persona name] — [Scenario]</h1>
+  <div class="meta">[Journey type] &nbsp;·&nbsp; Trigger: [trigger] &nbsp;·&nbsp; Resolution: [resolution] &nbsp;·&nbsp; [generatedAt]</div>
+
   <div class="grid">
+
+    <!-- ROW: Stage Header -->
     <div class="row-label">Stage</div>
-    <!-- For each stage i, output: <div class="cell" style="background:[color-i]"><div class="stage-name">[name]</div><div class="stage-time">[timeframe]</div></div> -->
+    [For each stage i: <div class="cell" style="background:[stage-color-i]"><div class="stage-name">[name]</div><div class="stage-time">[timeframe]</div></div>]
 
+    <!-- ROW: Narrative -->
     <div class="row-label">Narrative</div>
-    <!-- For each stage: <div class="cell">[narrative]</div> -->
+    [For each stage: <div class="cell">[narrative]</div>]
 
+    <!-- ROW: Channels -->
     <div class="row-label">Channels</div>
-    <!-- For each stage: <div class="cell"><div class="pills"><span class="pill">[ch1]</span>...</div></div> -->
+    [For each stage: <div class="cell"><div class="pills">[For each channel: <span class="pill">[channel]</span>]</div></div>]
 
+    <!-- ROW: Feeling -->
     <div class="row-label">Feeling</div>
-    <!-- For each stage: <div class="cell emotion"><span class="emoji">[emoji]</span><div class="feeling">[customerEntryState]</div></div> -->
+    [For each stage: <div class="cell emotion"><span class="emoji">[emoji from score]</span><div class="feeling">[customerEntryState]</div></div>]
 
+    <!-- ROW: User Need -->
+    <div class="row-label">User Need</div>
+    [For each stage: <div class="cell need-col">
+      <div class="need-statement">[userNeed]</div>
+      <ul class="need-evidence">
+        [For each item in userNeedEvidence: <li>[text] <span class="need-source">([source])</span></li>]
+      </ul>
+    </div>]
+
+    <!-- ROW: Problems -->
     <div class="row-label">Problems</div>
-    <!-- For each stage: <div class="cell problems"><ul><li>[problem]</li>...</ul></div> -->
+    [For each stage: <div class="cell problems"><ul>[For each problem: <li>[problem]</li>]</ul></div>]
 
-    <div class="row-label">Opportunities</div>
-    <!-- For each stage: <div class="cell opps-col"><ul><li>[opportunity]</li>...</ul></div> -->
-  </div>
+    <!-- ROW: HMW Opportunities -->
+    <div class="row-label">HMW Opportunities</div>
+    [For each stage: <div class="cell hmw-col"><ul>
+      [For each hmwOpportunity: <li><span class="hmw-vector">[vector]</span><br>[hmw]</li>]
+    </ul></div>]
 
-  <div class="needs-section">
-    <h2>User Needs by Stage</h2>
-    <div class="needs-grid">
-      <!-- For each stage i, output a column:
-      <div>
-        <div class="needs-col-header" style="background:[color-i]">[stage name]</div>
-        For each userNeed in this stage:
-        <div class="need-card">
-          <div class="need-label">User Need</div>
-          <div class="need-text">[need statement]</div>
-          <div class="evidence-label">Evidence</div>
-          <ul class="evidence-list">
-            For each evidence item: <li>[evidence text] <span class="evidence-source">([source])</span></li>
-          </ul>
-        </div>
-      </div>
-      -->
-    </div>
   </div>
 </body>
 </html>
 ```
 
-Expand every comment into real HTML elements populated with the actual stage data. Each row must have exactly [N] stage cells (one per stage) for the grid to render correctly.
+Replace `[REPEAT_COLS]` with `repeat([N], 1fr)` where N is the number of stages.
 
-After writing both files, tell the user:
-> "Files saved: `[slug]-journey-map.json` and `[slug]-journey-map.html` — open the HTML in your browser to view the map."
-
-Then continue to Section 4 below.
-
----
-
-## Step 4: Emotional Arc
-
-Write a narrative (3-5 sentences) describing the emotional journey overall. Name:
-- The dominant emotional state at the start of the journey
-- The key inflection moments (where the emotion shifted significantly — up or down)
-- The emotional state at resolution
-- What the emotional arc reveals about the customer relationship with this organization
-
----
-
-## Step 5: Top 5 Moments of Truth
-
-From all the Moment of Truth touchpoints, identify the **5 most critical** — the ones where experience most determines whether the customer feels well-served or let down.
-
-For each, explain in 1-2 sentences why it's disproportionately important.
-
----
-
-## Step 6: Top 5 Opportunity Areas
-
-From the opportunity notes and pain points across the full journey, surface the **5 most impactful improvement opportunities**. Frame each as:
-
-**"[Specific improvement] at [touchpoint/stage] would [specific customer outcome] because [mechanism]."**
-
-Order by potential impact, not sequence in the journey.
-
----
-
-## Output Format
-
-**Section 1: Journey Overview**
-- Persona name and description (1 sentence)
-- Journey trigger and resolution
-- Stage names listed
-
-**Section 2: Journey Map**
-For each stage, in this order:
-1. Stage header block (name / timeframe / business goal / customer entry state / primary user need / goal-experience tension)
-2. Touchpoint table
-3. User needs cards (2-4: title + need statement + evidence bullets with sources)
-4. Stage insight cards (2-4: title + behavioral observation + sourced evidence)
-5. Per-stage HMW questions (2-4)
-
-**Section 3: Emotional Arc**
-Narrative description of the emotional journey.
-
-**Section 4: Top 5 Moments of Truth**
-Numbered list with brief rationale.
-
-**Section 5: Top 5 Opportunity Areas**
-Numbered list in impact order, framed as specific improvement → customer outcome → mechanism. For each opportunity, also note the backstage constraint or root cause that is currently preventing it — opportunities that don't account for what's behind the experience are hard to action.
-
-**Section 5.5: Post-Resolution Implications**
-A brief note (3-4 sentences) on the emotional state at resolution and what it means for future customer behaviour. Relief is not the same as delight. A customer who finishes relieved the process is over is not a referrer. Name whether the end-state creates advocacy, retention, or churn risk — this is often the most executive-relevant insight in the map.
-
-**If the journey is cyclical:** explicitly state what emotional state the customer carries into the next cycle. A customer who ends cycle 1 feeling depleted but successful (not delighted) arrives at cycle 2 with lower tolerance for friction than they had at the start of cycle 1. Each repeat of a poorly-resolved journey compounds the churn risk. Name the cycle-over-cycle dynamic: is the experience building trust and deepening the relationship, or is each repetition eroding a little more goodwill? Also note whether there is a re-engagement opportunity at the cycle seam — the moment between completion and next trigger is often the best moment to invest in the relationship, and most organizations miss it entirely.
-
-**Section 6: Strategic HMW Questions**
-3-5 How Might We questions that open up broader strategic thinking — new products, services, digital experiences, or brand positioning opportunities the journey map reveals. These are not operational fixes; they are invitations to imagine something that doesn't exist yet. Each should point toward a meaningful opportunity for the brand: a new offering, a new relationship with the customer, a new category to own.
-
-Frame them as genuine HMWs — open enough that multiple different solutions could answer them, specific enough that a bad answer would be obviously out of scope. They should emerge directly from the emotional gaps, unmet needs, and unresolved tensions in the journey — not from the touchpoint friction already named in Stage opportunities.
-
-Good: "HMW build a product that lets Alex know their media diet is actually calibrated — not just full — so they leave each news cycle feeling genuinely informed rather than just busy?"
-Good: "HMW design a subscription relationship that deepens in the space between news events, not just during them?"
-Bad: "HMW improve the newsletter experience?" (operational fix, not strategic opening)
-Bad: "HMW make the app easier to use?" (UX improvement, not a new product or brand opportunity)
-
----
-
-## Step 7: Confirm Output Files
-
-The output files were already written at Step 3.6. If for any reason they were not written (e.g., the session was interrupted), write them now using the same instructions in Step 3.6 above.
+After writing the file, tell the user:
+> "`[persona-slug]-journey-map.html` saved — open in your browser to view the map"
