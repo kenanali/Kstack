@@ -1,7 +1,7 @@
 ---
 name: journey-map
 description: |
-  Map a customer journey moment-by-moment with emotional truth, pain points, and opportunity areas. Takes a persona and scenario, then builds a structured journey map across all stages with touchpoints, customer thoughts, feelings (scored), moments of truth, and opportunities. Use after persona-build to design or redesign a specific customer experience, or whenever a user wants to understand what a customer actually experiences end-to-end. Trigger when users describe a customer process, ask about pain points in a journey, mention onboarding/complaints/claims/applications, or want to run a workshop that includes empathy work. Maps emotional reality — refuses to produce sanitized process diagrams.
+  Map a customer journey moment-by-moment with emotional truth, pain points, and opportunity areas. Takes a persona and scenario, then builds a staged journey map with touchpoints, emotion scores (1–5), moments of truth, named insight cards, and per-stage How Might We questions. Automatically generates a visual HTML file and structured JSON at the end of every session. Use after /persona-build to design or redesign a specific customer experience. Trigger when users ask "what does the customer go through?", describe a process step-by-step from a customer perspective, share interview transcripts or complaint data and need them structured into a journey, want an empathy artifact for a workshop or design sprint, or mention onboarding, claims, complaints, renewals, or applications. Also trigger when a user has a persona and wants to understand where the experience breaks down. Maps emotional reality — refuses to produce sanitized process diagrams.
 ---
 
 # Journey Map
@@ -43,13 +43,13 @@ Ask the user:
 
 Read all provided materials before proceeding.
 
-**If no persona is provided:** Ask the user to describe the customer in enough detail to map with emotional truth — at minimum: who they are, what they're trying to achieve, what they're anxious about, and what channels they prefer. Explain: "A journey map without a persona becomes a process diagram. I need to know who I'm mapping for to give each touchpoint emotional truth." If they want to proceed with minimal context, do so — but flag that the emotion scores and customer thoughts will be less reliable.
+**If no persona is provided:** Tell the user directly — "A journey map without a persona becomes a process diagram. To give each touchpoint emotional truth I need to know: who is this customer, what are they trying to achieve, what are they anxious about, and what channels do they use?" Ask these four questions explicitly. If they want to proceed with minimal context, continue — but flag that emotion scores and customer thoughts will be inferred rather than evidence-grounded.
 
 ---
 
 ## Step 0.5: Persona and Scope Confirmation
 
-**This is a mandatory gate. Do not proceed to mapping until the user confirms.**
+Pause here before building any stages. A wrong assumption about persona or journey scope produces a completed map of the wrong journey — confirming scope now takes 30 seconds and saves the session.
 
 After reading all provided materials, summarize what you understand and present it for confirmation before doing any mapping work:
 
@@ -107,7 +107,7 @@ After proposing the stages, stop.
 >
 > Also flag any stages where the business goal and what you know about the customer's emotional state seem to be in tension — e.g., 'Business goal is to convert, but customers are scoring low on confidence at this stage.' Those tensions are often where the most important design work lives."
 
-**This is a mandatory pause. Do not proceed to Step 3 without stage confirmation.**
+Pause here before mapping any touchpoints. Stage structure is the skeleton of the map — adding or removing a stage mid-way requires rebuilding everything. Getting confirmation now is faster than correcting later.
 
 If operating without live interaction: complete the check-in as a written exchange — state the proposed stages, describe what each covers, and name what would change if a stage were split, merged, or added. Do not narrate around this step.
 

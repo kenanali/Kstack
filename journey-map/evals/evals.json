@@ -1,0 +1,27 @@
+[
+  {
+    "id": "jm-001",
+    "prompt": "I want to map the journey for a first-time homebuyer going through mortgage application. Our persona is a 34-year-old dual-income couple, financially stable but anxious about the process. They've never done this before. Main channels are our website, branch visits, and phone. Key pain points we already know: the document checklist is confusing and people don't know what to upload.",
+    "expected": "Confirms persona and scope before mapping. Asks about journey type (linear). Proposes 4-7 stages from customer perspective — not process steps. Pauses for stage confirmation before building touchpoints. Touchpoint table includes Customer Thought in first person. Emotion scores trend low (1-2) in document/waiting stages. Produces insight cards with memorable titles. Generates HTML and JSON files at end."
+  },
+  {
+    "id": "jm-002",
+    "prompt": "Can you map what a customer goes through when they make a complaint? We're a telecoms company. I don't have a persona built yet but I know our customers are usually frustrated before they even contact us.",
+    "expected": "Recognizes no persona provided. Asks the four questions: who they are, what they're trying to achieve, what they're anxious about, what channels they use. Does not proceed to mapping until answered. Once underway, emotion scores reflect pre-existing frustration (stage 1 should start at 1-2 not 3). Complaint journeys should average 1.5-2.5 overall. Generates visual output files at end."
+  },
+  {
+    "id": "jm-003",
+    "prompt": "Here's a persona output from persona-build: [assumes a full persona block is pasted]. I want to map their annual renewal journey for our insurance product. It repeats every year.",
+    "expected": "Identifies journey as cyclical (not linear) based on 'annual renewal repeats'. Scope confirmation references cycle-over-cycle compounding. Post-Resolution Implications section specifically addresses what emotional state carries into cycle 2. Output Format Section 5.5 includes cyclical framing. Generates HTML and JSON."
+  },
+  {
+    "id": "jm-004",
+    "prompt": "Walk me through what our enterprise customers experience when they onboard to our SaaS platform. They usually have a dedicated account manager, implementation team, and technical integration to do.",
+    "expected": "Recognizes this as an enterprise B2B journey with multiple stakeholders — should flag that the map will focus on one primary contact (e.g., the IT lead or the business owner) and name which. Stage names reflect customer experience not internal process (e.g., 'Getting everyone aligned internally' not 'Kickoff'). Channels include account manager calls, onboarding portal, technical documentation. Some stages will span weeks to months. Generates files at end."
+  },
+  {
+    "id": "jm-005",
+    "prompt": "I have a Miro export of our existing journey map. Can you improve it? [assumes file uploaded]",
+    "expected": "Reads the uploaded file before asking questions. Uses it as a starting point rather than starting from scratch. Confirms whether persona is embedded in the Miro export or needs to be provided. Highlights what the existing map is missing (emotion scores, moments of truth, insight cards, HMW questions) rather than duplicating what it already has. Produces an improved version. Generates HTML and JSON at end."
+  }
+]
