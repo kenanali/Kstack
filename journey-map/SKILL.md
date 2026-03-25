@@ -206,7 +206,9 @@ For each stage, in this order:
 
 After completing all sections above, automatically generate one file using the Write tool. Do not ask permission — this is a mandatory final step.
 
-### HTML file: `[persona-slug]-journey-map.html`
+### HTML file: `outputs/[persona-slug]-journey-map.html`
+
+Write the file to the `outputs/` folder at the root of the working directory. This folder is gitignored — outputs are never committed to the repo.
 
 Generate a fully self-contained HTML file. No external dependencies — all CSS inline in `<style>`, no JavaScript. Use the exact structure below, populated with the session data.
 
@@ -320,4 +322,4 @@ Generate a fully self-contained HTML file. No external dependencies — all CSS 
 Replace `[REPEAT_COLS]` with `repeat([N], 1fr)` where N is the number of stages.
 
 After writing the file, tell the user:
-> "`[persona-slug]-journey-map.html` saved — open in your browser to view the map"
+> "`outputs/[persona-slug]-journey-map.html` saved — open in your browser to view the map"
