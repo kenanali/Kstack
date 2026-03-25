@@ -1,0 +1,174 @@
+{
+  "meta": {
+    "persona": "Alex — The Calibrated Citizen",
+    "personaDescription": "An educated, politically aware professional in their 40s–60s who actively manages a multi-source media diet, seeking genuine understanding of events rather than just awareness of them.",
+    "scenario": "A significant breaking news story arrives via social or newsletter — trigger is skepticism about the source or framing — through to triangulated understanding and source portfolio update.",
+    "journeyType": "cyclical",
+    "trigger": "A breaking story arrives from a source they don't fully trust, or that conflicts with what they already understood — source cross-check reflex activates immediately.",
+    "resolution": "They have triangulated a view they can hold and defend, have decided whether to act or share, and have updated their source portfolio accordingly.",
+    "generatedAt": "2026-03-25"
+  },
+  "stages": [
+    {
+      "id": "alert-catches-their-eye",
+      "name": "Alert catches their eye",
+      "timeframe": "Minutes",
+      "businessGoal": "Be the first credible signal — not the first alarming one",
+      "customerEntryState": "Skeptical, alert",
+      "userNeed": "I need a fast signal that something significant has happened — without being emotionally activated before I know if it's real or how serious it actually is.",
+      "goalExperienceTension": true,
+      "tensionDescription": "Publisher interest is in capturing attention immediately; Alex's interest is in resisting attention until credibility is established — urgent, alarming signals drive disengagement, not engagement.",
+      "channels": ["Social Media", "Email newsletter", "Mobile App — push notification", "Podcast app notification"],
+      "stageEmotionScore": 2.5,
+      "narrative": "A breaking story surfaces across one of their feeds. Before reading a word, Alex is already evaluating the source — their first cognitive move is 'who is saying this and why?', not 'what happened?' The format and origin of the alert determines whether they engage or scroll past.",
+      "problems": [
+        "Source framing activates distrust before content is evaluated",
+        "Urgency-optimised notifications signal emotional manipulation",
+        "Podcast format too long to consume at the alert moment"
+      ],
+      "opportunities": [
+        "Calm, sourced headlines break through skepticism where alarming ones repel",
+        "Newsletter delivery format signals editorial curation before a word is read",
+        "Show notes / summaries available at notification time serve the breaking moment"
+      ]
+    },
+    {
+      "id": "does-this-check-out",
+      "name": "Does this check out?",
+      "timeframe": "15–60 minutes",
+      "businessGoal": "Show up as the confirmation source in their two-source verification sequence",
+      "customerEntryState": "Suspicious, actively searching",
+      "userNeed": "Quick access to a second trusted source I can use to triangulate — I want confirmation or contradiction, not more of the same framing.",
+      "goalExperienceTension": true,
+      "tensionDescription": "The source wants time-on-site and engagement depth; Alex wants efficient verification and wants to leave when they've confirmed enough — every friction point signals the wrong priority.",
+      "channels": ["Website — search", "Website — homepage", "Website — article page"],
+      "stageEmotionScore": 2.0,
+      "narrative": "Alex actively searches for coverage of the story on outlets they already trust. The goal is triangulation: if two trusted sources agree on the facts (even if they frame differently), the story is real. Paywall friction, partisan framing, or hidden sourcing at this stage terminates the visit.",
+      "problems": [
+        "Trusted source hasn't published yet — Alex stuck with the less trusted version",
+        "Partisan homepage framing breaks trust signal even on generally trusted outlets",
+        "Paywall before sourcing is visible = trust block, Alex leaves",
+        "Divergent framing across trusted sources increases anxiety rather than resolves it"
+      ],
+      "opportunities": [
+        "Being first among trusted sources at the verification moment earns long-term positioning as the confirmation source",
+        "Visible sourcing in the first paragraph earns credibility before any paywall friction",
+        "Explaining why framings differ earns higher analytical trust than ignoring the competing version"
+      ]
+    },
+    {
+      "id": "going-deeper",
+      "name": "Going deeper",
+      "timeframe": "30 minutes–several hours (distributed across the day)",
+      "businessGoal": "Be the depth source — the place Alex spends meaningful time when they want to actually understand, not just know",
+      "customerEntryState": "Engaged, methodical, frustrated by breadth",
+      "userNeed": "Synthesis and comprehension — not more chronological updates. I need to understand what this means, not receive the 12th version of what happened.",
+      "goalExperienceTension": true,
+      "tensionDescription": "Most news ecosystems are optimised for breadth, recency, and volume; Alex wants depth and synthesis — a fundamentally different product that most outlets don't build.",
+      "channels": ["Website — long-form article", "Podcast", "Social Media — scanning"],
+      "stageEmotionScore": 3.0,
+      "narrative": "Alex moves from verification to comprehension — seeking synthesis, context, and implications. When they find a good explainer or analysis piece, engagement is high and voluntary. When they can't find synthesis and are stuck scrolling chronological updates, frustration spikes and they lose confidence in the outlet.",
+      "problems": [
+        "Breaking news format optimised for volume and speed, not comprehension",
+        "Podcast episodes may lag behind the latest developments",
+        "Commentary that slips from analysis into advocacy breaks trust mid-read"
+      ],
+      "opportunities": [
+        "Structured explainers with 'what we know / what we don't / what it means' earn repeat visits",
+        "Same-day podcast publication earns daily habit formation",
+        "The outlet that produces synthesis first owns the depth moment — Alex remembers which source helped them understand"
+      ]
+    },
+    {
+      "id": "making-sense-of-it",
+      "name": "Making sense of it",
+      "timeframe": "Hours — ambient, fragmented, often away from any screen",
+      "businessGoal": "Stay top of mind as the source that helped them understand — not just informed them",
+      "customerEntryState": "Reflective, integrating, forming a view",
+      "userNeed": "Space to arrive at a position I can hold and defend — not more content, but confidence that what I've read is enough to form a view.",
+      "goalExperienceTension": false,
+      "tensionDescription": null,
+      "channels": ["Offline / ambient", "Word of mouth — peer conversation", "Social Media / Messaging"],
+      "stageEmotionScore": 2.67,
+      "narrative": "Understanding forms away from the screen — during commutes, conversations, exercise. The test of a source's value happens in conversation: if Alex's synthesis holds up when challenged, the source earned it. If it falls apart, the source gets a strike. The decision to share or not is a credibility judgment about the source, not just the story.",
+      "problems": [
+        "Incomplete understanding means anxiety persists rather than resolving",
+        "Understanding that doesn't hold in conversation sends Alex back to research",
+        "Sharing from a less-trusted source creates reputational risk — suppresses sharing entirely"
+      ],
+      "opportunities": [
+        "Coverage that presents the strongest opposing argument honestly makes Alex feel prepared for conversation",
+        "Sources with visible credibility signals earn more shares — sharing becomes a lower-risk act",
+        "Why-this-matters-for-you framing reduces the cognitive work of ambient sense-making"
+      ]
+    },
+    {
+      "id": "deciding-what-to-do",
+      "name": "Deciding what to do with it",
+      "timeframe": "Minutes",
+      "businessGoal": "Earn the relationship beyond this story — the daily return habit starts here",
+      "customerEntryState": "Resolved but evaluating",
+      "userNeed": "Either a clear action I can actually take, or permission to disengage without guilt — media that leaves me unable to act and unable to stop is the worst of both worlds.",
+      "goalExperienceTension": true,
+      "tensionDescription": "Media organisations benefit from continued consumption; Alex needs to disengage to maintain equilibrium — the format that respects this decision earns long-term trust, the format that resists it earns resentment.",
+      "channels": ["Website — self-service portal", "Mobile App", "Social Media / Messaging"],
+      "stageEmotionScore": 3.0,
+      "narrative": "Alex decides: act, share, follow, or close. Each of these is a micro-trust judgment. The follow or subscribe decision — made at peak trust, at the end of a piece they valued — is the highest-leverage loyalty acquisition moment in the journey. Almost every platform misses it.",
+      "problems": [
+        "Civic action options are generic and disconnected from the specific story",
+        "Closing formats that end with 'donate to our newsroom' feel disconnected from the moment",
+        "Follow and subscribe mechanisms are buried — the moment of earned trust passes without a clear action"
+      ],
+      "opportunities": [
+        "Specific local actionable connection between story and what Alex can do within 24 hours",
+        "Closing states that give permission to disengage reduce emotional exhaustion and build long-term relationship",
+        "Surfacing follow/subscribe CTA at the exact moment of earned trust is the highest-leverage loyalty acquisition moment"
+      ]
+    },
+    {
+      "id": "recalibration",
+      "name": "Recalibration",
+      "timeframe": "Days to weeks — ongoing between news cycles",
+      "businessGoal": "Survive the source portfolio review and remain in Alex's regular rotation for the next cycle",
+      "customerEntryState": "Settled, slightly fatigued, reflective",
+      "userNeed": "Confidence that my media diet is actually serving me — that I'm genuinely informed rather than just busy, and that I'm not in an echo chamber I can't see.",
+      "goalExperienceTension": true,
+      "tensionDescription": "Platforms optimise for maximum consumption; Alex is explicitly trying to consume less but better — the platform that respects this wins the long game, the platform that fights it earns churn.",
+      "channels": ["Offline / ambient", "Mobile App", "Website", "Email newsletter"],
+      "stageEmotionScore": 2.5,
+      "narrative": "Alex reviews whether their media diet served them this cycle. Which sources helped them understand vs. which left them anxious and confused? The source that gets opened first at the start of the next cycle is the source that earned consistent trust across this one. This is the compounding loyalty moment — and the cycle-seam is also the moment most platforms miss entirely.",
+      "problems": [
+        "No mechanism to gauge whether consumption has been productive rather than just voluminous",
+        "Most media design makes it difficult to compare source quality retrospectively",
+        "Engagement-maximising re-engagement tactics actively resist the break Alex needs"
+      ],
+      "opportunities": [
+        "Product design oriented around understanding rather than engagement time would be distinctive",
+        "The source that earns the cycle seam — the space between news events — with relationship-building content (not urgency) earns long-term loyalty",
+        "Visible track record of reliability across multiple stories earns permanent rotation position"
+      ]
+    }
+  ],
+  "emotionalArc": "Alex enters the journey guarded — the first emotional move is resistance, not engagement. Stage 2 is the trough: methodical, fatigued, anxious about being wrong. Stage 3 creates a relative peak when good synthesis is found, but this is contingent — the absence of synthesis pushes scores back down to 1. Stages 4 and 5 hover at mild frustration as Alex deals with the gap between being informed and being able to act. Stage 6 settles into a resigned fatigue: they consumed a lot, they understand something, but they're not sure the ratio was right. The emotional arc reveals a fundamental disconnect between what media is optimised for and what this consumer actually needs. Every high point in the journey happens when a source helps them understand; every low point happens when a source adds to their information load without helping them make sense of it.",
+  "topMomentsOfTruth": [
+    "Does this check out? — Scanning homepage of primary outlet: the trust signal is formed in 5 seconds — calm factual framing or partisan loading determines whether Alex continues or leaves",
+    "Does this check out? — Reading lede and first paragraphs: visible sourcing before paywall friction establishes credibility before the subscription ask",
+    "Going deeper — Absence of synthesis / scrolling breaking updates: the outlet that produces synthesis fastest owns Alex's understanding of the story — this moment determines who gets credited",
+    "Deciding what to do — Follow writer or save source: the highest-leverage loyalty acquisition moment; almost always missed because the mechanism is buried",
+    "Recalibration — Opening first source of next cycle: the source opened first in cycle N+1 is the source that consistently earned trust in cycle N — this is compounding loyalty or compounding churn"
+  ],
+  "topOpportunities": [
+    "Producing synthesis (what happened / what it means / what to watch) faster than competitors at Stage 3 would make Alex credit this outlet for their understanding — because the synthesis outlet is the one they remember and recommend.",
+    "Making sourcing and evidence methodology visible before any paywall friction at Stage 2 would earn credibility at the exact moment Alex is evaluating whether to trust — because they evaluate trust before they evaluate cost.",
+    "Surfacing a low-friction follow or subscribe CTA at the end of a piece Alex genuinely valued at Stage 5 would capture loyalty at peak trust — because the moment passes within seconds and most platforms don't build for it.",
+    "Designing closing states that give Alex explicit permission to disengage at Stage 5 would build long-term relationship equity — because the format that doesn't weaponise FOMO is distinctive in a market that does nothing else.",
+    "Connecting specific stories to specific local civic actions at Stage 5 would resolve the civic helplessness that leaves Alex with nowhere to put their informed frustration — because feeling informed without being able to act is the unresolved tension this audience carries into every cycle."
+  ],
+  "strategicHMW": [
+    "HMW build a news product where the primary success metric is what you understood — not what you consumed — and make that legible and rewarding to the reader?",
+    "HMW design a brand relationship that earns commitment at the moment of peak earned trust — the end of a valued piece — rather than asking for it at zero trust at the beginning of a visit?",
+    "HMW create a news experience that helps Alex know their media diet is calibrated, not just full — giving them genuine confidence they're informed rather than just busy?",
+    "HMW build a digital service that closes the gap between understanding a story and knowing what to do with it — connecting being informed to being able to act, locally and specifically?",
+    "HMW design a news brand whose relationship with its audience deepens between news events — owning the cycle seam as a product experience, not leaving it as a gap?"
+  ]
+}
