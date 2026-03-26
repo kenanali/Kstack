@@ -1,78 +1,56 @@
 # KStack
 
-**A set of Claude Code slash-command skills for CX transformation, brand strategy, and innovation work.**
+**11 expert slash-command skills for CX transformation and brand strategy — inside Claude Code.**
 
-KStack gives you 11 expert cognitive modes — the way a senior service designer, brand strategist, organizational consultant, or workshop facilitator actually thinks — as slash commands inside Claude Code. Instead of prompting a generic AI assistant, you invoke a specific expert perspective with a structured methodology, opinionated outputs, and the right questions at the right moments.
-
-Built for CX consultants, service designers, brand strategists, innovation leads, and anyone who runs CX transformation or brand development programs.
+Each skill encodes a specific methodology: the way a senior service designer, management consultant, or brand strategist actually works through a problem. Skills chain together — the output of one becomes the input of the next.
 
 ---
 
-## What it does
-
-Most AI tools give you a chatbot. KStack gives you a workflow.
-
-Each skill encodes a real methodology: how an expert would actually approach the problem, what they'd look for, what questions they'd ask, and what a finished output looks like. Skills are designed to chain — the output of one becomes the input of the next.
-
-```mermaid
-flowchart TD
-    ss["/session-start"] -.->|"creates output folder"| P1
-
-    subgraph P1["Phase 1: Intelligence"]
-        ts["/trend-scan"]
-        bc["/biz-context"]
-        sb["/scan-blockers"]
-    end
-    subgraph P2["Phase 2: Customer Understanding"]
-        pb["/persona-build"]
-        jm["/journey-map"]
-        sm["/service-map"]
-    end
-    P1 --> syn["/synthesize"]
-    P2 --> syn
-    syn --> biz["/biz-case"]
-    syn --> pri["/prioritize"]
-
-    subgraph Brand["Brand Strategy Track"]
-        bbb["/brand-building-blocks"] --> bt["/brand-territories"]
-    end
-    pb -.-> bbb
-    bc -.-> bbb
-    ts -.-> bbb
-```
-
----
-
-## The 11 skills
+## Skills
 
 ### CX Transformation
 
-| Skill | Expert mode | What you get |
-|---|---|---|
-| `/trend-scan` | Futurist + macro analyst | Trend radar across PESTLE + tech waves, scored for CX relevance, with specific CX implications and convergence zones |
-| `/biz-context` | Management consultant | Five-domain business diagnostic (revenue, customer metrics, ops, market position, org capability) + Porter's Five Forces competitive assessment + key tensions + strategic "so what" |
-| `/scan-blockers` | Organizational consultant | Full blocker map across 8 categories, rated by severity and addressability, with "where to start" and landmine warnings |
-| `/persona-build` | UX researcher + behavioral psychologist | Rich persona card with JTBD (functional, emotional, social), trigger events, anxieties, unmet needs — every claim tagged as evidenced or inferred |
-| `/journey-map` | Service designer | Stage-by-stage journey map with emotion scores, moments of truth, and top 5 opportunities — outputs a visual HTML file and JSON automatically |
-| `/service-map` | Service designer + operations consultant | 5-layer service blueprint (customer actions → frontstage → backstage → support processes → systems), failure point register, handoff risks |
-| `/synthesize` | Senior strategist | Affinity clusters with source attribution, tension map, ranked How Might We questions, burning platform, synthesis headline |
-| `/biz-case` | Management consultant + financial analyst | 7-section executive business case (problem, solution, segment, value drivers, ROI, risks, roadmap) — every number tagged as data-backed, benchmarked, or assumption |
-| `/prioritize` | Portfolio strategist | Multi-criteria scoring (strategic alignment × customer impact × feasibility × time-to-value), portfolio quadrant view, sequencing recommendation, explicit deprioritization rationale |
+| Skill | What it does |
+|---|---|
+| `/trend-scan` | Macro trend radar across PESTLE + tech waves, scored for CX relevance |
+| `/biz-context` | Five-domain business diagnostic + Porter's Five Forces + key tensions |
+| `/scan-blockers` | Full blocker map across 8 categories, rated by severity and addressability |
+| `/persona-build` | Rich persona with JTBD, trigger events, anxieties, and unmet needs |
+| `/journey-map` | Stage-by-stage journey map with emotion scores, moments of truth, and HMW opportunities |
+| `/service-map` | 5-layer service blueprint with failure points and handoff risks |
+| `/synthesize` | Insight clusters, tension map, ranked How Might We questions, burning platform |
+| `/biz-case` | 7-section executive business case — every number tagged as data-backed or assumption |
+| `/prioritize` | Multi-criteria initiative scoring, phased roadmap, and sequencing recommendation |
 
 ### Brand Strategy
 
-| Skill | Expert mode | What you get |
-|---|---|---|
-| `/brand-building-blocks` | Brand strategist + research synthesizer | 5-8 named building blocks across Audience, Company, and Moment forces — the insight-rich fuel for brand territories |
-| `/brand-territories` | Brand strategist + creative director | 3 distinct territory directions, each anchored by a different emotional benefit, with "What if we..." scenarios for each |
+| Skill | What it does |
+|---|---|
+| `/brand-building-blocks` | 5-8 named building blocks across Audience, Company, and Moment forces |
+| `/brand-territories` | 3 distinct territory directions, each anchored by a different emotional benefit |
+
+Skills flow in phases:
+
+```
+/session-start → creates output folder
+
+Phase 1: Intelligence          Phase 2: Customer Understanding
+  /trend-scan                    /persona-build
+  /biz-context                   /journey-map
+  /scan-blockers                 /service-map
+       └──────────── both feed into ────────────┘
+                          /synthesize
+                        /biz-case  /prioritize
+
+Brand track: /brand-building-blocks → /brand-territories
+(feeds from /persona-build, /biz-context, /trend-scan)
+```
 
 ---
 
 ## Installation
 
-**Requires:** [Claude Code](https://claude.ai/code) (the CLI)
-
-### Option A — Clone and run setup (recommended)
+**Requires:** [Claude Code](https://claude.ai/code)
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/KStack.git
@@ -80,342 +58,99 @@ cd KStack
 ./setup
 ```
 
-The setup script symlinks all 9 skills into `~/.claude/skills/` so they're available as slash commands in any Claude Code session.
-
-**Then restart Claude Code** — the skills will appear in the slash command menu.
-
-### Option B — Manual install (no git required)
-
-If you don't want to clone the repo, you can install skills one at a time:
-
-1. Open any skill's `SKILL.md` file on GitHub (e.g. `trend-scan/SKILL.md`)
-2. Copy the full file contents
-3. Open Claude Code and paste the contents into the chat
-4. Ask Claude: **"Please install this as a slash command skill"**
-
-Claude will save it to `~/.claude/skills/` and it will be available immediately as a slash command in that session. Repeat for each skill you want.
+Restart Claude Code — all skills will appear in the slash command menu.
 
 ---
 
 ## How to use
 
-### Starting a new CX project
-
-For a new engagement, run Phase 1 first to build the strategic and organizational context:
-
-```
-/trend-scan       ← what's happening in the external environment?
-/biz-context      ← how is this business actually performing?
-/scan-blockers    ← what's blocking CX improvement internally and externally?
-```
-
-Each skill will ask you intake questions, then work through its methodology. You can paste documents, upload files, or describe context verbally.
-
-### Understanding the customer
-
-Run Phase 2 to build the customer picture:
-
-```
-/persona-build    ← who is this customer really?
-/journey-map      ← what does their experience actually feel like?
-/service-map      ← what's happening behind the scenes that creates that experience?
-```
-
-`/journey-map` is designed to consume the output of `/persona-build` — paste the persona card directly into the journey mapping session.
-
-### Synthesizing and activating
-
-Once you have Phase 1 + Phase 2 outputs, bring them together:
-
-```
-/synthesize       ← what does it all mean? what are the opportunities?
-```
-
-Then move to activation:
-
-```
-/biz-case         ← build a business case for a specific initiative
-/prioritize       ← score and sequence a portfolio of initiatives
-```
-
-### Chaining outputs
-
-All skill outputs are structured markdown. Paste the output of one skill directly into the next session — the receiving skill will read and work from it.
-
-Example chain:
-1. Run `/biz-context` → paste output into `/synthesize`
-2. Run `/journey-map` → paste output into `/synthesize`
-3. Run `/synthesize` → paste output into `/biz-case` or `/prioritize`
-
----
-
-## Sessions and outputs
-
-Every time you run a KStack skill, it saves its output as a file — a visual HTML document you can open in your browser, or a structured markdown document you can copy into a presentation or Google Doc.
-
-### Starting a session
-
-A **session** is how KStack keeps all your outputs for one engagement organised together. When you start a session for a client or project, KStack creates a single folder — named with the organisation and today's date — and every skill you run after that writes its output into that folder automatically.
-
-**To start a session:**
-```
-/session-start New York Post
-```
-
-This creates a folder like `outputs/new-york-post-2026-03-25-0930/` and remembers it for the rest of your work. You won't need to tell each skill where to save — they find the session automatically.
-
-**You don't have to run `/session-start` first.** If you skip it and run a skill directly, the skill will ask you for the organisation name on its own and create the session folder for you. Either way works.
-
-### What gets saved
-
-| Output type | Skills that produce it | What it is |
-|---|---|---|
-| **HTML file** | `/journey-map`, `/persona-build`, `/service-map`, `/synthesize`, `/prioritize`, `/brand-territories` | A visual, formatted document — open it in your browser like a webpage. Designed to be shareable and presentation-ready. |
-| **Markdown file** | `/biz-context`, `/biz-case`, `/trend-scan`, `/scan-blockers`, `/brand-building-blocks` | A structured text document — copy and paste directly into Word, Google Docs, Notion, or a presentation deck. |
-
-All outputs include a short disclaimer that the content was AI-generated and should be reviewed before use.
-
-### Starting a new engagement
-
-Each client or project should have its own session. To start fresh:
+Start a session for an engagement:
 
 ```
 /session-start Acme Health
 ```
 
-This creates a new dated folder for Acme Health and all subsequent outputs go there. Your previous sessions are not affected — they stay in their own folders inside `outputs/`.
-
-### Finding your outputs
-
-All output files are saved in the `outputs/` folder inside this project, organised by session:
+This creates `outputs/acme-health-2026-03-25-1400/` and all subsequent skills write their outputs there automatically. Run any skill next:
 
 ```
-outputs/
-├── new-york-post-2026-03-25-0930/
-│   ├── persona-alex.html
-│   ├── journey-map-alex.html
-│   └── trend-scan.md
-└── acme-health-2026-03-26-1400/
-    ├── biz-context.md
-    └── prioritize.html
+/trend-scan
+/biz-context
+/persona-build
+/journey-map
 ```
 
-Open any `.html` file in your browser to view the visual output. Open any `.md` file in a text editor or paste it into your preferred document tool.
+Skills ask intake questions, work through their methodology, and save their output as a file — an HTML document you can open in a browser, or a markdown document you can paste into any tool.
 
----
+**Chaining outputs:** Paste the output of one skill directly into the next session. `/synthesize` is designed to consume outputs from Phase 1 and Phase 2 together.
 
-> **Note on where you're running KStack:** The session and file output system works fully when you're using **Claude Code in a terminal or VS Code** — outputs are written directly to your project folder.
->
-> If you're using **Claude.ai in a web browser** or the **Claude desktop app** outside of an IDE, file writing may behave differently depending on your setup. In those environments, skill outputs may stay in the chat rather than being saved as files. The skills themselves will still run and produce the same quality analysis — you may just need to copy the output manually.
->
-> For the best experience with sessions and saved outputs, use Claude Code with this project open in VS Code or a terminal.
-
----
-
-## What's inside each skill folder
-
-Some skills include companion reference files that the skill reads automatically during execution:
-
-| File | Used by | Contains |
-|---|---|---|
-| `scan-blockers/blocker-taxonomy.md` | `/scan-blockers` | 8-category taxonomy of 40+ CX blockers across internal and external dimensions |
-| `journey-map/touchpoint-taxonomy.md` | `/journey-map` | Full vocabulary of customer touchpoints organized by channel type |
-| `biz-case/value-driver-library.md` | `/biz-case` | 14 CX value drivers with mechanisms, metrics, impact ranges, and key assumptions |
-
----
-
-## Design principles
-
-**Opinionated methodology, not generic prompting.**
-Each skill encodes a specific way of thinking — not just a task description. `/scan-blockers` doesn't just "find problems," it works through a structured taxonomy and rates every blocker on severity and addressability. `/biz-case` doesn't just "write a business case," it marks every value estimate as data-backed, benchmarked, or assumption.
-
-**Evidence discipline.**
-Skills are designed to distinguish between what's evidenced and what's inferred. `/persona-build` tags every claim. `/biz-case` marks every number. This is deliberate — the outputs are used in real stakeholder settings where credibility matters.
-
-**Mandatory stops at decision points.**
-Each skill pauses at key moments to check its work with you before proceeding. Stage definitions in `/journey-map`, theme clusters in `/synthesize`, scoring in `/prioritize` — the human stays in the loop at the decisions that matter.
-
-**Outputs designed for real work.**
-Every output is structured markdown designed to be copy-pasted directly into presentations, Notion pages, Word documents, or the next skill in the chain. Nothing needs reformatting.
-
----
-
-## Project structure
-
-```
-KStack/
-├── README.md
-├── CLAUDE.md                           ← instructions for Claude Code
-├── package.json
-├── setup                               ← install script
-├── .kstack-session.json                ← active session (auto-created, do not delete mid-engagement)
-│
-├── outputs/                            ← all skill outputs, organised by session
-│   └── [org-slug]-[YYYY-MM-DD-HHMM]/  ← one folder per engagement
-│       ├── persona-[name].html
-│       ├── journey-map-[name].html
-│       ├── biz-context.md
-│       └── ...
-│
-├── session-start/
-│   └── SKILL.md
-├── trend-scan/
-│   └── SKILL.md
-├── biz-context/
-│   └── SKILL.md
-├── scan-blockers/
-│   ├── SKILL.md
-│   └── blocker-taxonomy.md             ← 8-category blocker taxonomy
-├── persona-build/
-│   └── SKILL.md
-├── journey-map/
-│   ├── SKILL.md
-│   └── touchpoint-taxonomy.md          ← full touchpoint vocabulary
-├── service-map/
-│   └── SKILL.md
-├── synthesize/
-│   └── SKILL.md
-├── biz-case/
-│   ├── SKILL.md
-│   └── value-driver-library.md         ← 14 CX value drivers
-├── prioritize/
-│   └── SKILL.md
-├── brand-building-blocks/
-│   └── SKILL.md
-└── brand-territories/
-    └── SKILL.md
-```
+> **Note:** Sessions and file outputs work best in Claude Code running in a terminal or VS Code. In the Claude web app or desktop app, outputs may stay in the chat rather than being saved as files.
 
 ---
 
 ## Requirements
 
-- [Claude Code](https://claude.ai/code) — the CLI that runs skills as slash commands
+- [Claude Code](https://claude.ai/code)
 - macOS or Linux (the setup script uses symlinks)
-- A Claude account (Pro or above recommended for longer skill sessions)
+- Claude Pro or above recommended for longer skill sessions
 
 ---
 
 ## Inspiration
 
-KStack was built in the spirit of [gstack](https://github.com/garrytan/gstack) — the idea that domain expertise can be encoded into slash commands that give you a specific cognitive mode on demand, rather than a blank-slate AI response.
-
-Where gstack encodes engineering and product thinking, KStack encodes CX transformation thinking: the way consultants, service designers, and facilitators actually work through these problems.
+Built in the spirit of [gstack](https://github.com/garrytan/gstack) — domain expertise encoded as slash commands that give you a specific cognitive mode on demand. Where gstack encodes engineering and product thinking, KStack encodes CX transformation and brand strategy thinking.
 
 ---
 
 ## Changelog
 
-### v1.9.2 — Journey Map Skill-Creator Improvements (2026-03-25)
+### v1.10.0 — Session Management + Disclaimer Footers (2026-03-25)
 
-`/journey-map` — Description sharpened with specific trigger phrases, mandatory gate language rewritten as reasoning-based pauses, no-persona intake made more direct. Added evals test suite.
+New `/session-start` skill creates a dated output folder per engagement; all skills read `.kstack-session.json` and write their outputs there automatically. All HTML and markdown outputs now include an AI disclaimer and creator credit. HMW opportunities freed from prescriptive 1:1 category requirements — 3–7 quality questions per stage, tagged thematically where appropriate.
 
-Full details: [CHANGELOG.md](CHANGELOG.md)
+### v1.9.2 — Journey Map Visual Improvements (2026-03-25)
 
-### v1.9.1 — Journey Map Visual HTML Output (2026-03-25)
+Synthesis footer redesigned to light slate (no more black panel); Top Opportunities column removed for cleaner two-column layout; HTML generation moved to isolated subagent to prevent context stalling on large outputs.
 
-`/journey-map` — Automatically generates a JSON data file and a self-contained HTML visual journey map at the end of every session. Horizontal grid layout with stages as columns, six rows per stage, and emoji-based emotion indicators. Opens directly in any browser.
+### v1.9.1 — Journey Map HTML Output (2026-03-25)
 
-Full details: [CHANGELOG.md](CHANGELOG.md)
+`/journey-map` automatically generates a self-contained visual HTML file at the end of every session. Horizontal grid layout with stages as columns, six content rows, and emoji-based emotion indicators.
 
-### v1.9.0 — Porter's Five Forces in Biz Context (2026-03-25)
+### v1.9.0 — Porter's Five Forces (2026-03-25)
 
-`/biz-context` — Porter's Five Forces assessment added to Domain 4 (Market Position). Rates each force by intensity, trend, and CX implication. Identifies the dominant force driving CX urgency and connects it to the strategic "So What."
-
-Full details: [CHANGELOG.md](CHANGELOG.md)
+`/biz-context` — Porter's Five Forces assessment added to Market Position domain, with intensity, trend, and CX implication per force.
 
 ### v1.8.0 — Brand Strategy Track (2026-03-24)
 
-Two new skills: `/brand-building-blocks`, `/brand-territories`. Synthesizes research across three forces (Audience, Company, Moment) into named building blocks, then explores 3 distinct territory directions each anchored by a different emotional benefit. Designed to consume `/persona-build`, `/biz-context`, and `/trend-scan` outputs directly.
-
-Full details: [CHANGELOG.md](CHANGELOG.md)
+Two new skills: `/brand-building-blocks` and `/brand-territories`. Feeds from `/persona-build`, `/biz-context`, and `/trend-scan`.
 
 ### v1.7.0 — Persona Design Principles (2026-03-24)
 
-`/persona-build` — Purpose-calibrated scope (use case now shapes output priorities), explicit exclusion guidance (no personality spectrums, unrelated hobbies, or fabricated content), "A Day With [Name]" contextual narrative section, and beyond-the-product unmet needs requirement. Improvements drawn from research on common persona design failures.
-
-Full details: [CHANGELOG.md](CHANGELOG.md)
+`/persona-build` — Purpose-calibrated scope, explicit exclusion guidance, contextual narrative section, beyond-the-product unmet needs.
 
 ### v1.6.0 — Live Data Integration (2026-03-23)
 
-`/biz-context`, `/trend-scan`, `/biz-case` — Added live web search and public data retrieval to the three skills where public information meaningfully supplements user-provided context. `/biz-context` now searches for annual reports, review site sentiment, competitor news, and WebFetches the company homepage when data is missing. `/trend-scan` gathers live signal data across PESTLE dimensions before the scan, enabling real Multi-Source Confirmed validation. `/biz-case` searches for industry benchmarks and competitor capability announcements. All web-sourced findings labeled `[SOURCE: Web search — verify before presenting]`. Search is conditional — only runs when user hasn't provided the relevant data.
-
-Full details: [CHANGELOG.md](CHANGELOG.md)
+`/biz-context`, `/trend-scan`, `/biz-case` — Live web search and public data retrieval when user-provided data is missing. All web-sourced findings labeled for verification.
 
 ### v1.5.0 — Interview Synthesis (2026-03-23)
 
-Advanced multi-interview analysis methodology across `/persona-build`, `/synthesize`, and `/scan-blockers`. Individual transcript analysis before cross-interview synthesis; dominant vs. outlier theme distinction; emergent subgroup detection; Learning Agenda framing; Between-Group Analysis for mixed-stakeholder data.
-
-Full details: [CHANGELOG.md](CHANGELOG.md)
+Advanced multi-interview analysis across `/persona-build`, `/synthesize`, and `/scan-blockers`. Individual transcript analysis before cross-interview synthesis; dominant vs. outlier theme distinction.
 
 ### v1.4.0 — Evidence Scaffolding (2026-03-23)
 
-**All skills** — Explicit "What to Upload" table in every skill's Step 0, naming exact file types and why each helps. **`/scan-blockers`** — Four diagnostic probe questions (vision cascade, decision rights, execution culture, goal alignment); two named landmines; Goal Misalignment Compound pattern; expanded blocker taxonomy. **`/service-map`** — Decision Points in backstage layer; Clock Stops field; five named failure point types; Competing Metrics column in handoff register; incentive architecture check. **`/journey-map`** and **`/service-map`** — Mandatory persona and stage confirmation gates before any mapping begins.
-
-Full details: [CHANGELOG.md](CHANGELOG.md)
+"What to Upload" intake tables in every skill. Expanded blocker taxonomy, decision points in service map, mandatory confirmation gates in journey map and service map.
 
 ### v1.3.0 — Journey Architecture (2026-03-23)
 
-`/journey-map` — Stage header blocks (timeframe, business goal, user need per stage, goal-experience tension); named insight cards per stage with sourced evidence; per-stage HMW questions embedded in each stage; linear vs. cyclical journey type; cycle-over-cycle post-resolution modeling.
-
-Full details: [CHANGELOG.md](CHANGELOG.md)
-
----
+`/journey-map` — Stage header blocks, named insight cards with sourced evidence, per-stage HMW questions, linear vs. cyclical journey type.
 
 ### v1.2.0 — Signal Grounding (2026-03-23)
 
-Skills grounded in real-world data signals across web, news, community, and competitive sources.
-
-`/persona-build` — Explicit client audience research file intake; community verbatim emotional jobs; trigger event timing/seasonality; switch reasons from review data; Research Channels as a distinct dimension (where persona researches before deciding); WHERE THEY RESEARCH persona card section
-
-`/trend-scan` — Search/news/community data intake; community affinity in Social PESTLE; Multi-Source Confirmed vs. Analyst-Led signal validation; competitor adoption status in trend implications
-
-`/biz-context` — Digital signal data intake; unfiltered sentiment vs. formal NPS comparison; digital presence + competitive news velocity in Market Position; signal source column in summary table; three named cross-domain patterns (sentiment divergence, messaging-execution gap, multi-domain deterioration)
-
-Full details: [CHANGELOG.md](CHANGELOG.md)
-
----
+Skills grounded in real-world data signals. Community verbatim in persona build; multi-source confirmation in trend scan; unfiltered sentiment vs. formal NPS in biz context.
 
 ### v1.1.0 — Portfolio Refinement (2026-03-23)
 
-`/workshop-prep` — **Removed.** Focus narrowed to strategic intelligence, customer understanding, synthesis, and activation. KStack is now a 9-skill portfolio.
-
----
+`/workshop-prep` removed. KStack narrowed to 11 core skills across intelligence, customer understanding, synthesis, activation, and brand strategy.
 
 ### v1.0.0 — Initial Release (2026-03-23)
 
-First full skill-creator evaluation cycle. 20 test cases run across all 10 skills, graded, and improved.
-
-**All skills:**
-- Removed unsupported `allowed-tools` frontmatter attribute
-- Made descriptions pushier with explicit trigger contexts and proactive trigger conditions
-
-**Key improvements by skill:**
-
-`/trend-scan` — Scoring anchors for the 1–5 disruption scale; competitor context in intake; async check-in fallback; genericity test for implications; signal trigger quality guidance
-
-`/biz-context` — New "Unassessed" health rating; summary table before domain detail; Cross-Domain Pattern Check step; competitive intake question; measurable success criteria requirement; no-documents verbal intake path
-
-`/scan-blockers` — Severity rationale column in table; upstream-leverage definition for Where to Start; program history question; blocker compound-system callout; sparse-input hypothesis framing
-
-`/persona-build` — No-research refusal with three concrete paths; >40% assumed = data quality warning; motivational goals requirement; social jobs tension-probing; channel-behaviour vs. channel-preference distinction
-
-`/journey-map` — Absence-of-touchpoint instruction; emotion score examples and calibration note; decline/unhappy path requirement; mandatory stage check-in as hard gate; post-resolution implications section
-
-`/service-map` — Confidence column on failure points (Confirmed/Inferred/Hypothesised); frequency on handoffs; provisional blueprint option; journey map dependency flagging
-
-`/synthesize` — Theme overlap check; provisional theme marking for document output; purpose-tailored output (workshop/board paper/design team); minimum viable input guidance; time-dimension quality check
-
-`/biz-case` — "Why now" must connect to competitive/regulatory urgency; alternative comparison requirement; phased commitment option for high-uncertainty programs; CFO standalone test for executive summary
-
-`/prioritize` — Weight calibration guidance; enabling vs. delivering initiative handling; explicit 6-month test output; dependency contingency for large-system programs; team composition check section
-
-Full details: [CHANGELOG.md](CHANGELOG.md)
-
----
-
-## Contributing
-
-The skills improve with real usage. If you use KStack on a project and find a skill's output is off, or a step is missing, or a reference file needs updating — PRs are welcome.
-
-The most valuable contributions are improvements to the reference files (`blocker-taxonomy.md`, `activity-library.md`, `value-driver-library.md`, `touchpoint-taxonomy.md`) based on real-world gaps.
+First full evaluation cycle across all skills. 20 test cases, graded, and improved.
