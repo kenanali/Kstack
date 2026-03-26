@@ -253,11 +253,6 @@ After the card, include a **Research Gaps** section (3-5 bullet points):
 
 This section prevents the persona from being used with false confidence in areas where the evidence is actually thin or contested. A persona that knows its own gaps is more trustworthy than one that doesn't.
 
-Then include a brief **Designer's Note** (3-5 sentences) covering:
-1. The single most important thing a designer might get wrong about this persona — the assumption most likely to be smuggled in
-2. The emotional truth that most data doesn't capture — what the numbers don't show about how this person actually feels
-3. The channel or touchpoint implication that is non-obvious — where this persona behaves differently from what designers typically expect
-
 ---
 
 ## Final Step: Save Output
@@ -298,7 +293,7 @@ Footer (place immediately before `</body>`):
 </footer>
 ```
 
-Design a persona portrait card. Single-column layout, max-width 1100px centered. Dark header with persona name, role/segment, and tagline. Then sections for: Goals, Functional JTBD, Emotional JTBD, Social JTBD, Trigger Events, Decision Factors, Anxieties, Channel Behavior, Unmet Needs. Each section in a white card with a colored left border (use #6366f1 for accent). Quote block in dark background. Research Gaps and Designer's Note at the bottom. Use -apple-system font, #f5f5f5 background, clean professional styling.
+Design a persona portrait card. Single-column layout, max-width 1100px centered. Dark header with persona name, role/segment, and tagline. Then sections for: Goals, Functional JTBD, Emotional JTBD, Social JTBD, Trigger Events, Decision Factors, Anxieties, Channel Behavior, Unmet Needs. Each section in a white card with a colored left border (use #6366f1 for accent). Quote block in dark background. Research Gaps at the bottom. Use -apple-system font, #f5f5f5 background, clean professional styling.
 
 Evidence sourcing: For every item that has a source citation inside its evidence brackets (e.g. [EVIDENCED — Rebecca verbatim: "..."] or [COMMUNITY VERBATIM: "..."]), extract the source text (everything after the em dash — or after "COMMUNITY VERBATIM:") and render it as a light grey pill inline after the claim text. Style the pill as: display:inline; background:#f3f4f6; color:#9ca3af; border-radius:999px; padding:2px 8px; font-size:11px; margin-left:6px. Only use source text that exists in the analysis — do not invent or fabricate sources. If a bracket contains only the tag word with no source text (e.g. just [INFERRED]), render the badge only with no pill.
 
