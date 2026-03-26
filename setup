@@ -9,6 +9,7 @@ echo "Installing KStack skills to $SKILLS_DIR..."
 mkdir -p "$SKILLS_DIR"
 
 SKILLS=(
+  "session-start"
   "trend-scan"
   "biz-context"
   "scan-blockers"
@@ -44,4 +45,4 @@ for skill in "${SKILLS[@]}"; do
   echo "  /$skill"
 done
 echo ""
-echo "Start with /trend-scan, /biz-context, or /scan-blockers for a new project."
+echo "Start a new engagement with /session-start, then run any skill."

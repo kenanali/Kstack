@@ -16,6 +16,8 @@ Each skill encodes a real methodology: how an expert would actually approach the
 
 ```mermaid
 flowchart TD
+    ss["/session-start"] -.->|"creates output folder"| P1
+
     subgraph P1["Phase 1: Intelligence"]
         ts["/trend-scan"]
         bc["/biz-context"]
@@ -30,16 +32,13 @@ flowchart TD
     P2 --> syn
     syn --> biz["/biz-case"]
     syn --> pri["/prioritize"]
-```
 
-**Brand Strategy Track** — chains with the CX workflow:
-
-```mermaid
-flowchart LR
-    pb2["/persona-build"] --> bbb["/brand-building-blocks"]
-    bc2["/biz-context"]   --> bbb
-    ts2["/trend-scan"]    --> bbb
-    bbb --> bt["/brand-territories"]
+    subgraph Brand["Brand Strategy Track"]
+        bbb["/brand-building-blocks"] --> bt["/brand-territories"]
+    end
+    pb -.-> bbb
+    bc -.-> bbb
+    ts -.-> bbb
 ```
 
 ---
@@ -150,6 +149,69 @@ Example chain:
 
 ---
 
+## Sessions and outputs
+
+Every time you run a KStack skill, it saves its output as a file — a visual HTML document you can open in your browser, or a structured markdown document you can copy into a presentation or Google Doc.
+
+### Starting a session
+
+A **session** is how KStack keeps all your outputs for one engagement organised together. When you start a session for a client or project, KStack creates a single folder — named with the organisation and today's date — and every skill you run after that writes its output into that folder automatically.
+
+**To start a session:**
+```
+/session-start New York Post
+```
+
+This creates a folder like `outputs/new-york-post-2026-03-25-0930/` and remembers it for the rest of your work. You won't need to tell each skill where to save — they find the session automatically.
+
+**You don't have to run `/session-start` first.** If you skip it and run a skill directly, the skill will ask you for the organisation name on its own and create the session folder for you. Either way works.
+
+### What gets saved
+
+| Output type | Skills that produce it | What it is |
+|---|---|---|
+| **HTML file** | `/journey-map`, `/persona-build`, `/service-map`, `/synthesize`, `/prioritize`, `/brand-territories` | A visual, formatted document — open it in your browser like a webpage. Designed to be shareable and presentation-ready. |
+| **Markdown file** | `/biz-context`, `/biz-case`, `/trend-scan`, `/scan-blockers`, `/brand-building-blocks` | A structured text document — copy and paste directly into Word, Google Docs, Notion, or a presentation deck. |
+
+All outputs include a short disclaimer that the content was AI-generated and should be reviewed before use.
+
+### Starting a new engagement
+
+Each client or project should have its own session. To start fresh:
+
+```
+/session-start Acme Health
+```
+
+This creates a new dated folder for Acme Health and all subsequent outputs go there. Your previous sessions are not affected — they stay in their own folders inside `outputs/`.
+
+### Finding your outputs
+
+All output files are saved in the `outputs/` folder inside this project, organised by session:
+
+```
+outputs/
+├── new-york-post-2026-03-25-0930/
+│   ├── persona-alex.html
+│   ├── journey-map-alex.html
+│   └── trend-scan.md
+└── acme-health-2026-03-26-1400/
+    ├── biz-context.md
+    └── prioritize.html
+```
+
+Open any `.html` file in your browser to view the visual output. Open any `.md` file in a text editor or paste it into your preferred document tool.
+
+---
+
+> **Note on where you're running KStack:** The session and file output system works fully when you're using **Claude Code in a terminal or VS Code** — outputs are written directly to your project folder.
+>
+> If you're using **Claude.ai in a web browser** or the **Claude desktop app** outside of an IDE, file writing may behave differently depending on your setup. In those environments, skill outputs may stay in the chat rather than being saved as files. The skills themselves will still run and produce the same quality analysis — you may just need to copy the output manually.
+>
+> For the best experience with sessions and saved outputs, use Claude Code with this project open in VS Code or a terminal.
+
+---
+
 ## What's inside each skill folder
 
 Some skills include companion reference files that the skill reads automatically during execution:
@@ -186,7 +248,17 @@ KStack/
 ├── CLAUDE.md                           ← instructions for Claude Code
 ├── package.json
 ├── setup                               ← install script
+├── .kstack-session.json                ← active session (auto-created, do not delete mid-engagement)
 │
+├── outputs/                            ← all skill outputs, organised by session
+│   └── [org-slug]-[YYYY-MM-DD-HHMM]/  ← one folder per engagement
+│       ├── persona-[name].html
+│       ├── journey-map-[name].html
+│       ├── biz-context.md
+│       └── ...
+│
+├── session-start/
+│   └── SKILL.md
 ├── trend-scan/
 │   └── SKILL.md
 ├── biz-context/

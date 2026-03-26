@@ -132,108 +132,136 @@ Adjust based on the user's response before mapping any touchpoints.
 
 ---
 
-## Step 3: Map Each Stage
+## Step 3: Build the Journey Map Analysis File
 
-For each stage, open with a **stage header block** before the touchpoint table:
+**Write all journey map content to a structured markdown file as you work through each stage.** Do not hold content in working memory — write to file immediately using the Write tool. This file is the source of truth for HTML generation in Step 7.
 
-```
-STAGE: [Stage name]
-Timeframe: [How long this stage typically lasts]
-Business goal: [What the organization is trying to achieve at this stage]
-Customer entry state: [The dominant emotional state as the customer arrives — 1-2 words]
-User need: [A synthesized statement of what the customer genuinely needs to succeed at this stage. Functional, not emotional — written as if the customer dictated it.]
-Goal-experience tension: [Yes/No — if Yes, name the conflict in one sentence]
-```
+**Session path:** Before writing, check for `.kstack-session.json` in the project root. If it exists, read `session_dir` from it and use that as the output folder. If it does not exist, use `outputs/` as the folder and create it with `mkdir -p outputs` if needed.
 
----
+**File:** `[session_dir]/journey-map-[persona-slug]-analysis.md`
 
-Then map all touchpoints — including the **absence of touchpoints**. If the customer expects communication at a certain moment and receives none, that silence is a touchpoint and should be mapped with its own row (e.g., "No proactive status update — absence of touchpoint"). Silence is often the highest-scoring pain point in journeys involving waiting.
+Create the file before starting Stage 1. Work through each stage sequentially, writing each section as you complete it. The file must follow this exact structure — the HTML generation agent in Step 7 will read it directly:
 
-For each stage, identify all touchpoints. For each touchpoint, complete the full row:
+```markdown
+# Journey Map Analysis: [Persona Name] — [Journey Scenario]
 
-| Stage | Touchpoint | Channel | Customer Action | Customer Thought | Feeling | Emotion Score | Pain Point | Moment of Truth | Opportunity |
-|---|---|---|---|---|---|---|---|---|---|
-
-**Field guidance:**
-
-- **Touchpoint:** The specific interaction point (e.g., "Automated payment confirmation email," "Call centre agent greeting," "App error screen")
-- **Channel:** From the touchpoint taxonomy (e.g., Email, Contact centre inbound, Mobile app)
-- **Customer Action:** What the customer does (verb + object — e.g., "Opens email and scans for total amount")
-- **Customer Thought:** Their internal monologue — what they're actually thinking (use first person, specific, not sanitized: "Why is it showing a different amount than last month?" not "The customer considers the bill amount")
-- **Feeling:** Emotion label (e.g., Confused, Anxious, Relieved, Frustrated, Surprised, Resigned, Grateful)
-- **Emotion Score:** 1-5 (1 = very negative, 3 = neutral, 5 = very positive). **Default to what the context suggests, not 3. Justify any score above 3.**
-  - Score 1 examples: discovering unexpected charges, being told to call back, getting conflicting information, system error at critical moment
-  - Score 2 examples: long wait times, having to repeat information, unclear next steps, automated response to emotional situation
-  - Score 4 examples: getting an answer faster than expected, feeling heard by an agent, issue resolved in one contact
-  - Score 5 examples: proactive resolution before they noticed a problem, feeling genuinely valued
-  - Most complaint/claims/application journeys will average 1.5-2.5 across stages. If your average is above 3, you are likely being too generous.
-- **Pain Point:** Specific friction, failure, or unmet need at this touchpoint. Leave blank if genuinely none.
-- **Moment of Truth:** Y/N — is this a touchpoint where the experience materially shapes the customer's perception of the brand? (Mark generously — there are usually more than you think)
-- **Opportunity:** Leave blank. Opportunities live in the HMW row of the grid, not at the touchpoint level.
+**Persona:** [name] — [one-sentence description]
+**Journey type:** [Cyclical / Linear]
+**Trigger:** [trigger event]
+**End point:** [resolution point]
+**Stage count:** [N]
 
 ---
 
-## Output Format
+## Stage [N]: [Stage Name]
+**Timeframe:** [X]
+**Business goal:** [Y]
+**Color index:** [0–7]
 
-**The journey map IS the output.** Do not generate lengthy prose analysis sections before or after the grid. The deliverable is the grid itself — structured, specific, ready to present.
+### Narrative
+[2–3 sentences: what the customer is actually doing and experiencing. Honest, specific — not a process description.]
 
-**Section 1: Journey Header** (3 lines maximum)
-- Persona and one-sentence description
-- Trigger → Resolution
-- Journey type (linear / cyclical) and confirmed stage names
+### Channels
+- [Channel name]
+- [Channel name — ABSENT]
 
-**Section 2: Journey Map**
-For each stage, in this order:
-1. Stage header block (compact — name / timeframe / business goal / customer entry state / goal-experience tension Y/N)
-2. User Need row — the synthesized need statement + 1-3 evidence bullets with sources
-3. Touchpoint table
-4. HMW Opportunities — 3-5 HMW questions for this stage (see guidance below)
+### Feeling
+Score: [1–5]
+Label: [2–4 words]
+Emoji: [😣 / 😟 / 😐 / 🙂 / 😊]
 
-**HMW Opportunity guidance:**
-- HMW questions are the opportunities row of the grid. They replace bullet-point solution statements.
-- Frame each as a genuine question, not a disguised recommendation. "HMW make this faster" is not an HMW. "HMW give the contractor confidence that what they need is in stock before they leave the job site?" is an HMW.
-- Each HMW should explicitly aim at one of these innovation vectors: **content**, **digital experience**, **new service**, **new product**, or **new business model**. Label which vector it targets.
-- 3-5 per stage. More than 5 means the stage is too broad.
+### User Need
+"[Need statement — written as if the customer dictated it]"
+- [Evidence bullet] ([source])
+- [Evidence bullet] ([source])
+- [Evidence bullet] ([source])
 
-**Section 3: Synthesis** (after all stages — brief, no more than 10 bullets total)
-- Emotional arc: 2 sentences — entry state, key inflection, exit state
-- Top moments of truth: bullet list (stage — touchpoint — why it matters in one clause)
-- If cyclical: one sentence on what emotional state the customer carries into the next cycle
+### Problems
+- [Specific friction, failure point, absent touchpoint, or unmet need]
+- [3–5 bullets total]
+
+### HMW Opportunities
+- [CONTENT] [HMW question]
+- [DIGITAL EXPERIENCE] [HMW question]
+- [NEW SERVICE] [HMW question]
+- [3–5 bullets total, each labelled with its innovation vector]
+
+---
+```
+
+After all stages, append a `## Synthesis` section:
+
+```markdown
+## Synthesis
+
+### Emotional Arc
+[2–3 sentences: entry state → key inflection point → exit state. For cyclical journeys, name what emotional state carries into the next cycle.]
+
+### Moments of Truth
+- [Stage name] · [Touchpoint] — [why this moment determines the relationship]
+- [5–8 bullets]
+```
+
+**Scoring discipline:**
+- Score 1: high distress, broken trust, system failure, feeling manipulated
+- Score 2: friction, confusion, unmet expectations, waiting without update
+- Score 3: neutral, transactional, neither positive nor negative
+- Score 4: faster/easier than expected, feeling heard, genuine progress
+- Score 5: proactive resolution, feeling genuinely valued
+- Most journeys involving complaint, complexity, or trust repair will average 1.5–2.5. If your average is above 3, you are being too generous.
+
+**HMW quality check:** If an HMW reads like a solution with a question mark, rewrite it as a genuine question about the outcome the customer needs, not the feature you've already decided to build.
+
+**Do not output stage content as chat text.** The only text you output in chat are the confirmation prompts at Steps 0.5 and 2.5, and the final file-saved confirmation at the end of Step 7.
 
 ---
 
 ## Step 7: Generate HTML Output File
 
-After completing all sections above, automatically generate one file using the Write tool. Do not ask permission — this is a mandatory final step.
+**Do not write the HTML yourself.** Spawn a fresh Agent using the Agent tool. This gives HTML generation a clean context window with no accumulated reasoning overhead — the agent reads the analysis file you wrote in Step 3 and converts it directly to HTML.
 
-### HTML file: `outputs/[persona-slug]-journey-map.html`
+Use the Agent tool with `subagent_type: "general-purpose"` and the following prompt (substitute the actual analysis file path):
 
-Write the file to the `outputs/` folder at the root of the working directory. This folder is gitignored — outputs are never committed to the repo.
+---
 
-Generate a fully self-contained HTML file. No external dependencies — all CSS inline in `<style>`, no JavaScript. Use the exact structure below, populated with the session data.
+**Agent prompt template:**
 
-**Grid layout:** CSS Grid with a fixed 160px left column for row labels and `1fr` per stage column. Seven rows: Stage Header, Narrative, Channels, Feeling, User Need, Problems, HMW Opportunities.
+```
+Read the journey map analysis file at: [session_dir]/journey-map-[persona-slug]-analysis.md
 
-**Emotion emoji mapping** (round `stageEmotionScore` to nearest integer):
-- Score 1 → 😣
-- Score 2 → 😟
-- Score 3 → 😐
-- Score 4 → 🙂
-- Score 5 → 😊
+Then write a complete, self-contained HTML journey map to: [session_dir]/journey-map-[persona-slug].html
 
-**Stage color palette** (cycle through for each stage column, 0-indexed):
-- 0: `#6366f1` (indigo)
-- 1: `#0ea5e9` (sky)
-- 2: `#10b981` (emerald)
-- 3: `#f59e0b` (amber)
-- 4: `#ef4444` (red)
-- 5: `#8b5cf6` (violet)
-- 6: `#06b6d4` (cyan)
-- 7: `#84cc16` (lime)
+Rules:
+- Read the analysis file first, in full, before writing any HTML
+- All CSS inline in <style> — no external dependencies, no JavaScript
+- Do not truncate — write every stage completely
+- Do not ask for confirmation — write the file immediately
+- After `<body>`, insert the disclaimer header banner. Before `</body>`, insert the disclaimer/credit footer. See exact HTML below:
 
-**HTML template to follow:**
-
+Header banner (place immediately after `<body>`):
 ```html
+<div style="background:#fef3c7; border-bottom:1px solid #f59e0b; padding:8px 24px; text-align:center; font-family:-apple-system,sans-serif; font-size:11px; color:#92400e;">
+  ⚠ This output was generated by AI and should be reviewed and verified before use in any decision-making.
+</div>
+```
+
+Footer (place immediately before `</body>`):
+```html
+<footer style="margin-top:48px; padding:16px 24px; background:#f9fafb; border-top:1px solid #e5e7eb; text-align:center; font-family:-apple-system,sans-serif;">
+  <p style="font-size:11px; color:#9ca3af; margin-bottom:4px;">This output was generated by AI and should be reviewed and verified before use in any decision-making.</p>
+  <p style="font-size:11px; color:#d1d5db;">Created with ❤️ by Kenan Ali &nbsp;·&nbsp; <a href="mailto:kstack@kenanali.com" style="color:#6366f1; text-decoration:none;">kstack@kenanali.com</a></p>
+</footer>
+```
+
+Stage colors by color index (0-indexed):
+0 → #6366f1 · 1 → #0ea5e9 · 2 → #10b981 · 3 → #f59e0b · 4 → #ef4444 · 5 → #8b5cf6 · 6 → #06b6d4 · 7 → #84cc16
+
+Emotion emoji: Score 1 → 😣 · Score 2 → 😟 · Score 3 → 😐 · Score 4 → 🙂 · Score 5 → 😊
+
+HTML structure: CSS Grid with a 160px label column and repeat(N, 1fr) stage columns where N = number of stages. Eight rows in order: Stage header, Narrative, Channels, Feeling, User Need, Problems, HMW Opportunities, Synthesis (full-width footer spanning all columns).
+
+Use this exact HTML/CSS template — populate it fully from the analysis file:
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -245,12 +273,12 @@ Generate a fully self-contained HTML file. No external dependencies — all CSS 
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f5; padding: 24px; color: #1a1a1a; }
     h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
     .meta { font-size: 13px; color: #666; margin-bottom: 24px; }
-    .grid { display: grid; grid-template-columns: 160px [REPEAT_COLS]; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; background: white; min-width: 0; }
+    .grid { display: grid; grid-template-columns: 160px repeat(N, 1fr); border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; background: white; }
     .row-label { background: #f8f8f8; border-right: 2px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; padding: 12px 10px; font-size: 10px; font-weight: 700; color: #999; text-transform: uppercase; letter-spacing: 0.06em; display: flex; align-items: center; }
     .cell { border-right: 1px solid #e0e0e0; border-bottom: 1px solid #e0e0e0; padding: 12px; font-size: 12px; line-height: 1.5; min-height: 60px; }
     .cell:last-child { border-right: none; }
     .stage-name { font-weight: 700; font-size: 13px; color: white; }
-    .stage-time { font-size: 11px; color: rgba(255,255,255,0.75); margin-top: 3px; }
+    .stage-meta { font-size: 11px; color: rgba(255,255,255,0.75); margin-top: 3px; }
     .pills { display: flex; flex-wrap: wrap; gap: 4px; }
     .pill { background: #f0f0f0; color: #555; font-size: 11px; padding: 2px 8px; border-radius: 10px; }
     .emotion { text-align: center; padding: 14px 12px; }
@@ -258,68 +286,115 @@ Generate a fully self-contained HTML file. No external dependencies — all CSS 
     .feeling { font-size: 11px; color: #888; margin-top: 4px; }
     .need-col { background: #fafaf7; }
     .need-statement { font-size: 12px; color: #1a1a1a; line-height: 1.5; margin-bottom: 8px; font-style: italic; }
-    .need-evidence { list-style: none; padding: 0; margin: 0; }
+    .need-evidence { list-style: none; }
     .need-evidence li { font-size: 11px; color: #6b7280; padding: 2px 0 2px 12px; position: relative; line-height: 1.4; }
     .need-evidence li::before { content: "•"; position: absolute; left: 2px; color: #9ca3af; }
     .need-source { font-style: italic; color: #9ca3af; }
     .problems { background: #fff5f5; }
-    .problems ul { list-style: none; padding: 0; }
-    .problems li { color: #b91c1c; padding: 2px 0 2px 14px; position: relative; }
+    .problems ul { list-style: none; }
+    .problems li { color: #b91c1c; padding: 2px 0 2px 14px; position: relative; font-size: 12px; line-height: 1.4; margin-bottom: 3px; }
     .problems li::before { content: "•"; position: absolute; left: 2px; }
     .hmw-col { background: #f0f9ff; }
-    .hmw-col ul { list-style: none; padding: 0; }
-    .hmw-col li { color: #0369a1; padding: 3px 0 3px 14px; position: relative; font-size: 11px; line-height: 1.4; }
+    .hmw-col ul { list-style: none; }
+    .hmw-col li { color: #0369a1; padding: 3px 0 3px 14px; position: relative; font-size: 11px; line-height: 1.4; margin-bottom: 5px; }
     .hmw-col li::before { content: "?"; position: absolute; left: 2px; font-weight: 700; color: #7dd3fc; }
     .hmw-vector { display: inline-block; font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #0ea5e9; background: #e0f2fe; border-radius: 3px; padding: 1px 5px; margin-bottom: 2px; }
+    .synthesis { grid-column: 1 / -1; background: #f1f5f9; color: #1e293b; padding: 28px 32px; border-top: 1px solid #e0e0e0; }
+    .synthesis h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: #94a3b8; margin-bottom: 20px; }
+    .synthesis-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 32px; }
+    .synthesis-section h3 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #94a3b8; margin-bottom: 10px; }
+    .synthesis-section p { font-size: 13px; color: #334155; line-height: 1.65; }
+    .synthesis-section ul { list-style: none; }
+    .synthesis-section li { font-size: 12px; color: #475569; padding: 4px 0 4px 16px; position: relative; line-height: 1.5; margin-bottom: 4px; border-bottom: 1px solid #e2e8f0; }
+    .synthesis-section li:last-child { border-bottom: none; }
+    .synthesis-section li::before { content: "→"; position: absolute; left: 0; color: #6366f1; font-weight: 700; }
+    .mot-tag { display: inline-block; font-size: 9px; font-weight: 700; background: #fef3c7; color: #92400e; border-radius: 3px; padding: 1px 5px; margin-left: 4px; }
   </style>
 </head>
 <body>
-  <h1>[Persona name] — [Scenario]</h1>
-  <div class="meta">[Journey type] &nbsp;·&nbsp; Trigger: [trigger] &nbsp;·&nbsp; Resolution: [resolution] &nbsp;·&nbsp; [generatedAt]</div>
+  <h1>[Persona name] — [Journey scenario]</h1>
+  <div class="meta">[Journey type] &nbsp;·&nbsp; Trigger: [trigger] &nbsp;·&nbsp; Resolution: [resolution]</div>
 
   <div class="grid">
 
-    <!-- ROW: Stage Header -->
+    <!-- ROW: Stage -->
     <div class="row-label">Stage</div>
-    [For each stage i: <div class="cell" style="background:[stage-color-i]"><div class="stage-name">[name]</div><div class="stage-time">[timeframe]</div></div>]
+    <!-- one cell per stage: -->
+    <div class="cell" style="background:[stage-color]">
+      <div class="stage-name">[Stage N] · [Stage Name]</div>
+      <div class="stage-meta">[Timeframe] · [Business goal — brief]</div>
+    </div>
 
     <!-- ROW: Narrative -->
     <div class="row-label">Narrative</div>
-    [For each stage: <div class="cell">[narrative]</div>]
+    <!-- one cell per stage: -->
+    <div class="cell">[Narrative text]</div>
 
     <!-- ROW: Channels -->
     <div class="row-label">Channels</div>
-    [For each stage: <div class="cell"><div class="pills">[For each channel: <span class="pill">[channel]</span>]</div></div>]
+    <!-- one cell per stage: -->
+    <div class="cell"><div class="pills">
+      <span class="pill">[channel]</span>
+    </div></div>
 
     <!-- ROW: Feeling -->
     <div class="row-label">Feeling</div>
-    [For each stage: <div class="cell emotion"><span class="emoji">[emoji from score]</span><div class="feeling">[customerEntryState]</div></div>]
+    <!-- one cell per stage: -->
+    <div class="cell emotion">
+      <span class="emoji">[emoji]</span>
+      <div class="feeling">[Feeling label]</div>
+    </div>
 
     <!-- ROW: User Need -->
     <div class="row-label">User Need</div>
-    [For each stage: <div class="cell need-col">
-      <div class="need-statement">[userNeed]</div>
+    <!-- one cell per stage: -->
+    <div class="cell need-col">
+      <div class="need-statement">"[Need statement]"</div>
       <ul class="need-evidence">
-        [For each item in userNeedEvidence: <li>[text] <span class="need-source">([source])</span></li>]
+        <li>[Evidence] <span class="need-source">([source])</span></li>
       </ul>
-    </div>]
+    </div>
 
     <!-- ROW: Problems -->
     <div class="row-label">Problems</div>
-    [For each stage: <div class="cell problems"><ul>[For each problem: <li>[problem]</li>]</ul></div>]
+    <!-- one cell per stage: -->
+    <div class="cell problems"><ul>
+      <li>[Problem]</li>
+    </ul></div>
 
     <!-- ROW: HMW Opportunities -->
     <div class="row-label">HMW Opportunities</div>
-    [For each stage: <div class="cell hmw-col"><ul>
-      [For each hmwOpportunity: <li><span class="hmw-vector">[vector]</span><br>[hmw]</li>]
-    </ul></div>]
+    <!-- one cell per stage: -->
+    <div class="cell hmw-col"><ul>
+      <li><span class="hmw-vector">[vector]</span><br>[HMW question]</li>
+    </ul></div>
+
+    <!-- SYNTHESIS — full width -->
+    <div class="synthesis">
+      <h2>Synthesis</h2>
+      <div class="synthesis-grid">
+        <div class="synthesis-section">
+          <h3>Emotional Arc</h3>
+          <p>[Emotional arc text]</p>
+        </div>
+        <div class="synthesis-section">
+          <h3>Moments of Truth</h3>
+          <ul>
+            <li>[Stage] · [Touchpoint] — [why it matters] <span class="mot-tag">MOT</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
   </div>
 </body>
 </html>
+
+After writing the file, confirm with the single line:
+"[session_dir]/journey-map-[persona-slug].html written successfully"
 ```
 
-Replace `[REPEAT_COLS]` with `repeat([N], 1fr)` where N is the number of stages.
+---
 
-After writing the file, tell the user:
-> "`outputs/[persona-slug]-journey-map.html` saved — open in your browser to view the map"
+After the Agent completes, output only:
+> "`[session_dir]/journey-map-[persona-slug].html` saved — open in your browser to view the map"

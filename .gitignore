@@ -5,3 +5,6 @@ __pycache__/
 
 # Skill outputs — never commit
 outputs/
+
+# Session state — local only
+.kstack-session.json
