@@ -52,13 +52,25 @@ Brand track: /brand-building-blocks → /brand-territories
 
 **Requires:** [Claude Code](https://claude.ai/code)
 
+### Option A — Clone with git
+
 ```bash
 git clone https://github.com/YOUR_USERNAME/KStack.git
 cd KStack
 ./setup
 ```
 
-Restart Claude Code — all skills will appear in the slash command menu.
+### Option B — Download as zip (no git required)
+
+1. Click **Code → Download ZIP** on the GitHub repo page
+2. Extract the zip and open the `KStack` folder in VS Code
+3. Open the VS Code terminal and run:
+
+```bash
+./setup
+```
+
+Either way, restart Claude Code after setup — all skills will appear in the slash command menu.
 
 ---
 
