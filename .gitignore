@@ -11,3 +11,4 @@ outputs/
 
 # Local eval workspace — never commit
 kstack-workspace/
+evals/
