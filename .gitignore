@@ -8,3 +8,6 @@ outputs/
 
 # Session state — local only
 .kstack-session.json
+
+# Local eval workspace — never commit
+kstack-workspace/
