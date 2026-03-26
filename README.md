@@ -10,24 +10,24 @@ Each skill encodes a specific methodology: the way a senior service designer, ma
 
 ### CX Transformation
 
-| Skill | What it does |
-|---|---|
-| `/trend-scan` | Macro trend radar across PESTLE + tech waves, scored for CX relevance |
-| `/biz-context` | Five-domain business diagnostic + Porter's Five Forces + key tensions |
-| `/scan-blockers` | Full blocker map across 8 categories, rated by severity and addressability |
-| `/persona-build` | Rich persona with JTBD, trigger events, anxieties, and unmet needs |
-| `/journey-map` | Stage-by-stage journey map with emotion scores, moments of truth, and HMW opportunities |
-| `/service-map` | 5-layer service blueprint with failure points and handoff risks |
-| `/synthesize` | Insight clusters, tension map, ranked How Might We questions, burning platform |
-| `/biz-case` | 7-section executive business case — every number tagged as data-backed or assumption |
-| `/prioritize` | Multi-criteria initiative scoring, phased roadmap, and sequencing recommendation |
+| Skill | What it does | Accepts |
+|---|---|---|
+| `/trend-scan` | Macro trend radar across PESTLE + tech waves, scored for CX relevance | Analyst reports, strategy decks, competitor intelligence, news/social listening exports, Google Trends exports, VOC reports |
+| `/biz-context` | Five-domain business diagnostic + Porter's Five Forces + key tensions | Annual reports, board papers, financial summaries, NPS/CSAT/VOC reports, org charts, website analytics, social listening, employee engagement surveys |
+| `/scan-blockers` | Full blocker map across 8 categories, rated by severity and addressability | Stakeholder interview transcripts, CX post-mortems, org charts, process docs, complaint data, strategy/transformation roadmaps |
+| `/persona-build` | Rich persona with JTBD, trigger events, anxieties, and unmet needs | Interview transcripts, survey verbatims, segmentation decks, CRM profiles, NPS/VOC reports, review site exports, social listening, usability test notes |
+| `/journey-map` | Stage-by-stage journey map with emotion scores, moments of truth, and HMW opportunities | `/persona-build` output, interview transcripts, call summaries, complaint data, NPS verbatims, existing journey maps, session recordings |
+| `/service-map` | 5-layer service blueprint with failure points and handoff risks | `/journey-map` output, process maps, system architecture diagrams, org charts, SLA docs, ticket/case management exports, incident logs |
+| `/synthesize` | Insight clusters, tension map, ranked How Might We questions, burning platform | Any KStack skill outputs, research reports, interview notes, workshop outputs, complaint analysis, contact reason data |
+| `/biz-case` | 7-section executive business case — every number tagged as data-backed or assumption | `/biz-context`, `/synthesize`, `/scan-blockers` outputs, financial data, operational metrics, benchmark reports, prior business cases |
+| `/prioritize` | Multi-criteria initiative scoring, phased roadmap, and sequencing recommendation | `/synthesize` or `/biz-case` outputs, initiative lists, budget/resource constraints, technology roadmaps, capability assessments |
 
 ### Brand Strategy
 
-| Skill | What it does |
-|---|---|
-| `/brand-building-blocks` | 5-8 named building blocks across Audience, Company, and Moment forces |
-| `/brand-territories` | 3 distinct territory directions, each anchored by a different emotional benefit |
+| Skill | What it does | Accepts |
+|---|---|---|
+| `/brand-building-blocks` | 5-8 named building blocks across Audience, Company, and Moment forces | `/persona-build`, `/biz-context`, `/trend-scan` outputs, interview transcripts, VOC/NPS verbatims, review exports, brand audits, competitive analysis |
+| `/brand-territories` | 3 distinct territory directions, each anchored by a different emotional benefit | `/brand-building-blocks` output, existing brand positioning docs, competitor brand analysis, prior territory work |
 
 Skills flow in phases:
 
