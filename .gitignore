@@ -12,3 +12,6 @@ outputs/
 # Local eval workspace — never commit
 kstack-workspace/
 evals/
+
+# Fake/test data — never commit
+fake-data/

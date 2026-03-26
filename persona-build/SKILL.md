@@ -298,7 +298,9 @@ Footer (place immediately before `</body>`):
 </footer>
 ```
 
-Design a persona portrait card. Single-column layout, max-width 780px centered. Dark header with persona name, role/segment, and tagline. Then sections for: Goals, Functional JTBD, Emotional JTBD, Social JTBD, Trigger Events, Decision Factors, Anxieties, Channel Behavior, Unmet Needs. Each section in a white card with a colored left border (use #6366f1 for accent). Quote block in dark background. Research Gaps and Designer's Note at the bottom. Use -apple-system font, #f5f5f5 background, clean professional styling.
+Design a persona portrait card. Single-column layout, max-width 1100px centered. Dark header with persona name, role/segment, and tagline. Then sections for: Goals, Functional JTBD, Emotional JTBD, Social JTBD, Trigger Events, Decision Factors, Anxieties, Channel Behavior, Unmet Needs. Each section in a white card with a colored left border (use #6366f1 for accent). Quote block in dark background. Research Gaps and Designer's Note at the bottom. Use -apple-system font, #f5f5f5 background, clean professional styling.
+
+Evidence sourcing: For every item that has a source citation inside its evidence brackets (e.g. [EVIDENCED — Rebecca verbatim: "..."] or [COMMUNITY VERBATIM: "..."]), extract the source text (everything after the em dash — or after "COMMUNITY VERBATIM:") and render it as a light grey pill inline after the claim text. Style the pill as: display:inline; background:#f3f4f6; color:#9ca3af; border-radius:999px; padding:2px 8px; font-size:11px; margin-left:6px. Only use source text that exists in the analysis — do not invent or fabricate sources. If a bracket contains only the tag word with no source text (e.g. just [INFERRED]), render the badge only with no pill.
 
 After writing, confirm with the single line:
 "[session_dir]/persona-[name-slug].html written successfully"
