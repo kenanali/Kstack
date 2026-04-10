@@ -61,7 +61,7 @@ Read any provided materials before proceeding.
 
 ## Step 0.5: Signal Data Search (if no external data was provided)
 
-Before scanning, gather live signal data to enable Multi-Source Confirmed validation in Step 2. If the user has not provided Google Trends exports, news monitoring data, social/community data, or competitive benchmarking, run the following targeted searches now. Do this automatically — do not ask permission first. Label all web-sourced findings `[SOURCE: Web search — verify before presenting]`.
+Before scanning, gather live signal data to enable Multi-Source Confirmed validation in Step 2. If the user has not provided Google Trends exports, news monitoring data, social/community data, or competitive benchmarking, run the following targeted searches now. Do this automatically — do not ask permission first. Label all web-sourced findings with an evidence pill that includes the actual source URL: `[SOURCE: [Site/Publication Name](actual-URL) — [date if available]]`. Capture the actual URL from each search result. Only include real, working URLs — do not fabricate URLs. If no specific URL can be retrieved for a finding, label it `[SOURCE: web search — URL unavailable]`.
 
 **News and competitive signals:**
 - Search: `"[industry]" "customer experience" trends [current year]`
@@ -125,7 +125,7 @@ For every signal identified, score it:
 **Timeframe:** When will this force materially impact the customer experience?
 **CX Disruption Potential:** 1 = minor friction, 5 = fundamentally changes how customers behave or what they expect.
 
-**Signal validation:** When populating the table, check each high-relevance signal against the web-sourced data gathered in Step 0.5 (or any provided materials). If a signal is corroborated by news coverage, regulatory announcements, or community discussion found via search, flag it as **Multi-Source Confirmed** and weight it higher in the radar. If a signal is based only on analytical reasoning with no detectable public footprint in search results or news, flag it as **Analyst-Led — validate with market signals.** A trend that is both analytically identified AND appearing in search results AND generating news coverage AND showing up in community discussions should be treated as higher urgency than one supported by analysis alone. Label any specific confirming sources: `[SOURCE: Web search — verify before presenting]`.
+**Signal validation:** When populating the table, check each high-relevance signal against the web-sourced data gathered in Step 0.5 (or any provided materials). If a signal is corroborated by news coverage, regulatory announcements, or community discussion found via search, flag it as **Multi-Source Confirmed** and weight it higher in the radar. If a signal is based only on analytical reasoning with no detectable public footprint in search results or news, flag it as **Analyst-Led — validate with market signals.** A trend that is both analytically identified AND appearing in search results AND generating news coverage AND showing up in community discussions should be treated as higher urgency than one supported by analysis alone. Label any specific confirming sources with the actual URL: `[SOURCE: [Site/Publication](URL) — [date if available]]`. Only include real URLs retrieved from your search results.
 
 **CX Disruption Potential anchors:**
 - **5** — This force is actively redefining what customers can get elsewhere, creating a benchmark gap that will reach this company's customers within 12–18 months. Customers are already experiencing it from adjacent industries.
@@ -160,7 +160,7 @@ For each elevated trend:
   - Names the specific customer behaviour or expectation this will change
   - Names the specific touchpoint or journey stage most affected
   - Identifies whether this creates a risk, an opportunity, or both for this company
-  - **Competitor verification:** Before asserting that a competitor is acting on a trend, use WebSearch to confirm: `"[Competitor name]" [trend name] launch OR announcement OR capability [current year]`. Only state competitor movement if you can cite a specific announcement, press release, or news article. Label the source `[SOURCE: Web search — verify before presenting]`. If confirmed: "Competitor X has launched [capability] against this trend; if unaddressed, this company will face a benchmark gap within [timeframe]." A trend competitors are already acting on has a different urgency than one they're also ignoring.
+  - **Competitor verification:** Before asserting that a competitor is acting on a trend, use WebSearch to confirm: `"[Competitor name]" [trend name] launch OR announcement OR capability [current year]`. Only state competitor movement if you can cite a specific announcement, press release, or news article and include its actual URL. Label the source `[SOURCE: [Publication/Site](URL) — [date]]`. If no specific URL can be retrieved, note `[SOURCE: web search — URL unavailable]` and qualify the claim accordingly. If confirmed: "Competitor X has launched [capability] against this trend; if unaddressed, this company will face a benchmark gap within [timeframe]." A trend competitors are already acting on has a different urgency than one they're also ignoring.
 
 **Refuse to write generic implications.** "Customers will expect seamless digital experiences" is not an implication — it could apply to any company in any industry and therefore says nothing useful. "AI-powered self-service tools in adjacent industries are training customers to expect real-time resolution without human contact — this company's 48-hour email response model will increasingly feel broken at the specific moment of billing disputes" is an implication. The test: would this statement be equally true for a competitor in a different sector? If yes, rewrite it until it isn't.
 
@@ -199,7 +199,18 @@ Write the complete output produced in this session to: `[session_dir]/trend-scan
 
 Use the Write tool directly — do not spawn a subagent. Write the full content of everything produced in this session: all sections, tables, analysis, and recommendations.
 
-Append this footer block after all content before saving:
+Prepend this header block at the very top of the file, before all content:
+
+```
+---
+**KStack** · CX Transformation Intelligence · [kstack@kenanali.com](mailto:kstack@kenanali.com)
+
+> ⚠ This output was generated by AI and should be reviewed and verified before use in any decision-making.
+
+---
+```
+
+Append this footer block after all content:
 
 ```
 ---

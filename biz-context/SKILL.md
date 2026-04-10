@@ -61,7 +61,7 @@ Read all provided materials thoroughly before proceeding.
 
 ## Step 0.5: Public Data Search (if gaps exist in provided materials)
 
-Before running the diagnostic, check whether key data is missing. If the user has not provided financial data, customer sentiment data, or competitive intelligence, run the following targeted web searches to partially fill those gaps. Do this automatically — do not ask permission first. Label all web-sourced findings `[SOURCE: Web search — verify before presenting]`.
+Before running the diagnostic, check whether key data is missing. If the user has not provided financial data, customer sentiment data, or competitive intelligence, run the following targeted web searches to partially fill those gaps. Do this automatically — do not ask permission first. Label all web-sourced findings with an evidence pill that includes the actual source URL: `[SOURCE: [Site/Publication Name](actual-URL) — [date if available]]`. Capture the actual URL from each search result. Only include real, working URLs — do not fabricate URLs. If no specific URL can be retrieved for a finding, label it `[SOURCE: web search — URL unavailable]`.
 
 **Financial data** (run if no annual report, investor deck, or financial summary was provided):
 - Search: `"[Company name]" annual report [current year] revenue`
@@ -121,7 +121,7 @@ Work through each domain systematically. For each domain:
 - Customer Lifetime Value (CLV) trend
 - Complaint volumes and resolution quality
 - Voice of Customer themes (what are customers consistently saying?)
-- **Unfiltered sentiment:** If community data, review site analysis, or social listening data is available, compare it to the formal NPS/survey picture. A company can have an adequate NPS while carrying a significant unresolved complaint pattern in public channels — the gap between formal scores and real-world sentiment is itself a finding. Note explicitly if formal metrics and unfiltered sentiment diverge, and flag which paints the more accurate operational picture. If no sentiment data was provided and Step 0.5 search has not already retrieved review site results, use WebSearch for `"[Company name]" reviews OR complaints` and WebFetch to retrieve the first page from Trustpilot, G2, or the most relevant review platform for this industry. Label all findings `[SOURCE: Web search — verify before presenting]`.
+- **Unfiltered sentiment:** If community data, review site analysis, or social listening data is available, compare it to the formal NPS/survey picture. A company can have an adequate NPS while carrying a significant unresolved complaint pattern in public channels — the gap between formal scores and real-world sentiment is itself a finding. Note explicitly if formal metrics and unfiltered sentiment diverge, and flag which paints the more accurate operational picture. If no sentiment data was provided and Step 0.5 search has not already retrieved review site results, use WebSearch for `"[Company name]" reviews OR complaints` and WebFetch to retrieve the first page from Trustpilot, G2, or the most relevant review platform for this industry. Label all findings with the actual source URL: `[SOURCE: [Site Name](URL) — [date if available]]`. Only include real, working URLs.
 
 ### Domain 3: Operational Health
 - Cost-to-serve and efficiency trajectory
@@ -136,7 +136,7 @@ Work through each domain systematically. For each domain:
 - Brand perception and trust indicators
 - Channel mix vs. market and competitor norms
 - **Digital presence and competitive parity:** If website benchmarking, search trend data, or competitive analysis is available, assess whether the company's digital footprint reflects its market position. Does the website clearly communicate the value proposition? Are self-service capabilities present or absent vs. competitors? Is the company visible in the channels where its customers are actively researching? A company can be strong operationally and weak digitally — this is a market position risk, not just an ops problem.
-- **Competitive news velocity:** If any competitor has made a significant announcement, partnership, or product launch recently, flag it. Competitor actions that appear in news coverage often signal where the market is moving and how quickly the benchmark is shifting. If no competitor intelligence was provided and Step 0.5 search has not already run competitor searches, use WebSearch for `"[Competitor name]" announcement OR launch OR partnership [current year]` for each competitor identified. Label all findings `[SOURCE: Web search — verify before presenting]`.
+- **Competitive news velocity:** If any competitor has made a significant announcement, partnership, or product launch recently, flag it. Competitor actions that appear in news coverage often signal where the market is moving and how quickly the benchmark is shifting. If no competitor intelligence was provided and Step 0.5 search has not already run competitor searches, use WebSearch for `"[Competitor name]" announcement OR launch OR partnership [current year]` for each competitor identified. Label all findings with the actual source URL: `[SOURCE: [Publication/Site](URL) — [date if available]]`. Only include real, working URLs.
 
 **Porter's Five Forces Assessment**
 
@@ -173,7 +173,7 @@ For each such domain:
 
 > "I'm missing data on [Domain/Metric] — I've rated it [health rating] based on [what you had], but this could change significantly with better data. This limits my ability to conclude [specific implication]. Do you have anything else I should read, or should I flag this as a data gap in the output?"
 
-Wait for response. Alternatively, offer to search public sources: "I can search for publicly available information on [missing domain] — this will be labeled `[SOURCE: Web search — verify before presenting]` and should not substitute for internal data in a board paper. Shall I search?" Update analysis accordingly. Do not proceed to Key Tensions if any Critical domain has thin evidence — that domain will likely produce the most important tension.
+Wait for response. Alternatively, offer to search public sources: "I can search for publicly available information on [missing domain] — results will be labeled with the actual source URL `[SOURCE: [Site](URL) — [date]]` and should not substitute for internal data in a board paper. Shall I search?" Update analysis accordingly. Do not proceed to Key Tensions if any Critical domain has thin evidence — that domain will likely produce the most important tension.
 
 ---
 
@@ -238,7 +238,18 @@ Write the complete output produced in this session to: `[session_dir]/biz-contex
 
 Use the Write tool directly — do not spawn a subagent. Write the full content of everything produced in this session: all sections, tables, analysis, and recommendations.
 
-Append this footer block after all content before saving:
+Prepend this header block at the very top of the file, before all content:
+
+```
+---
+**KStack** · CX Transformation Intelligence · [kstack@kenanali.com](mailto:kstack@kenanali.com)
+
+> ⚠ This output was generated by AI and should be reviewed and verified before use in any decision-making.
+
+---
+```
+
+Append this footer block after all content:
 
 ```
 ---
