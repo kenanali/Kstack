@@ -35,6 +35,7 @@ PHASE 1: INTELLIGENCE          PHASE 2: CUSTOMER UNDERSTANDING
 | `/prioritize` | Initiative prioritization | Scored portfolio with sequencing recommendation |
 | `/brand-building-blocks` | Brand research synthesis | 5-8 named building blocks across Audience, Company, Moment |
 | `/brand-territories` | Brand territory exploration | 3 distinct territory directions with "What if we..." scenarios |
+| `/name-check` | Naming strategist + clearance analyst | Name generation from creative brief + multi-source clearance sweep (trademark, app stores, domains, social handles, web presence) with interactive refinement loop |
 
 ## How Skills Chain
 
@@ -44,6 +45,7 @@ PHASE 1: INTELLIGENCE          PHASE 2: CUSTOMER UNDERSTANDING
 - `/journey-map` is designed to consume output from `/persona-build`.
 - `/brand-building-blocks` is designed to consume outputs from `/persona-build` (Audience force), `/biz-context` (Company force), and `/trend-scan` (Moment force).
 - `/brand-territories` is designed to consume output from `/brand-building-blocks`.
+- `/name-check` can consume output from `/brand-territories` (for naming direction) but can also run standalone with a freeform creative brief. Feeds into legal trademark review and final name decision.
 
 ## Input Conventions
 
@@ -91,5 +93,6 @@ KStack/
 │   └── value-driver-library.md
 ├── prioritize/SKILL.md
 ├── brand-building-blocks/SKILL.md
-└── brand-territories/SKILL.md
+├── brand-territories/SKILL.md
+└── name-check/SKILL.md
 ```

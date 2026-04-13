@@ -1,6 +1,6 @@
 # KStack
 
-**11 expert slash-command skills for CX transformation and brand strategy — inside Claude Code.**
+**12 expert slash-command skills for CX transformation and brand strategy — inside Claude Code.**
 
 Each skill encodes a specific methodology: the way a senior service designer, management consultant, or brand strategist actually works through a problem. Skills chain together — the output of one becomes the input of the next.
 
@@ -28,6 +28,7 @@ Each skill encodes a specific methodology: the way a senior service designer, ma
 |---|---|---|---|
 | `/brand-building-blocks` | Brand strategist + research synthesizer | 5-8 named building blocks across Audience, Company, and Moment forces | `/persona-build`, `/biz-context`, `/trend-scan` outputs, interview transcripts, VOC/NPS verbatims, review exports, brand audits, competitive analysis |
 | `/brand-territories` | Brand strategist + creative director | 3 distinct territory directions, each anchored by a different emotional benefit | `/brand-building-blocks` output, existing brand positioning docs, competitor brand analysis, prior territory work |
+| `/name-check` | Naming strategist + clearance analyst | Generate candidate names from a creative brief, then run a multi-source clearance sweep — trademark, app stores, domains, social handles, web presence — with an interactive refinement loop until a clear name is found | `/brand-territories` output (optional), creative brief, existing name candidates |
 
 Skills flow in phases:
 
@@ -42,7 +43,7 @@ Phase 1: Intelligence          Phase 2: Customer Understanding
                           /synthesize
                         /biz-case  /prioritize
 
-Brand track: /brand-building-blocks → /brand-territories
+Brand track: /brand-building-blocks → /brand-territories → /name-check
 (feeds from /persona-build, /biz-context, /trend-scan)
 ```
 

@@ -21,6 +21,7 @@ SKILLS=(
   "prioritize"
   "brand-building-blocks"
   "brand-territories"
+  "name-check"
 )
 
 for skill in "${SKILLS[@]}"; do

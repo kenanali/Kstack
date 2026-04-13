@@ -15,3 +15,6 @@ evals/
 
 # Fake/test data — never commit
 fake-data/
+
+# Experimental / unpublished skills
+journey-map-coach/
