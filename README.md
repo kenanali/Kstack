@@ -1,6 +1,6 @@
 # KStack
 
-**12 expert slash-command skills for CX transformation and brand strategy — inside Claude Code.**
+**13 expert slash-command skills for CX transformation, brand strategy, and pricing intelligence — inside Claude Code.**
 
 Each skill encodes a specific methodology: the way a senior service designer, management consultant, or brand strategist actually works through a problem. Skills chain together — the output of one becomes the input of the next.
 
@@ -29,6 +29,7 @@ Each skill encodes a specific methodology: the way a senior service designer, ma
 | `/brand-building-blocks` | Brand strategist + research synthesizer | 5-8 named building blocks across Audience, Company, and Moment forces | `/persona-build`, `/biz-context`, `/trend-scan` outputs, interview transcripts, VOC/NPS verbatims, review exports, brand audits, competitive analysis |
 | `/brand-territories` | Brand strategist + creative director | 3 distinct territory directions, each anchored by a different emotional benefit | `/brand-building-blocks` output, existing brand positioning docs, competitor brand analysis, prior territory work |
 | `/name-check` | Naming strategist + clearance analyst | Generate candidate names from a creative brief, then run a multi-source clearance sweep — trademark, app stores, domains, social handles, web presence — with an interactive refinement loop until a clear name is found | `/brand-territories` output (optional), creative brief, existing name candidates |
+| `/pricing-intelligence` | Competitive pricing analyst | Full competitive pricing intelligence report — market data scraping, tier architecture inference, buyer WTP matrix, gap analysis, and decision-ready recommendations tagged as [MARKET], [PERSONA], or [INFERRED] | `/persona-build` output (optional), competitor list, product category description |
 
 Skills flow in phases:
 
@@ -45,6 +46,9 @@ Phase 1: Intelligence          Phase 2: Customer Understanding
 
 Brand track: /brand-building-blocks → /brand-territories → /name-check
 (feeds from /persona-build, /biz-context, /trend-scan)
+
+Pricing track: /pricing-intelligence
+(can consume /persona-build output for WTP analysis)
 ```
 
 ---
@@ -115,6 +119,10 @@ Built in the spirit of [gstack](https://github.com/garrytan/gstack) — domain e
 ---
 
 ## Changelog
+
+### v1.11.0 — Pricing Intelligence (2026-04-13)
+
+New `/pricing-intelligence` skill for full competitive pricing analysis. Three input paths: market data only, persona data only, or both combined. Produces a normalized competitor pricing table, tier architecture inference, buyer WTP matrix per persona, gap analysis (underlap/overlap/overhang), and decision-ready recommendations with every claim tagged as [MARKET], [PERSONA], or [INFERRED]. Also ships `/name-check` — naming strategy and multi-source clearance sweep with interactive refinement loop, KB fallback when web tools are unavailable, and adverse-association screening at generation.
 
 ### v1.10.0 — Session Management + Disclaimer Footers (2026-03-25)
 

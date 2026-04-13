@@ -36,6 +36,7 @@ PHASE 1: INTELLIGENCE          PHASE 2: CUSTOMER UNDERSTANDING
 | `/brand-building-blocks` | Brand research synthesis | 5-8 named building blocks across Audience, Company, Moment |
 | `/brand-territories` | Brand territory exploration | 3 distinct territory directions with "What if we..." scenarios |
 | `/name-check` | Naming strategist + clearance analyst | Name generation from creative brief + multi-source clearance sweep (trademark, app stores, domains, social handles, web presence) with interactive refinement loop |
+| `/pricing-intelligence` | Competitive pricing analyst | Full competitive pricing intelligence report — market data scraping, tier architecture inference, buyer WTP matrix, gap analysis, and decision-ready recommendations |
 
 ## How Skills Chain
 
@@ -46,6 +47,7 @@ PHASE 1: INTELLIGENCE          PHASE 2: CUSTOMER UNDERSTANDING
 - `/brand-building-blocks` is designed to consume outputs from `/persona-build` (Audience force), `/biz-context` (Company force), and `/trend-scan` (Moment force).
 - `/brand-territories` is designed to consume output from `/brand-building-blocks`.
 - `/name-check` can consume output from `/brand-territories` (for naming direction) but can also run standalone with a freeform creative brief. Feeds into legal trademark review and final name decision.
+- `/pricing-intelligence` can consume output from `/persona-build` (for buyer WTP analysis) and runs standalone with a list of competitors or a product category. Produces a decision-ready pricing report with every claim tagged as [MARKET], [PERSONA], or [INFERRED].
 
 ## Input Conventions
 
@@ -94,5 +96,12 @@ KStack/
 ├── prioritize/SKILL.md
 ├── brand-building-blocks/SKILL.md
 ├── brand-territories/SKILL.md
-└── name-check/SKILL.md
+├── name-check/SKILL.md
+└── pricing-intelligence/
+    ├── SKILL.md
+    └── references/
+        ├── scraping-strategy.md
+        ├── normalization.md
+        ├── tier-inference.md
+        └── buyer-psychology.md
 ```
